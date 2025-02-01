@@ -6,7 +6,7 @@ export const Chats1 = ({ onBack }) => {
 
       // Function to go back to the main page
   const handleBackClick = () => {
-    setChats2(false);
+    setChats2 (false);
   }
 
     return (

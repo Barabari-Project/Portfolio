@@ -8,7 +8,6 @@
     width: 100%; /* Full width */
     position: relative; /* Position buttons relative to this container */
   }
-
   .prevButton,
   .nextButton {
     font-size: 18px;

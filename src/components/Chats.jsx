@@ -7,7 +7,6 @@ export const Chats = () => {
   // Function to handle button click
   const handleChatClick = () => {
     setChats1(true);
-    console.log("H")
   };    
 
   // Function to go back to the main page

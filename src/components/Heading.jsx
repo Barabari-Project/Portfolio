@@ -9,7 +9,6 @@ export const Heading = () => {
                 <div>
                 </div>
             </div>
-
         </div>
     )
 }

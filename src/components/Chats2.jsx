@@ -7,7 +7,7 @@ export const Chats2 = () => {
     setStep((prevStep) => prevStep + 1);
   };
 
-  const handlePreviousStep = () => {
+  const handlePreviousStep  = () => {
     setStep((prevStep) => (prevStep > 1 ? prevStep - 1 : prevStep));
   };
 
