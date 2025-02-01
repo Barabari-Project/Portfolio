@@ -1,0 +1,35 @@
+.linkDiv {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: black;
+    height: 300px;
+    padding-top: 4%; 
+}
+
+
+.linkDiv-para {
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+    .linkDiv {
+        display: flex;
+        flex-direction: row; /* Laptop jaise hi row layout */
+        justify-content: center;
+        align-items: center; /* Center alignment */
+        gap: 10px;
+        height: auto;
+        padding: 10px 0;
+    }
+    .linkDiv a img {
+        margin-left: 0; /* Image ko center align karna */
+        width: 50px; /* Phone par image size */
+    }
+    .linkDiv-para {
+        font-size: 14px; /* Phone par font size */
+        text-align: left; /* Text alignment adjust karna (optional) */
+    }
+}

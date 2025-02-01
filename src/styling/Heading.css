@@ -1,0 +1,24 @@
+.div-container {
+    height: 190px;
+    background-color: #334499;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;  
+}
+
+.div-container h2, 
+.div-container p {
+    padding-top: 1.5%;
+}
+
+@media (max-width: 600px) {
+    .div-container {
+        height: 150px;  
+        padding: 5px;    
+    }
+
+    .div-container h2,
+    .div-container p {
+        font-size: 14px;  
+    }
+}
