@@ -1,34 +1,43 @@
 .linkDiv {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column; /* Align content in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     background-color: black;
     height: 300px;
     padding-top: 4%; 
+    gap: 20px; /* Maintain gap between elements */
 }
 
+.imageDiv {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    gap: 20px; /* Maintain gap between images */
+}
 
 .linkDiv-para {
     color: white;
-    text-align: center;
-    padding-top: 5%;
+    text-align: center; /* Center text horizontally */
 }
-@media (max-width: 768px) {
+
+/* Responsive design for phone screens */
+@media (max-width: 375px) {
     .linkDiv {
-        display: flex;
-        flex-direction: row; /* Laptop jaise hi row layout */
-        justify-content: center;
-        align-items: center; /* Center alignment */
-        gap: 10px;
-        height: auto;
-        padding: 10px 0;
+        height: auto; /* Adjust height to fit content */
+        padding: 10px 0; /* Add padding for spacing */
+        margin-top: 10%; /* Adjust margin for better alignment */
     }
+
+    .imageDiv {
+        flex-direction: row; /* Maintain row layout for images */
+        gap: 10px; /* Reduce gap between images */
+    }
+
     .linkDiv a img {
-        margin-left: 0; /* Image ko center align karna */
-        width: 50px; /* Phone par image size */
+        width: 50px; /* Smaller image size for phones */
     }
+
     .linkDiv-para {
-        font-size: 14px; /* Phone par font size */
-        text-align: left; /* Text alignment adjust karna (optional) */
+        font-size: 14px; /* Smaller font size for phones */
     }
 }

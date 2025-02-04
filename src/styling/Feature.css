@@ -1,12 +1,10 @@
 .card-div1, .card-div2 {
     display: flex;
     justify-content: center;
-    gap: 4%;
+    gap: 20px; /* Sabhi screens ke liye gap */
     flex-wrap: wrap;
-
     padding: 20px;
 }
-
 .card {
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -38,11 +36,33 @@
 
 .card-content h5 {
     font-size: 1rem;
-    cursor: pointer; /* Pointer on hover */
+    cursor: pointer;
     margin-top: 10px;
-    margin-left:70%;
+    display: flex; /* Make h5 a flex container */
+    align-items: center; /* Align content vertically */
+    justify-content: flex-end; /* Align content to the right */
+    gap: 8px; /* Space between h5 text and SVG */
 }
 
+.card-content h5 svg {
+    width: 20px; /* Set desired size for SVG */
+    height: 20px;
+}
+.h5-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: -15px;
+    margin-left: 50%;
+    gap: 8px;
+}
+
+.h5-container svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-bottom: 7%;
+}
 
 /* Section title styling */
 .featureH1 {
@@ -54,14 +74,16 @@
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 375px) {
     .card-div1, .card-div2 {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center-align content */
+        display: flex;
+        justify-content: center;
+        gap: 25px; /* Sirf chhoti screens ke liye gap */
+        flex-wrap: wrap;
+        padding: 20px;
     }
-
     .card {
-        width: 90%; /* Full-width cards on small screens */
+        width: 100%; /* Full-width cards on small screens */
     }
 
     .card-content h5 {

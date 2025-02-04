@@ -3,13 +3,10 @@
     background-color: #334499;
     color: #ffffff;
     text-align: center;
-    padding: 10px;  
+    padding: 10px; 
+    margin-bottom: 3%;
 }
 
-.div-container h2, 
-.div-container p {
-    padding-top: 1.5%;
-}
 @media (max-width: 600px) {
     .div-container {
         height: 150px;  

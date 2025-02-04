@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styling/Chats1.css"
-
+ 
 export const Chats1 = () => {
 
   const onClickStartChat = () => {
@@ -9,7 +9,6 @@ export const Chats1 = () => {
     // chatpage.style.visibilty = "visible"
     // .style.opacity = 0.5;
   }
-
       // Function to go back to the main page
   const handleBackClick = () => {
     setChats2(false);
