@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "../styling/Chats1.css"
- 
+// const [Chats2, setChats2] = useState(true); 
+
 export const Chats1 = () => {
 
   const onClickStartChat = () => {
     const chatcard = document.querySelector(".chat-card");
     chatcard.style.display = "block"
-    // chatpage.style.visibilty = "visible"
-    // .style.opacity = 0.5;
   }
       // Function to go back to the main page
   const handleBackClick = () => {

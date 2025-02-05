@@ -12,6 +12,9 @@ import { Chats2 } from './components/Chats2'
 function App() {
   return (
     <>
+      <Chats />
+      <Chats1 />
+      <Chats2 />
       <Heading />
       <div>
         <h1 className='featureH1'>Featured Projects</h1>
@@ -60,17 +63,14 @@ function App() {
       </div>
       <Header />
       <Public />
-      <Chats />
-      <Chats1 />
-      <Chats2 />
       <div className='linkDiv'>
         <div className='imageDiv'>
           <Footer link="https://github.com/Barabari-Project"
-            image="github.png" />
+            image="github.webp" />
           <Footer link="https://x.com/BarabariProject"
-            image="twitter.png" />
+            image="twitter.jpeg" />
           <Footer link="https://www.linkedin.com/company/the-barabari-project"
-            image="linked.png" />
+            image="linkedIn.png" />
           <Footer link="https://www.instagram.com/thebarabariproject/"
             image="insta.png" />
         </div>

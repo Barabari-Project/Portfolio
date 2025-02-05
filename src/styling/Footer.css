@@ -14,7 +14,9 @@
     justify-content: center; /* Center images horizontally */
     gap: 20px; /* Maintain gap between images */
 }
-
+.imageDiv img{
+width: 10%;
+}
 .linkDiv-para {
     color: white;
     text-align: center; /* Center text horizontally */
