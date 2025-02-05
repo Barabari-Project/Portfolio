@@ -17,6 +17,7 @@ export const Header = () => {
             role: "CEO, ABC Company",
             logo: "logo.jpeg",
         },
+        
         {
             img: "card.png",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
