@@ -14,8 +14,11 @@
     justify-content: center; /* Center images horizontally */
     gap: 20px; /* Maintain gap between images */
 }
-.imageDiv img{
-width: 10%;
+.imageDiv img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* This will make sure all images cover the entire space */
+    border-radius: 5px; /* Optional for rounded corners */
 }
 .linkDiv-para {
     color: white;

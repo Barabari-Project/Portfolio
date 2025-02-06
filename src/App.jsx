@@ -66,13 +66,15 @@ function App() {
       <div className='linkDiv'>
         <div className='imageDiv'>
           <Footer link="https://github.com/Barabari-Project"
-            image="github.webp" />
+            image="githublogo.png" 
+            />
           <Footer link="https://x.com/BarabariProject"
-            image="twitter.jpeg" />
+            image="twitter.webp" 
+            className = "twitterImg"/>
           <Footer link="https://www.linkedin.com/company/the-barabari-project"
             image="linkedIn.png" />
           <Footer link="https://www.instagram.com/thebarabariproject/"
-            image="insta.png" />
+            image="insta.webp" />
         </div>
         <div className='linkDiv-para'>
           <p>2024 @ All Right Reserved</p>
