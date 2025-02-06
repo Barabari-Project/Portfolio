@@ -7,6 +7,7 @@ export const Feature = ({ title, description, image }) =>{
       </div>
       <div className="card-content">
         <h3>{title}</h3>
+      
         <p>{description}</p>
         <div className="h5-container">
           <h5>View Project</h5>
