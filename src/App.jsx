@@ -63,25 +63,8 @@ function App() {
       </div>
       <Header />
       <Public />
-      <div className='linkDiv'>
-        <div className='imageDiv'>
-          <Footer link="https://github.com/Barabari-Project"
-            image="githublogo.png" 
-            />
-          <Footer link="https://x.com/BarabariProject"
-            image="twitter.webp" 
-            className = "twitterImg"/>
-          <Footer link="https://www.linkedin.com/company/the-barabari-project"
-            image="linkedIn.png" />
-          <Footer link="https://www.instagram.com/thebarabariproject/"
-            image="insta.webp" />
-        </div>
-        <div className='linkDiv-para'>
-          <p>2024 @ All Right Reserved</p>
-          <p>Designed and Developed by Barabari Project Dev Team</p>
-        </div>
-      </div>
-      <AiFillGithub />
+      <Footer/>
+
     </>
   )
 

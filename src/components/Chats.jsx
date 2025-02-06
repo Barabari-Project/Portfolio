@@ -6,8 +6,6 @@ export const Chats = () => {
   const onClickChat = () => {
     const chatpage = document.querySelector(".chatPage");
     chatpage.style.display = "block"
-    // chatpage.style.visibilty = "visible"
-    // .style.opacity = 0.5;
   }
   return (
     <div className="contactDiv">

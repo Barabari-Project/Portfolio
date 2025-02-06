@@ -1,48 +1,116 @@
-.linkDiv {
+.logoMaindiv {
     display: flex;
     flex-direction: column; /* Align content in a column */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     background-color: black;
     height: 300px;
-    padding-top: 4%; 
+    padding-top: 1%; 
     gap: 20px; /* Maintain gap between elements */
 }
-
-.imageDiv {
+.logodiv{
     display: flex;
-    justify-content: center; /* Center images horizontally */
-    gap: 20px; /* Maintain gap between images */
+    justify-content: center;
+    gap: 20px;
 }
-.imageDiv img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover; /* This will make sure all images cover the entire space */
-    border-radius: 5px; /* Optional for rounded corners */
-}
-.linkDiv-para {
+.logo{
+    font-size: 1.5rem;
     color: white;
-    text-align: center; /* Center text horizontally */
+}
+.instalogo{
+    font-size: 1.7rem;
+    color: white;
+}
+.paraDiv{
+    font-size: 1.3rem;
+    color: white;
+}
+.paraDivfirstPara{
+    margin-left: 30%;
+}
+.githubdiv{
+    display: flex;
+    justify-content: end;
+    justify-content: center;
+    align-items: end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: #334499;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+        
+}
+.twitterdiv{
+    display: flex;
+    justify-content: end;
+    justify-content: center;
+    align-items: end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: rgb(25, 165, 221);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+}
+.linkedIndiv{
+    display: flex;
+    justify-content: end;
+    justify-content: center;
+    align-items: end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: #334499;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.instadiv{
+    display: flex;
+    justify-content: end;
+    justify-content: center;
+    align-items: end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: orangered;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+}
+@media screen and (max-width: 768px) {
+    .logoMaindiv {
+        height: auto; /* Remove fixed height on small screens */
+        padding-top: 10px;
+        gap: 15px; /* Smaller gap between elements */
+    }
+
+    .logodiv {
+        flex-direction: row; /* Stack the social icons vertically */
+        gap: 10px; 
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .instalogo {
+        font-size: 1.4rem; 
+    }
+
+    .paraDiv {
+        font-size: 1.1rem;
+    }
+
+    .paraDivfirstPara {
+        margin-left: 20%;
+    }
+
+    /* Adjust the size of the social media icons */
+    .githubdiv, .twitterdiv, .linkedIndiv, .instadiv {
+        height: 40px;
+        width: 40px;
+    }
 }
 
-/* Responsive design for phone screens */
-@media (max-width: 375px) {
-    .linkDiv {
-        height: auto; /* Adjust height to fit content */
-        padding: 10px 0; /* Add padding for spacing */
-        margin-top: 10%; /* Adjust margin for better alignment */
-    }
-
-    .imageDiv {
-        flex-direction: row; /* Maintain row layout for images */
-        gap: 10px; /* Reduce gap between images */
-    }
-
-    .linkDiv a img {
-        width: 50px; /* Smaller image size for phones */
-    }
-
-    .linkDiv-para {
-        font-size: 14px; /* Smaller font size for phones */
-    }
-}
