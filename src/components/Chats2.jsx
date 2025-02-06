@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "../styling/Chats2.css";
-
-
 export const Chats2 = () => {
   return (
       <div className="chat-card">
