@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../styling/Header.css"; 
-
 export const Header = () => {
     const testimonials = [
         {

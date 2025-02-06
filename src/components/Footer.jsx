@@ -1,4 +1,6 @@
 import "../styling/Footer.css"
+import { AiFillGithub } from "react-icons/ai";
+
 export const Footer = ({ link, image }) => {
     return (
       <div>
@@ -6,5 +8,5 @@ export const Footer = ({ link, image }) => {
           <img src={image} alt="" />
         </a>
       </div>
-    );
+    )
   };

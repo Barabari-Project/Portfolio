@@ -81,8 +81,7 @@ function App() {
           <p>Designed and Developed by Barabari Project Dev Team</p>
         </div>
       </div>
-
-
+      <AiFillGithub />
     </>
   )
 
