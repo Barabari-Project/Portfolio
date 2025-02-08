@@ -1,11 +1,10 @@
 /* Chat page styles */
 .chatPage {
   padding: 20px;
-  background-color: #fefefe; /* Light background */
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+   align-items: center;
+  /* height: 100vh; */
   display: none;
 }
 
@@ -17,7 +16,9 @@
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 0%;
+  right: 0%;
   font-family: "Arial", sans-serif;
 }
 
@@ -30,6 +31,21 @@
   padding: 10px;
   border-radius: 12px 12px 0 0;
   font-size: 1.2rem;
+}
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.closeChat {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .backChat div:first-child {

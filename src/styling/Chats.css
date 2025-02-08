@@ -1,38 +1,57 @@
+.contactDiv {
+  padding: 20px;
+}
 
 .logoDiv {
   display: flex;
-      align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logodiv {
+  display: flex;
 }
 
 .logoDiv img {
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  margin-left: 5%;
-}
-.contactButton svg{
-  color: #333;
-}
-.contactButton button{
-  color: #333;
-  background-color: #FFFFFF;
-  border-radius: 25px;
 }
 
 .logoDiv p {
   font-size: 1.2em;
 }
 
+.contactButton {
+  display: flex;
+  align-items: center;
+}
+
+.contactButton button {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.contactButton svg {
+  fill: #333;
+}
+
 .publicImgDiv {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 40px;
+  margin-top: 30px;
 }
 
 .logoDivPara h1 {
   font-size: 2.5rem;
   color: #333;
+  margin-bottom: 20px;
 }
 
 .logoDivPara h1 span {
@@ -43,7 +62,8 @@
 .logoDivPara p {
   font-size: 1.1rem;
   color: #555;
-  margin: 20px 0;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .logoDivPara button {
@@ -55,26 +75,18 @@
   cursor: pointer;
 }
 
-.startChatButtonPara{
-  background-color: ffffff;
-  box-shadow: 3px 3px 3px black;
-  width: 70%;
-  padding: 2%;
-
-}
 .publicImg {
-  height: 1000px;
+  max-width: 500px;
+  height: auto;
 }
 
 .chatButton {
   margin-top: 20px;
   background-color: #ff9900;
-  color:#4d4b4b;
+  color: #4d4b4b;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transform: rotate(90deg);
 }
-
-

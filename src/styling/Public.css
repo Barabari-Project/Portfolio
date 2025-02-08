@@ -1,7 +1,7 @@
 .publicMainDiv {
     display: flex;
     justify-content: space-around;
-    padding: 100px;
+    padding: 10px;
 }
 
 .publicDiv p {
@@ -13,7 +13,7 @@
 .publicDiv h1 {
     color: black;
     text-align: start;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 .publicImgDiv img {
     height: 400px;
@@ -23,6 +23,7 @@ button {
     color: white;
     padding: 10px 20px;
     border: none;
+    margin-top: 5px;
     border-radius: 5px;
     font-weight: 500;
     font-size: 1.1em;

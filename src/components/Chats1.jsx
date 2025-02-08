@@ -1,26 +1,29 @@
 import React, { useState } from "react";
 import "../styling/Chats1.css"
-// const [Chats2, setChats2] = useState(true); 
 
 export const Chats1 = () => {
+  const [Chatbox, setChatbox] = useState(true); 
+  const blured = Chatbox
 
   const onClickStartChat = () => {
     const chatcard = document.querySelector(".chat-card");
-    chatcard.style.display = "block"
-  }
-      // Function to go back to the main page
-  const handleBackClick = () => {
-    setChats2(false);
-  }
+    chatcard.style.display = "block";
+    setChatbox(false);
+  };
 
-    return (
-      <div className="chatPage">
-        <button className="backButton"></button>
+  const handleBackClick = () => {
+    setChatbox(false);
+  };
+
+  return (
+    <div className="chatPage">
+      <button className="backButton"></button>
+      {Chatbox && (  // Conditionally render the chatContainer
         <div className="chatContainer">
           <div className="backChat">
-            <div>|-</div>
+            <div onClick={handleBackClick}>|-</div>
             <div>Chat with us</div>
-            <div>x</div>
+            <div onClick={handleBackClick}>x</div>
           </div>
           <img className="searchImg" src="search.png" alt="" />
           <h1>Hi There!</h1>
@@ -29,7 +32,9 @@ export const Chats1 = () => {
             We are happy to discuss any potential projects. If you have a couple
             of minutes, we would love to hear more.
           </p>
-          <button className="startChatButton" onClick={onClickStartChat}>Start Chat</button>
+          <button className="startChatButton" onClick={onClickStartChat}>
+            Start Chat
+          </button>
           <div className="startChatButtonPara">
             <h2>Got any other queries?</h2>
             <p>Please drop us an email at </p>
@@ -38,6 +43,7 @@ export const Chats1 = () => {
             </a>
           </div>
         </div>
-      </div>
-    );
-  };
+      )}
+    </div>
+  );
+}
