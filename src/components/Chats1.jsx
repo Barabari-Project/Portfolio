@@ -1,29 +1,26 @@
 import React, { useState } from "react";
-import "../styling/Chats1.css"
+import "../styling/Chats1.css";
+import { Chats2 } from "./Chats2";
+import { IoCloseCircleOutline } from "react-icons/io5";
+import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 
-export const Chats1 = () => {
-  const [Chatbox, setChatbox] = useState(true); 
-  const blured = Chatbox
-
+export const Chats1 = ({ chatBoxHandler, chatBoxVar }) => {
+  const [chatboxOpen , setchatboxOpen] = useState(false);
   const onClickStartChat = () => {
-    const chatcard = document.querySelector(".chat-card");
-    chatcard.style.display = "block";
-    setChatbox(false);
+    setchatboxOpen(true);
   };
-
   const handleBackClick = () => {
-    setChatbox(false);
+    chatBoxHandler(false);
   };
-
   return (
     <div className="chatPage">
       <button className="backButton"></button>
-      {Chatbox && (  // Conditionally render the chatContainer
+      {chatBoxVar && (  // Conditionally render the chatContainer
         <div className="chatContainer">
           <div className="backChat">
-            <div onClick={handleBackClick}>|-</div>
+            <div onClick={handleBackClick}><FaRegArrowAltCircleLeft /></div>
             <div>Chat with us</div>
-            <div onClick={handleBackClick}>x</div>
+            <div onClick={handleBackClick}><IoCloseCircleOutline /></div>
           </div>
           <img className="searchImg" src="search.png" alt="" />
           <h1>Hi There!</h1>
@@ -44,6 +41,7 @@ export const Chats1 = () => {
           </div>
         </div>
       )}
+      <Chats2 chatboxOpen = {chatboxOpen} chatboxOpener = {setchatboxOpen}/>
     </div>
   );
 }

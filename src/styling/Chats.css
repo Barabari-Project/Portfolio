@@ -2,6 +2,11 @@
   padding: 20px;
 }
 
+.blur{
+  filter: blur(3px);
+  pointer-events: none;
+  transition: filter 0.3s ease-in-out;
+}
 .logoDiv {
   display: flex;
   justify-content: space-between;

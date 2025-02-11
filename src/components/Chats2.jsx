@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "../styling/Chats2.css";
+import { IoCloseCircleOutline } from "react-icons/io5";
+import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 
-export const Chats2 = () => {
-  const [ChatBots, setChatBots] = useState(true);
 
+export const Chats2 = ({chatboxOpen , chatboxOpener}) => {
   const BackClick = () => {
-    setChatBots(false);
+    chatboxOpener(false);
   };
   return (
     <div>
-      {ChatBots && (
+      {chatboxOpen && (
         <div className="chat-card">
           <div className="chat-header">
-            <button className="back-button" onClick={BackClick}>|-</button>
+            <button className="back-button" onClick={BackClick}><FaRegArrowAltCircleLeft /></button>
             <h3>Chat with us</h3>
-            <button className="close-button" onClick={BackClick}>&times;</button>
+            <button className="close-button" onClick={BackClick}><IoCloseCircleOutline /></button>
           </div>
           <div className="chat-content">
             <img src="search.png" alt="" />

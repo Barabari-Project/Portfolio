@@ -6,15 +6,15 @@ import { Heading } from './components/Heading'
 import { Footer } from './components/Footer'
 import { Feature } from './components/Feature'
 import { Chats } from './components/Chats'
-import { Chats1 } from './components/Chats1'
+// import { Chats1 } from './components/Chats1'
 import { Chats2 } from './components/Chats2'
 
 function App() {
   return (
     <>
       <Chats />
-      <Chats1 />
-      <Chats2 />
+      {/* <Chats1 /> */}
+      {/* <Chats2 /> */}
       <Heading />
       <div>
         <h1 className='featureH1'>Featured Projects</h1>
