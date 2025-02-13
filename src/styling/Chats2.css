@@ -1,4 +1,4 @@
-.chat-card {
+.chat-card {  
   width: 450px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -7,12 +7,12 @@
   position: absolute;
   top: 0%;
   right: 0%;
-  font-family: Arial, sans-serif;
 }
 
 h3{
   color: black;
 }
+
 .chat-header {
   background-color: #f9b233; /* Yellow color */
   padding: 10px;
@@ -21,7 +21,6 @@ h3{
   align-items: center;
   color: white;
 }
-
 .back-button,
 .close-button {
   background: none;
@@ -31,12 +30,28 @@ h3{
   cursor: pointer;
 }
 
-.chat-content {
-  padding: 20px;
+.chat-content{
+  overflow-y:scroll;
+  height: 38vh;
+  padding-left: 10px;
 }
 
-.chat-content p {
-  margin: 0 0 20px;
+.thankPara{
+  border: 1px solid grey;
+  height: 10%;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.para-Div{
+  border: 1px solid grey;
+  height: 14%;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .button-group {
@@ -68,7 +83,7 @@ h3{
   margin-top: 20px;
   padding: 10px;
   width: 50%;
-  background-color: navy;
+  background-color: #334499;
   color: white;
   border: none;
   border-radius: 10px;
@@ -81,14 +96,175 @@ h3{
   padding: 10px;
   display: flex;
 }
+.messageLeft{
+  background-color: #334499;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  max-width: 80%;
+  margin-left: 75%;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.message-Left {
+  background-color: #334499;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: 60%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word; /* Ensures long words break and wrap inside the container */
+  word-break: break-word; /* Prevents text from overflowing */
+  white-space: normal; /* Allow normal wrapping behavior */
+}
+
+.message-Left p {
+  color: white;
+  margin: 0;
+}
+.messageLeft p{
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  font-size: 1em;
+
+}
+.awesomePara{
+  border: 1px solid grey;
+  height: 14%;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+}
+.soundGoodPara{
+  border: 1px solid grey;
+  height: 60%;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.detailPara{
+  border: 1px solid grey;
+  height: 60%;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+}
+.icons-container {
+  display: flex;
+  justify-content: space-between; /* Icons evenly spaced */
+  width: 90%;
+  padding: 10px;
+  background-color: white; /* Ensures proper background */
+}
 
 .chat-input {
-  flex: 1;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 10px;
-  padding-bottom: 10px;
-  outline: none;
-  margin-right: -10px;
-  width: 80%;
+  display: flex;
+  align-items: center;
+  width: 100%; /* Adjust width to match design */
+  height: 45px;
+  border: 1px solid rgb(204, 203, 203);
+  background-color: aliceblue;
+  font-size: 1em;
+  border-radius: 25px; /* Rounded corners like the image */
 }
+.chatbot-container {
+  width: 20%;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  display: none;
+}
+
+h4{
+  background: #FFD54F;
+  color: black;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  margin: -20px -20px 10px -20px;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.option-btn {
+  background: white;
+  border: 2px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: 0.3s ease-in-out;
+}
+
+.option-btn:hover {
+  background: #f0f0f0;
+}
+
+.option-btn.selected {
+  background: #334499;
+  color: white;
+  border-color: #334499;
+}
+
+.submit-btn {
+  width: 40%;
+  background: #334499;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.para-container{
+  border:1px solid rgb(160, 153, 153);
+  border-radius: 6%;
+  width:60%;
+  height: 5rem;
+  background-color: rgb(196, 228, 250);
+}
+.message-left {
+  background-color: #334499;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  max-width: 80%;
+  margin-left: 80%;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: You can further modify to make it look more like a chat bubble */
+.message-left p {
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  font-size: 1em;
+} 

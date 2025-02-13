@@ -7,6 +7,10 @@
     margin-bottom: 3%;
 }
 
+.div-container p{
+    color: #ffffff; 
+}
+
 @media (max-width: 600px) {
     .div-container {
         height: 150px;  
