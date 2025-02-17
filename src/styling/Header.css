@@ -2,50 +2,62 @@
 @media (max-width: 375px) {
   .sliderContent {
     display: flex;
-    flex-direction: row; /* Align items horizontally */
-    align-items: center; /* Vertically center elements */
-    justify-content: space-between; /* Space between items */
-    width: 100%; /* Full width */
-    position: relative; /* Position buttons relative to this container */
+    flex-direction: row;
+    /* Align items horizontally */
+    align-items: center;
+    /* Vertically center elements */
+    justify-content: space-between;
+    /* Space between items */
+    width: 100%;
+    /* Full width */
+    position: relative;
+    /* Position buttons relative to this container */
   }
+
   .prevButton,
   .nextButton {
     font-size: 18px;
     width: 40px;
     height: 40px;
-    background-color: rgba(0, 0, 0, 0.5); /* Button background */
-    color: white; /* Button text color */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Button background */
+    color: white;
+    /* Button text color */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: absolute; /* Position buttons absolutely */
-    top: 50%; /* Vertically center */
+    position: absolute;
+    /* Position buttons absolutely */
+    top: 50%;
+    /* Vertically center */
   }
 
   .prevButton {
-    left: 10px; /* Position prevButton on the left side */
+    left: 10px;
+    /* Position prevButton on the left side */
   }
 
   .nextButton {
-    right: 10px; /* Position nextButton on the right side */
+    right: 10px;
+    /* Position nextButton on the right side */
   }
 
   .cardDiv {
     display: flex;
-    flex-direction: row; /* Cards arranged horizontally */
-    gap: 0px; /* Adjust gap between cards */
-    flex: 1; /* Allow cards to take available space */
+    flex-direction: row;
+    flex: 1;
   }
 
   .cardDiv img {
-    height: 10px; /* Adjust image size */
+    height: 10px;
+    /* Adjust image size */
   }
 
   .Para {
     padding: 5px;
-    width: 30%; /* Adjust width */
-    text-align: center; /* Optional: Center text */
+    width: 10%;
+    text-align: center;
   }
 
   .sliderdiv {
@@ -58,7 +70,8 @@
   align-items: center;
   justify-content: center;
 }
-.sliderdiv h5{
+
+.sliderdiv h5 {
   color: #ffffff;
   font-size: 1.2em;
   text-align: center;
@@ -82,7 +95,6 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .cardDiv {
   display: flex;
   align-items: center;
@@ -92,37 +104,92 @@
 .cardDiv img {
   height: 290px;
 }
-h3{
+
+h3 {
   color: black;
 }
-.hDiv{
+
+.hDiv {
   background-color: #334499;
   height: 700px;
 }
-.headerDiv{
+
+.headerDiv {
   color: #ffffff;
   text-align: center;
   padding: 2%;
 }
-.company img{
-  height: 20px;
-  margin-bottom: -20%;
-  
+
+.headerDiv p {
+  color: #ffffff;
 }
 
-.company{
+.company {
   display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  width: 350px;
 }
+
+.rayanDiv img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: -80%;
+}
+
+.company div h3 {
+  margin: 0;
+  color: white;
+  margin-top: 20%;
+  margin-left: -50%;
+}
+
+.company div p {
+  margin: 2px 0;
+  color: white;
+  margin-left: -40%;
+}
+
+.company div:last-child img {
+  height: 30px;
+  margin-left: auto;
+  margin-bottom: -35%;
+}
+
 .Para {
   background-color: rgba(238, 242, 238, 0.29);
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  width: 40%;
+  width: 15%;
   height: 200px;
 }
+.Para p{
+  color: white;
 
+}
 .sliderdiv {
   border-radius: 10px;
   padding: 20px;
+}
+.dotImg{
+  width: 20%;
+  max-height: 100px;
+  margin-bottom: 50%;
+  margin-left: -18%;
+}
+.dot-Img{
+  width: 20%;
+  max-height: 100px;
+margin-top: 55%;
+margin-right: -18%;
+}
+.commaImg{
+  width: 20%;
+  max-height: 50px;
+  margin-top: -20%;
+  margin-right: 80%;
 }

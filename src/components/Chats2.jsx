@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect} from "react";
 import "../styling/Chats2.css";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { HiOutlineRefresh } from "react-icons/hi";
+import { FiArrowRight } from "react-icons/fi";
+import { BiSolidHandDown } from "react-icons/bi";
 import { TbSend } from "react-icons/tb";
 
 export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
+  const chatContentRef = useRef(null);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [step, setStep] = useState(1);
   const [budget, setBudget] = useState(null);
@@ -37,6 +40,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
       setShowBudgetMessage(false);
       setGoodSoundMessage("");
     }
+
   };
 
   const handleSubmit = () => {
@@ -64,7 +68,14 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
       setSentMessages([...sentMessages, userInput]);
       setUserInput("");
       setShowThankYouMessage(true);
+      setTimeout(() => {
+        const messages = document.querySelectorAll(".message-Left");
+        if (messages.length > 0) {
+          messages[messages.length - 1].scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
     }
+
   };
 
   const handleRefresh = () => {
@@ -81,6 +92,12 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
     setShowThankYouMessage(false);
   };
 
+  useEffect(() => {
+    if (chatContentRef.current) {
+      chatContentRef.current.scrollTop = chatContentRef.current.scrollHeight;
+    }
+  }, [sentMessages, userInput, budgetOptions]);
+
   return (
     <div>
       {chatboxOpen && (
@@ -88,13 +105,17 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
           <div className="chatContainer">
             <div className="backChat">
               <div onClick={BackClick}><FaRegArrowAltCircleLeft /></div>
-              <div>Chat with us</div>
+              <div className="chatWith">Chat with us</div>
               <div onClick={BackClick}><IoCloseCircleOutline /></div>
             </div>
-            <div className="chat-content">
-              <img src="search.png" alt="" />
-              <div className="thankPara">
-                <p>Hi, Thank you for reaching out.</p>
+            <div className="chat-content" ref={chatContentRef}>
+              <div className="botimgDiv">
+                <div className="botDiv">
+                  <img className="botImg" src="bot.png" alt="bot image" />
+                </div>
+                <div className="thankPara">
+                  <p>Hi, Thank you for reaching out.</p>
+                </div>
               </div>
               <div className="para-Div">
                 <p>Let's see what kind of projects we can help you with</p>
@@ -116,7 +137,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
                 onClick={handleSubmit}
                 disabled={selectedOptions.length === 0}
               >
-                Submit
+                Submit <FiArrowRight />
               </button>
 
               {selectedOptions.includes("Website") && showMessage && (
@@ -127,8 +148,15 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
 
               {step === 2 && (
                 <>
-                  <div className="awesomePara">
-                    <p>Awesome, can you let us know your budget?</p>
+                  <div>
+                    <div className="botimgDiv">
+                    <div className="bot-imgDiv">
+                      <img className="botImg" src="bot.png" alt="" />
+                    </div>
+                    <div className="awesomePara">
+                      <p>Awesome, can you let us know your budget?</p>
+                    </div>
+                    </div>
                   </div>
                   <div className="options-container">
                     {budgetOptions.map((option) => (
@@ -149,12 +177,17 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
                   )}
 
                   {budget === "Under 50K" && goodSoundMessage && (
-                    <div className="para-div">
-                      <div className="soundGoodPara">
-                        <p>Sound good. Can you please leave us your contact details?</p>
+                    <div>
+                      <div className="botimgDiv">
+                        <div className="bot-imgDiv">
+                          <img className="botImg" src="bot.png" alt="" />
+                        </div>
+                        <div className="soundGoodPara">
+                          <p>Sound good. Can you please leave us your contact details?</p>
+                        </div>
                       </div>
                       <div className="detailPara">
-                        <p>You can type it in below</p>
+                        <p>You can type it in below <BiSolidHandDown className="below-icon" /></p>
                       </div>
                     </div>
                   )}
@@ -167,14 +200,18 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
 
                   {showThankYouMessage && (
                     <div>
-                      <div className="soundGoodPara">
-                        <p>Thank you for your message!</p>
+                      <div className="botimgDiv">
+                      <div className="bot-imgDiv">
+                        <img className="botImg" src="bot.png" alt="" />
                       </div>
-
                       <div className="soundGoodPara">
-                        <p>Hello</p>
+                        <p>Thankyou! Is there anything else you would like to share? Please type it in below <BiSolidHandDown className="below-icon" /></p>
                       </div>
-                      <button className="submit-btn">Submit Request</button>
+                      </div>
+                      <div className="soundGoodpara">
+                        <p>If not, kindly hit submit. We will get back to you in 2-3 business days.</p>
+                      </div>
+                      <button className="submitBtn">Submit Request <FiArrowRight /></button>
                     </div>
                   )}
                 </>
@@ -190,7 +227,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
                 value={userInput}
                 onChange={handleInputChange}
               />
-              <TbSend onClick={handleSendMessage} />
+              <TbSend className="sendIcon" onClick={handleSendMessage} />
             </div>
           </div>
         </div>

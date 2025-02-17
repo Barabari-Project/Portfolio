@@ -1,4 +1,4 @@
-.chat-card {  
+.chat-card {
   width: 450px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -9,18 +9,19 @@
   right: 0%;
 }
 
-h3{
+h3 {
   color: black;
 }
 
 .chat-header {
-  background-color: #f9b233; /* Yellow color */
+  background-color: #f9b233;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
 }
+
 .back-button,
 .close-button {
   background: none;
@@ -30,28 +31,55 @@ h3{
   cursor: pointer;
 }
 
-.chat-content{
-  overflow-y:scroll;
-  height: 38vh;
+.chat-content {
+  overflow-y: scroll;
+  height: 46svh;
   padding-left: 10px;
+  overflow-x: hidden;
 }
 
-.thankPara{
-  border: 1px solid grey;
-  height: 10%;
-  width: 50%;
-  background-color: aliceblue;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 5px;
+.botimgDiv {
+  display: flex;
+  align-items: flex-start; /* Aligns the items towards the top */
+  justify-content: flex-start; /* Keeps them in a row */
+  margin-bottom: 10px;
+  margin-left: -2.5%;
 }
-.para-Div{
+.botDiv {
+  height: 20px;
+  width: 40px;
+  background-color: #334499;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Moves the image container down */
+}
+
+.thankPara {
   border: 1px solid grey;
-  height: 14%;
+  height: 15%;
   width: 50%;
   background-color: aliceblue;
   border-radius: 10px;
   padding: 5px;
+  margin-top: 10px; /* Moves the paragraph down */
+  margin-left: 10px;
+}
+.botImg {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+.para-Div {
+  border: 1px solid grey;
+  height: 23%;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 3px;
+  margin-left: 12%;
 }
 
 .button-group {
@@ -68,15 +96,30 @@ h3{
   cursor: pointer;
   font-size: 14px;
 }
-.selectPara{
+
+.selectPara {
   color: navy;
 }
-.option-button{
-  color:navy;
+
+.option-button {
+  color: navy;
 }
 
 .option-button:hover {
   background-color: #f0f0f0;
+}
+
+.botImg {
+  width: 100%;
+  height: 100%;
+}
+
+.botDiv {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #334499;
+  border-radius: 50%;
 }
 
 .submit-button {
@@ -96,17 +139,19 @@ h3{
   padding: 10px;
   display: flex;
 }
-.messageLeft{
+
+.messageLeft {
   background-color: #334499;
   color: white;
   padding: 10px;
   border-radius: 10px;
   width: fit-content;
   max-width: 80%;
-  margin-left: 75%;
+  margin-left: 70%;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .message-Left {
   background-color: #334499;
   color: white;
@@ -114,18 +159,19 @@ h3{
   border-radius: 5px;
   width: fit-content;
   max-width: 100%;
-  margin-left: 60%;
+  margin-left: 80%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  word-wrap: break-word; /* Ensures long words break and wrap inside the container */
-  word-break: break-word; /* Prevents text from overflowing */
-  white-space: normal; /* Allow normal wrapping behavior */
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .message-Left p {
   color: white;
   margin: 0;
 }
-.messageLeft p{
+
+.messageLeft p {
   margin: 0;
   padding-left: 5px;
   padding-right: 5px;
@@ -133,7 +179,7 @@ h3{
   font-size: 1em;
 
 }
-.awesomePara{
+.awesomePara {
   border: 1px solid grey;
   height: 14%;
   width: 50%;
@@ -142,7 +188,10 @@ h3{
   padding: 5px;
   margin-top: 5px;
 }
-.soundGoodPara{
+.bot-imgDiv{
+  margin-right: 10px;
+}
+.soundGoodPara {
   border: 1px solid grey;
   height: 60%;
   width: 50%;
@@ -151,32 +200,53 @@ h3{
   padding: 5px;
   margin-bottom: 5px;
 }
-.detailPara{
+.soundGoodpara{
   border: 1px solid grey;
   height: 60%;
   width: 50%;
   background-color: aliceblue;
   border-radius: 10px;
   padding: 5px;
+  margin-bottom: 5px;
+margin-left: 10%;
+
 }
+.detailPara {
+  border: 1px solid grey;
+  height: 60%;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 11%;
+}
+
 .icons-container {
   display: flex;
-  justify-content: space-between; /* Icons evenly spaced */
+  justify-content: space-between;
   width: 90%;
   padding: 10px;
-  background-color: white; /* Ensures proper background */
+  background-color: white;
 }
 
 .chat-input {
   display: flex;
   align-items: center;
-  width: 100%; /* Adjust width to match design */
+  width: 100%;
   height: 45px;
-  border: 1px solid rgb(204, 203, 203);
+  border: 1px solid #334499;
   background-color: aliceblue;
   font-size: 1em;
-  border-radius: 25px; /* Rounded corners like the image */
+  border-radius: 25px;
 }
+.bot-imgDiv{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #334499;
+}
+
+
 .chatbot-container {
   width: 20%;
   background: white;
@@ -187,7 +257,7 @@ h3{
   display: none;
 }
 
-h4{
+h4 {
   background: #FFD54F;
   color: black;
   padding: 10px;
@@ -206,6 +276,7 @@ p {
   flex-wrap: wrap;
   gap: 10px;
   margin: 15px 0;
+  margin-left: 11%;
 }
 
 .option-btn {
@@ -218,11 +289,9 @@ p {
   color: #333;
   transition: 0.3s ease-in-out;
 }
-
 .option-btn:hover {
   background: #f0f0f0;
 }
-
 .option-btn.selected {
   background: #334499;
   color: white;
@@ -234,20 +303,42 @@ p {
   background: #334499;
   color: white;
   border: none;
-  padding: 12px;
+  padding: 10px;
   font-size: 16px;
+  font-weight: 700;
   border-radius: 25px;
   cursor: pointer;
   margin-top: 10px;
   transition: 0.3s;
+  margin-right: 40%;
 }
-.para-container{
-  border:1px solid rgb(160, 153, 153);
+.submitBtn{
+  width: 50%;
+  background: #334499;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  margin-right: 33%;
+
+}
+.below-icon{
+  color: goldenrod;
+  font-size: 15px;
+}
+.para-container {
+  border: 1px solid rgb(160, 153, 153);
   border-radius: 6%;
-  width:60%;
+  width: 60%;
   height: 5rem;
   background-color: rgb(196, 228, 250);
 }
+
 .message-left {
   background-color: #334499;
   color: white;
@@ -255,7 +346,7 @@ p {
   border-radius: 10px;
   width: fit-content;
   max-width: 80%;
-  margin-left: 80%;
+  margin-left: 100%;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -267,4 +358,17 @@ p {
   padding-right: 5px;
   color: white;
   font-size: 1em;
-} 
+}
+.refreshIcon{
+  font-size: 2em;
+  margin-top: 3%;
+  margin-right: 2%;
+  color: #334499;
+}
+.sendIcon{
+  font-size: 2em;
+  margin-top: 3%;
+  margin-left: 1%;
+  color: #334499;
+
+}

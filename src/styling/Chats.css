@@ -87,11 +87,12 @@
 
 .chatButton {
   margin-top: 20px;
-  background-color: #ff9900;
+  background-color: #FFCC33;
   color: #4d4b4b;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transform: rotate(90deg);
+  font-weight: 600;
 }

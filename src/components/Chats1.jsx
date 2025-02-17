@@ -3,6 +3,8 @@ import "../styling/Chats1.css";
 import { Chats2 } from "./Chats2";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
+
 
 export const Chats1 = ({ chatBoxHandler, chatBoxVar }) => {
   const [chatboxOpen , setchatboxOpen] = useState(false);
@@ -19,22 +21,22 @@ export const Chats1 = ({ chatBoxHandler, chatBoxVar }) => {
         <div className="chatContainer">
           <div className="backChat">
             <div onClick={handleBackClick}><FaRegArrowAltCircleLeft /></div>
-            <div>Chat with us</div>
+            <div className="chatWith">Chat with us</div>
             <div onClick={handleBackClick}><IoCloseCircleOutline /></div>
           </div>
           <img className="searchImg" src="search.png" alt="" />
           <h1>Hi There!</h1>
           <p className="whatpara">Want to work with us?</p>
-          <p>
+          <p className="wePara">
             We are happy to discuss any potential projects. If you have a couple
             of minutes, we would love to hear more.
           </p>
           <button className="startChatButton" onClick={onClickStartChat}>
-            Start Chat
+            Start Chat <FiArrowRight className="arrow"/>
           </button>
           <div className="startChatButtonPara">
             <h2>Got any other queries?</h2>
-            <p>Please drop us an email at </p>
+            <p>Please drop us an email at <FiArrowRight/> </p>
             <a href="mailto:barabaricollective@gmail.com">
               barabaricollective@gmail.com
             </a>
