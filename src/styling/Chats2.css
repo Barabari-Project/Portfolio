@@ -40,11 +40,14 @@ h3 {
 
 .botimgDiv {
   display: flex;
-  align-items: flex-start; /* Aligns the items towards the top */
-  justify-content: flex-start; /* Keeps them in a row */
+  align-items: flex-start;
+  /* Aligns the items towards the top */
+  justify-content: flex-start;
+  /* Keeps them in a row */
   margin-bottom: 10px;
   margin-left: -2.5%;
 }
+
 .botDiv {
   height: 20px;
   width: 40px;
@@ -53,7 +56,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px; /* Moves the image container down */
+  margin-top: 10px;
+  /* Moves the image container down */
 }
 
 .thankPara {
@@ -63,9 +67,11 @@ h3 {
   background-color: aliceblue;
   border-radius: 10px;
   padding: 5px;
-  margin-top: 10px; /* Moves the paragraph down */
+  margin-top: 10px;
+  /* Moves the paragraph down */
   margin-left: 10px;
 }
+
 .botImg {
   width: 50%;
   height: 50%;
@@ -179,6 +185,7 @@ h3 {
   font-size: 1em;
 
 }
+
 .awesomePara {
   border: 1px solid grey;
   height: 14%;
@@ -188,9 +195,11 @@ h3 {
   padding: 5px;
   margin-top: 5px;
 }
-.bot-imgDiv{
+
+.bot-imgDiv {
   margin-right: 10px;
 }
+
 .soundGoodPara {
   border: 1px solid grey;
   height: 60%;
@@ -200,7 +209,8 @@ h3 {
   padding: 5px;
   margin-bottom: 5px;
 }
-.soundGoodpara{
+
+.soundGoodpara {
   border: 1px solid grey;
   height: 60%;
   width: 50%;
@@ -208,9 +218,10 @@ h3 {
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 5px;
-margin-left: 10%;
+  margin-left: 10%;
 
 }
+
 .detailPara {
   border: 1px solid grey;
   height: 60%;
@@ -239,7 +250,8 @@ margin-left: 10%;
   font-size: 1em;
   border-radius: 25px;
 }
-.bot-imgDiv{
+
+.bot-imgDiv {
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -289,9 +301,11 @@ p {
   color: #333;
   transition: 0.3s ease-in-out;
 }
+
 .option-btn:hover {
   background: #f0f0f0;
 }
+
 .option-btn.selected {
   background: #334499;
   color: white;
@@ -312,7 +326,8 @@ p {
   transition: 0.3s;
   margin-right: 40%;
 }
-.submitBtn{
+
+.submitBtn {
   width: 50%;
   background: #334499;
   color: white;
@@ -327,10 +342,12 @@ p {
   margin-right: 33%;
 
 }
-.below-icon{
+
+.below-icon {
   color: goldenrod;
   font-size: 15px;
 }
+
 .para-container {
   border: 1px solid rgb(160, 153, 153);
   border-radius: 6%;
@@ -359,13 +376,15 @@ p {
   color: white;
   font-size: 1em;
 }
-.refreshIcon{
+
+.refreshIcon {
   font-size: 2em;
   margin-top: 3%;
   margin-right: 2%;
   color: #334499;
 }
-.sendIcon{
+
+.sendIcon {
   font-size: 2em;
   margin-top: 3%;
   margin-left: 1%;

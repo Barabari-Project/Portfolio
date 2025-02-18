@@ -16,6 +16,8 @@ export const Chats = () => {
             <img src="logo.png" alt="Barabari logo" />
             <p>The Barabari Project</p>
           </div>
+          <div className="skyBlue"></div>
+          <div className="blue"></div>
           <div className="contactButton">
             <button>Contact us</button>
             <svg className="icon" viewBox="0 0 100 80" width="46" height="20">
@@ -25,17 +27,17 @@ export const Chats = () => {
             </svg>
           </div>
         </div>
-        <div className="publicImgDiv">
+        <div className="publicimgDiv">
           <div className="logoDivPara">
             <h1>
-              Let our students <br /> build your <span>ChatBots</span>
+              Let our students build your <span>ChatBots</span>
             </h1>
             <p>
-              We are Section 8 Non-Profit upskilling candidates <br />
-              from low-income families democratizing access <br />
+              We are Section 8 Non-Profit upskilling candidates
+              from low-income families democratizing access
               to tech design employment opportunities.
             </p>
-            <button>Hire from us</button>
+            <button className="hireButton">Hire from us</button>
           </div>
           <div>
             <img className="publicImg" src="public.png" alt="A public visual" />

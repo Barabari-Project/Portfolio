@@ -2,15 +2,20 @@
   padding: 20px;
 }
 
-.blur{
+.blur {
   filter: blur(3px);
   pointer-events: none;
   transition: filter 0.3s ease-in-out;
 }
+
 .logoDiv {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+}
+
+.logoDivPara h1 {
+  font-size: 10em;
 }
 
 .logodiv {
@@ -42,6 +47,20 @@
   cursor: pointer;
 }
 
+.logoDivPara .hireButton {
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 15%;
+  background-color: #334499;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+}
+
 .contactButton svg {
   fill: #333;
 }
@@ -54,9 +73,10 @@
 }
 
 .logoDivPara h1 {
-  font-size: 2.5rem;
+  font-size: 4em;
   color: #333;
   margin-bottom: 20px;
+  width: 55%;
 }
 
 .logoDivPara h1 span {
@@ -65,10 +85,11 @@
 }
 
 .logoDivPara p {
-  font-size: 1.1rem;
+  font-size: 1.4em;
   color: #555;
   line-height: 1.5;
   margin-bottom: 20px;
+  width: 45%;
 }
 
 .logoDivPara button {
@@ -81,8 +102,8 @@
 }
 
 .publicImg {
-  max-width: 500px;
-  height: auto;
+  width: 100%;
+  height: 1000px;
 }
 
 .chatButton {
@@ -91,8 +112,77 @@
   color: #4d4b4b;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   transform: rotate(90deg);
   font-weight: 600;
+  font-size: 1em;
+}
+
+/* Media Queries for Phone Sizes */
+@media (max-width: 375px) {
+  .logoDivPara h1 {
+    font-size: 3em;
+    width: 100%;
+  }
+
+  .logoDivPara p {
+    font-size: 1em;
+    width: 100%; 
+  }
+
+  .logoDivPara .hireButton {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 60%;
+    background-color: #334499;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  
+  
+  .logoDivPara button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .logoDiv img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logoDiv {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .contactButton button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .contactButton {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .publicImg {
+    height: 600px; /* Adjust image height for mobile */
+  }
+
+  .chatButton {
+    font-size: 0.9em;
+    transform: rotate(90deg);
+    margin-left: 45%;
+    width: 90%;
+    margin-top: -100%;
+  }
+
+  .contactDiv {
+    padding: 10px; /* Adjust padding for mobile */
+  }
 }

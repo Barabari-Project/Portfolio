@@ -48,7 +48,7 @@ export const Header = () => {
                     <button onClick={goToPrev} className="prevButton">&#8249;</button>
                     <div className="cardDiv">
                         <img className="dot-Img" src="dot.png" alt="" />
-                        <img src={testimonials[currentIndex].img} alt="Testimonial" />
+                        <img className="paraImg" src={testimonials[currentIndex].img} alt="Testimonial" />
                         <img className="dotImg" src="dot.png" alt="" />
                     </div>
 
