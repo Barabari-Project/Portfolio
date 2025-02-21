@@ -41,9 +41,7 @@ h3 {
 .botimgDiv {
   display: flex;
   align-items: flex-start;
-  /* Aligns the items towards the top */
   justify-content: flex-start;
-  /* Keeps them in a row */
   margin-bottom: 10px;
   margin-left: -2.5%;
 }
@@ -57,7 +55,6 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  /* Moves the image container down */
 }
 
 .thankPara {
@@ -150,7 +147,7 @@ h3 {
   background-color: #334499;
   color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   width: fit-content;
   max-width: 80%;
   margin-left: 70%;
@@ -161,10 +158,10 @@ h3 {
 .message-Left {
   background-color: #334499;
   color: white;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 15px;
   width: fit-content;
-  max-width: 100%;
+  max-width: 80%;
   margin-left: 80%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   word-wrap: break-word;
@@ -360,7 +357,7 @@ p {
   background-color: #334499;
   color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   width: fit-content;
   max-width: 80%;
   margin-left: 100%;
@@ -390,4 +387,52 @@ p {
   margin-left: 1%;
   color: #334499;
 
+}
+
+@media (max-width: 375px){
+  .chat-content {
+    overflow-y: scroll;
+    height: 57svh;
+    padding-left: 10px;
+    overflow-x: hidden;
+  }
+  .refreshIcon{
+    margin-left: 12%;
+  }
+  .sendIcon{
+    margin-left: 2%;
+  }
+  .chat-card{
+    padding: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .message-Left{
+  background-color: #334499;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: 75%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  }
+  .messageLeft{
+    background-color: #334499;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 80%;
+    margin-left: 66%;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  }
 }

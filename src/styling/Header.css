@@ -132,10 +132,16 @@ h3 {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   .sliderdiv h5 {
     font-size: 1em;
     margin-right: 5%;
+  }
+
+  .cardDiv img{
+    width: 5.9rem;
+    height: 290px;
+
   }
 
   .prevButton,
@@ -150,33 +156,33 @@ h3 {
     gap: 5%;
   }
 
-  .cardDiv img {
-    height: 200px;
-  }
 
   .company {
-    width: 100%;
+    display: flex;
     padding: 10px;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .rayanDiv img {
-    margin-left: 0;
+    margin-right: 20%;
   }
 
   .company div h3 {
-    margin-top: 10%;
-    margin-left: 0;
+    margin: 0;
+    color: white;
+    margin-top: 20%;
+    margin-left: -90%;
   }
-
+  
   .company div p {
-    margin-left: 0;
+    margin: 2px 0;
+    color: white;
+    margin-left: -80%;
   }
-
+  
   .company div:last-child img {
     height: 25px;
-    margin-left: auto;
+    margin-left: -80%;
+    margin-top: 70%;
   }
 
   .dotImg,
@@ -187,26 +193,28 @@ h3 {
   }
   
   .commaImg {
-    width: 15%;
-    margin-left: -90%;
-    padding-top: -10%;
+    width: 8%;
+    margin-left: -100%;
+    margin-top: -100%;
   }
   
   .dotImg {
-    margin-left: -80%;
-    margin-top: -40%;
+    width: 5%;
+    height: 5%;
+    margin-right: -80%;
+    margin-bottom: -80%;
   }
   
   .dot-Img {
-    margin-right: -80%;
-    margin-bottom: -40%;
+    margin-left: -90%;
+    margin-top: -80%;
+    width: 70%;
+    height: 60%;
   }
   
   .Para {
-    width: 80%; /* Adjusted to 50% width */
-    height: 250px;
-    padding: 15px;
-    margin: 0 auto; /* Ensures it is centered */
+    width: 60%;
+    height: fit-content;
   }
   
   .paraImg {

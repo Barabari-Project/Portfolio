@@ -16,8 +16,6 @@ export const Chats = () => {
             <img src="logo.png" alt="Barabari logo" />
             <p>The Barabari Project</p>
           </div>
-          <div className="skyBlue"></div>
-          <div className="blue"></div>
           <div className="contactButton">
             <button>Contact us</button>
             <svg className="icon" viewBox="0 0 100 80" width="46" height="20">
@@ -40,7 +38,7 @@ export const Chats = () => {
             <button className="hireButton">Hire from us</button>
           </div>
           <div>
-            <img className="publicImg" src="public.png" alt="A public visual" />
+            <img className="publicImg" src="circle.png" alt="A public visual" />
             <button className="chatButton" onClick={onClickChat}>
               Chat with us
             </button>

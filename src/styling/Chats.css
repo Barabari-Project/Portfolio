@@ -15,7 +15,7 @@
 }
 
 .logoDivPara h1 {
-  font-size: 10em;
+  font-size: 2em;
 }
 
 .logodiv {
@@ -64,7 +64,11 @@
 .contactButton svg {
   fill: #333;
 }
-
+/* .publicImg{
+  width: 100%;
+  height: 100%;
+  margin-top: -10%;
+} */
 .publicImgDiv {
   display: flex;
   justify-content: space-evenly;
@@ -76,7 +80,7 @@
   font-size: 4em;
   color: #333;
   margin-bottom: 20px;
-  width: 55%;
+  width: 66%;
 }
 
 .logoDivPara h1 span {
@@ -101,11 +105,6 @@
   cursor: pointer;
 }
 
-.publicImg {
-  width: 100%;
-  height: 1000px;
-}
-
 .chatButton {
   margin-top: 20px;
   background-color: #FFCC33;
@@ -119,16 +118,33 @@
   font-size: 1em;
 }
 
+
+
 /* Media Queries for Phone Sizes */
 @media (max-width: 375px) {
   .logoDivPara h1 {
     font-size: 3em;
-    width: 100%;
+    width: 95%;
   }
 
   .logoDivPara p {
     font-size: 1em;
-    width: 100%; 
+    width: 100%;
+  }
+  .publicImg{
+    width: 100%;
+    height: 100%;
+    margin-top: -10%;
+  }
+  
+  
+  .publicimgDiv{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .publicimgDiv img{
+    width: 100%;
+    height: 100%;
   }
 
   .logoDivPara .hireButton {
@@ -143,17 +159,12 @@
     font-size: 1em;
     font-weight: 600;
   }
-  
-  
+
   .logoDivPara button {
     padding: 8px 16px;
     font-size: 0.9em;
   }
 
-  .logoDiv img {
-    width: 40px;
-    height: 40px;
-  }
 
   .logoDiv {
     flex-direction: column;
@@ -171,18 +182,20 @@
   }
 
   .publicImg {
-    height: 600px; /* Adjust image height for mobile */
+    height: 600px;
+    /* Adjust image height for mobile */
   }
 
   .chatButton {
     font-size: 0.9em;
     transform: rotate(90deg);
-    margin-left: 45%;
-    width: 90%;
-    margin-top: -100%;
+    margin-left: 75%;
+    width: 40%;
+    margin-top: -30%;
   }
 
   .contactDiv {
-    padding: 10px; /* Adjust padding for mobile */
+    padding: 10px;
+    /* Adjust padding for mobile */
   }
 }
