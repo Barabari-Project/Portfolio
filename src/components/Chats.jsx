@@ -10,6 +10,7 @@ export const Chats = () => {
 
   return (
     <>
+    <div className="box">
       <div className={`contactDiv ${chatboxOpen ? "blur" : " "} `}>
         <div className="logoDiv">
           <div className="logodiv">
@@ -25,25 +26,26 @@ export const Chats = () => {
             </svg>
           </div>
         </div>
-          <div className="logoDivPara">
-            <h1>
-              Let our students build your <span>ChatBots</span>
-            </h1>
-            <p>
-              We are Section 8 Non-Profit upskilling candidates
-              from low-income families democratizing access
-              to tech design employment opportunities.
-            </p>
-            <button className="hireButton">Hire from us</button>
-          </div>
-          <div className="animationImg">
-            <img className="publicImg" src="circle.jpeg" alt="A public visual" />
-            <button className="chatButton" onClick={onClickChat}>
-              Chat with us
-            </button>
-          </div>
+        <div className="logoDivPara">
+          <h1>
+            Let our students build your <span>ChatBots</span>
+          </h1>
+          <p>
+            We are Section 8 Non-Profit upskilling candidates
+            from low-income families democratizing access
+            to tech design employment opportunities.
+          </p>
+          <button className="hireButton">Hire from us</button>
         </div>
+        <div className="animationImg">
+          <img className="publicImg" src="circle.jpeg" alt="A public visual" />
+          <button className="chatButton" onClick={onClickChat}>
+            Chat with us
+          </button>
+        </div>
+      </div>
       <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />
+      </div>
     </>
 
   );

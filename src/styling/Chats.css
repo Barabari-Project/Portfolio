@@ -1,6 +1,3 @@
-.contactDiv {
-  padding: 20px;
-}
 .logodiv{
   margin-left: 15%;
 }
@@ -36,6 +33,7 @@
 
 .logoDiv p {
   font-size: 1.2em;
+  margin-left: -10%;
 }
 .animationImg {
   position: relative; /* Make the container of the image relative to position elements inside it */
@@ -210,17 +208,12 @@
     padding: 8px 16px;
     font-size: 0.9em;
   }
-  /* Add this to your existing CSS file */
-.gradientDiv {
-  position: absolute;  /* Make sure it's positioned properly */
-  top: 0;
-  left: 0;
+.box{
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);  /* Example gradient */
-  z-index: -1;  /* Make sure it's behind other content */
+  height: auto;
+  background-image: linear-gradient(rgb(151, 151, 233), rgb(186, 235, 186), rgb(242, 242, 146));
+  margin-bottom: 3%;
 }
-
 
   .contactButton svg {
     margin-top: 15%;
