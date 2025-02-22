@@ -25,7 +25,6 @@ export const Chats = () => {
             </svg>
           </div>
         </div>
-        <div className="publicimgDiv">
           <div className="logoDivPara">
             <h1>
               Let our students build your <span>ChatBots</span>
@@ -37,14 +36,13 @@ export const Chats = () => {
             </p>
             <button className="hireButton">Hire from us</button>
           </div>
-          <div>
-            <img className="publicImg" src="circle.png" alt="A public visual" />
+          <div className="animationImg">
+            <img className="publicImg" src="circle.jpeg" alt="A public visual" />
             <button className="chatButton" onClick={onClickChat}>
               Chat with us
             </button>
           </div>
         </div>
-      </div>
       <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />
     </>
 

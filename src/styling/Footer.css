@@ -1,17 +1,18 @@
 .logoMaindiv {
     display: flex;
-    flex-direction: column; /* Align content in a column */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
     background-color: black;
     height: 300px;
     padding-top: 1%; 
-    /* gap: 20px; Maintain gap between elements */
+    background-image: url('motpath.svg');
 }
 .logodiv{
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-right: 15%;
 }
 .logo{
     font-size: 1.5rem;
@@ -26,7 +27,7 @@
     font-size: 1.3rem;
 }
 .paraDivfirstPara{
-    margin-left: 30%;
+    margin-left: 25%;
 }
 .githubdiv{
     display: flex;
@@ -77,11 +78,16 @@
 }
 @media screen and (max-width: 768px) {
     .logoMaindiv {
-        height: auto; /* Remove fixed height on small screens */
-        padding-top: 10px;
-        gap: 15px; /* Smaller gap between elements */
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; 
+        background-color: black;
+        height: 170px;
+        padding-top: 1%; 
+        background-image: url('motpath.svg');
     }
-
+    
     .logodiv {
         flex-direction: row; /* Stack the social icons vertically */
         gap: 10px; 

@@ -15,7 +15,6 @@ export const Footer = () => {
       <div className="paraDiv">
         <p className="paraDivfirstPara">2024 @ All Right Reserved</p>
         <p>Designed and Developed by Barabari Project Dev Team</p>
-
       </div>
     </div>
   )

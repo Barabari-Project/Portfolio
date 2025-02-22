@@ -1,6 +1,9 @@
 .contactDiv {
   padding: 20px;
 }
+.logodiv{
+  margin-left: 15%;
+}
 
 .blur {
   filter: blur(3px);
@@ -17,7 +20,10 @@
 .logoDivPara h1 {
   font-size: 2em;
 }
-
+.publicImg{
+  width: 100%;
+  height: auto;
+}
 .logodiv {
   display: flex;
 }
@@ -31,27 +37,39 @@
 .logoDiv p {
   font-size: 1.2em;
 }
-
-.contactButton {
-  display: flex;
-  align-items: center;
+.animationImg {
+  position: relative; /* Make the container of the image relative to position elements inside it */
 }
 
-.contactButton button {
-  color: #333;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  padding: 10px 15px;
-  margin-right: 10px;
-  cursor: pointer;
+.contactButton {
+  position: absolute; /* Positioning relative to .animationImg */
+  top: 5%; /* Centering vertically */
+  right: 6%; /* Centering horizontally */
+  transform: translate(-50%, -50%); /* To make sure it's exactly centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.contactButton button{
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+}
+.icon rect{
+  fill: #ffff;
 }
 
 .logoDivPara .hireButton {
   padding: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  width: 15%;
+  width: 10%;
+  margin-left: 15%;
   background-color: #334499;
   color: white;
   border: none;
@@ -64,23 +82,19 @@
 .contactButton svg {
   fill: #333;
 }
-/* .publicImg{
-  width: 100%;
-  height: 100%;
-  margin-top: -10%;
-} */
-.publicImgDiv {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 30px;
+
+.animationImg {
+  margin-left: 45%;
+  margin-top: -25%;
+  position: relative;
 }
 
 .logoDivPara h1 {
-  font-size: 4em;
+  font-size: 3.5em;
   color: #333;
   margin-bottom: 20px;
-  width: 66%;
+  width: 35%;
+  margin-left: 15%;
 }
 
 .logoDivPara h1 span {
@@ -93,7 +107,8 @@
   color: #555;
   line-height: 1.5;
   margin-bottom: 20px;
-  width: 45%;
+  width: 27%;
+  margin-left: 15%;
 }
 
 .logoDivPara button {
@@ -106,7 +121,8 @@
 }
 
 .chatButton {
-  margin-top: 20px;
+  margin-bottom: -80%;
+  margin-left: 80%;
   background-color: #FFCC33;
   color: #4d4b4b;
   padding: 10px 20px;
@@ -116,6 +132,7 @@
   transform: rotate(90deg);
   font-weight: 600;
   font-size: 1em;
+  position: relative;
 }
 
 
@@ -125,24 +142,41 @@
   .logoDivPara h1 {
     font-size: 3em;
     width: 95%;
+    margin: 0%;
+  }
+
+  .logoDiv img {
+    width: 25px;
+    height: 25px;
+    margin-left: -70%;
+  }
+
+
+  .logoDiv {
+    display: flex;
+    flex-direction: row;
   }
 
   .logoDivPara p {
     font-size: 1em;
     width: 100%;
+    margin: 0%;
   }
-  .publicImg{
-    width: 100%;
-    height: 100%;
-    margin-top: -10%;
+
+  .publicImg {
+    display: none;
   }
-  
-  
-  .publicimgDiv{
+
+.icon rect{
+  fill: black;
+}
+
+  .publicimgDiv {
     display: flex;
     flex-direction: column-reverse;
   }
-  .publicimgDiv img{
+
+  .publicimgDiv img {
     width: 100%;
     height: 100%;
   }
@@ -150,25 +184,46 @@
   .logoDivPara .hireButton {
     padding-left: 10px;
     padding-right: 10px;
-    width: 60%;
+    width: 40%;
     background-color: #334499;
     color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     font-size: 1em;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: -3%;
     font-weight: 600;
+  }
+
+  .contactButton button {
+    display: none;
+  }
+
+  .logoDiv p {
+    margin-top: 2%;
+    margin-left: -8%;
   }
 
   .logoDivPara button {
     padding: 8px 16px;
     font-size: 0.9em;
   }
+  /* Add this to your existing CSS file */
+.gradientDiv {
+  position: absolute;  /* Make sure it's positioned properly */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);  /* Example gradient */
+  z-index: -1;  /* Make sure it's behind other content */
+}
 
 
-  .logoDiv {
-    flex-direction: column;
-    align-items: start;
+  .contactButton svg {
+    margin-top: 15%;
   }
 
   .contactButton button {
@@ -181,19 +236,14 @@
     align-items: center;
   }
 
-  .publicImg {
-    height: 600px;
-    /* Adjust image height for mobile */
-  }
-
   .chatButton {
     font-size: 0.9em;
     transform: rotate(90deg);
-    margin-left: 75%;
-    width: 40%;
-    margin-top: -30%;
+    margin-left: 50%;
+    margin-right: -80%;
+    margin-top: 7%;
+    margin-bottom: 2%;
   }
-
   .contactDiv {
     padding: 10px;
     /* Adjust padding for mobile */
