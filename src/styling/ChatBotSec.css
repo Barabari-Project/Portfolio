@@ -1,0 +1,222 @@
+/* Chats2.css - Improved Styling */
+
+.chat-card {
+  width: 400px; /* Reduced width for better responsiveness */
+  background-color: #ffffff;
+  max-height: 100vh;
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More subtle shadow */
+  padding: 15px; /* Consistent padding */
+  position: fixed;
+  height: 78vh;
+  top: 85px;
+  right: 2%; /* Adjusted positioning */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  z-index: 100;
+}
+
+.chatHeader {
+  background-color: #fff8e1; /* Light yellow header, softer */
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee; /* Light border for separation */
+  border-radius: 10px 10px 0 0; /* rounded top corners*/
+}
+
+.backIcon,
+.closeIcon {
+  background: none;
+  color: #333; /* Darker, more readable icon color */
+  border: none;
+  font-size: 1.2rem; /* Adjusted icon size */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.backIcon:hover,
+.closeIcon:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.chatTitle {
+  font-weight: 600;
+  color: #334499;
+  font-size: 1.1rem;
+}
+
+.chat-content {
+  overflow-y: auto; /* Changed to auto for better scroll handling */
+  max-height: 50vh; /* Adjusted height for flexibility */
+  padding: 15px;
+  overflow-x: hidden;
+}
+
+.botMessage {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.botAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  background-color: #334499; /* Bot avatar background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botImg {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.messageText {
+  background-color: #f0f0f0; /* Light background for messages */
+  border-radius: 18px;
+  padding: 10px 15px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 0.95rem; /* Slightly smaller font for messages */
+  color: #333;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.option-btn {
+  padding: 10px 18px;
+  border: 1px solid #ddd;
+  border-radius: 25px; /* More rounded buttons */
+  background-color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.option-btn:hover {
+  background-color: #f8f8f8;
+  border-color: #bbb;
+}
+
+.option-btn.selected {
+  background-color: #334499;
+  color: white;
+  border-color: #334499;
+}
+
+.submit-btn {
+  width: 45%; /* Adjusted width */
+  background-color: #334499;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: #28377a;
+}
+
+.message-Left {
+  background-color: #334499;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  margin-left: auto; /* Align to the right */
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+}
+
+.message-Left p {
+  margin: 0;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #334499;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  margin-right: 10px;
+  background-color: #f9f9f9;
+}
+
+.refreshIcon,
+.sendIcon {
+  font-size: 1.5rem;
+  color: #334499;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.refreshIcon:hover,
+.sendIcon:hover {
+  color: #28377a;
+}
+
+.submitBtn {
+  width: 50%;
+  background: #334499;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  margin: 10px auto;
+  display: block;
+}
+
+.below-icon {
+  color: goldenrod;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+@media (max-width: 480px) {
+  .chat-card {
+    width: 90%;
+    top: 5%;
+    right: 5%;
+    left: 5%;
+  }
+
+  .chat-content {
+    max-height: 60vh;
+  }
+
+  .message-Left {
+    max-width: 90%;
+  }
+}

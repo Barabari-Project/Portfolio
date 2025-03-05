@@ -1,70 +1,41 @@
-import { useState } from 'react'
-import './App.css'
-import { Header } from './components/Header'
-import { Public } from './components/Public'
-import { Heading } from './components/Heading'
-import { Footer } from './components/Footer'
-import { Feature } from './components/Feature'
-import { Chats } from './components/Chats'
-
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HeroSection from './pages/HeroSection/HeroSection';
+import HireSection from './pages/HiringSection/HiringSection';
+import ServiceSection from './pages/ServiceSection/ServiceSection';
+import FeaturePage from './pages/Feature/FeaturePage';
+import Testimonial from './pages/Testimonial/Testimonial';
+import Header from './pages/Header/Header';
+import Home from './pages/HeroSection/HeroSection'; // Create this component if needed
+import Services from './pages/ServiceSection/ServiceSection'; // Create this component if needed
+import ScrollToTop from './components/ScrollToTop'; // Recommended helper component
+import Footer from './pages/Footer/Footer';
+const App = () => {
   return (
-    <>
-      <Chats />
-      <Heading />
-      <div>
-        <h1 className='featureH1'>Featured Projects</h1>
-        <div className='card-div1'>
-          <div className='cards'>
-            <Feature title="Sprint Up Website"
-              description="E-learning platform landing page"
-              image="img1.png" />
-          </div>
-
-          <div className='cards'>
-            <Feature title="Sprint Up Website"
-              description="E-learning platform landing page"
-              image="img2.png" />
-
-          </div>
-
-          <div className='cards'>
-            <Feature title="Sprint Up Website"
-              description="E-learning platform landing page"
-              image="img3.png" />
-
-          </div>
-        </div>
-
-        <div className='card-div2'>
-          <div className='cards'>
-            <Feature title="Sprint Up Website"
-              description="E-learning platform landing page"
-              image="img4.png" />
-          </div>
-
-          <div className='cards'>
-            <Feature title="Sprint Up Website"
-              description="E-learning platform landing page"
-              image="img4.png" />
-
-          </div>
-
-          <div className='cards'>
-            <Feature title="Sprint Up Website"
-              description="E-learning platform landing page"
-              image="img4.png" />
-          </div>
-        </div>
-      </div>
+    <Router>
+      <ScrollToTop />
       <Header />
-      <Public />
-      <Footer/>
+      
+      <Routes>
+        {/* Main landing page route */}
+        <Route path="/" element={
+          <>
+            <HeroSection />
+            <HireSection />
+            <ServiceSection />
+            <FeaturePage />
+            <Testimonial />
+            <Footer />
+          </>
+        } />
 
-    </>
-  )
+        {/* Example separate services page */}
+        <Route path="/services" element={<Services />} />
+        
+        {/* Add more routes as needed */}
+      </Routes>
+    </Router>
+  );
+};
 
-
-}
-
-export default App
+export default App;

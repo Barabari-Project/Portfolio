@@ -1,92 +1,101 @@
-.card-div1, .card-div2 {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Sabhi screens ke liye gap */
-    flex-wrap: wrap;
+.feature-page {
     padding: 20px;
 }
-.card {
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Prevent content from overflowing */
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-    background-color: #fff; /* White background for card */
-    text-align: center; /* Center-align card content */
+
+.featureH1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
-/* Card content styling */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px; /* Limit the overall width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 400px; /* Consistent maximum width */
+    /* margin: 0 auto; center the card in its grid cell */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fill the space */
+}
+
 .card-content {
     padding: 20px;
 }
 
 .card-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
-    color: #334499; /* Custom blue color */
-    text-align: start;
+    color: #334499;
+    text-align: left;
 }
 
 .card-content p {
     font-size: 1rem;
-    color: #666; /* Soft gray for description */
-    margin-bottom: 15px;
-    text-align: start;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6; /* Improved readability */
 }
 
-.card-content h5 {
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 10px;
-    display: flex; /* Make h5 a flex container */
-    align-items: center; /* Align content vertically */
-    justify-content: flex-end; /* Align content to the right */
-    gap: 8px; /* Space between h5 text and SVG */
-}
-
-.card-content h5 svg {
-    width: 20px; /* Set desired size for SVG */
-    height: 20px;
-}
 .h5-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: -15px;
-    margin-left: 50%;
-    gap: 8px;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.h5-container h5 {
+    font-size: 1rem;
+    color: #334499;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.h5-container h5:hover {
+    color: #28357a;
 }
 
 .h5-container svg {
     width: 20px;
     height: 20px;
-    cursor: pointer;
-    margin-bottom: 7%;
+    fill: #334499;
+    transition: fill 0.3s ease-in-out;
 }
 
-/* Section title styling */
-.featureH1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-    margin: 20px 0;
-    font-weight: bold;
+.h5-container svg:hover {
+    fill: #28357a;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 375px) {
-    .card-div1, .card-div2 {
-        display: flex;
-        justify-content: center;
-        gap: 25px; /* Sirf chhoti screens ke liye gap */
-        flex-wrap: wrap;
-        padding: 20px;
-    }
-    .card {
-        width: 100%; /* Full-width cards on small screens */
-    }
-
-    .card-content h5 {
-        margin-top: 15px;
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
     }
 }
