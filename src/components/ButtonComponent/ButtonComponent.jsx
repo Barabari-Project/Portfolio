@@ -8,11 +8,11 @@ const DynamicButton = ({
   onClick,
 }) => {
   return (
-    <div className="absolute z-20" style={position}>
+    <div className="absolute z-20 max-md:flex max-md:justify-center max-md:w-full max-md:!left-0 max-md:!top-[445px]" style={position}>
       <div className=" relative">
         <div className="overflow-visible">
           <div
-            className=" font-normal text-[18px] px-8 py-3 rounded-full perspective-300  cursor-pointer"
+            className=" font-normal text-[18px] px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0"
             style={{
               backgroundColor: bgColor,
               color: textColor,

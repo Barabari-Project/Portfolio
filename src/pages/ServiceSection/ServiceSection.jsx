@@ -7,10 +7,8 @@ import {
   FaMobileAlt,
   FaRobot,
   FaCode,
-  
 } from "react-icons/fa";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
-
 
 const serviceData = [
   {
@@ -44,13 +42,12 @@ const serviceData = [
     icon: <FaCode />,
   },
 ];
-
 const ServiceCard = ({ title, description, icon }) => {
   return (
-    <div className="col-lg-4 col-md-6 col-sm-12 custommarginbottom flex justify-between">
-      <div className="single-cases-card">
-        <div className="feature-block-one">
-          <div className="inner-box flex justify-center flex-col items-center shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">
+    <div className="w-full p-4 sm:w-1/2 lg:w-1/3 xl:w-1/3 2xl:w-1/3">
+      <div className="single-cases-card h-full">
+        <div className="feature-block-one h-full">
+          <div className="inner-box flex flex-col items-center justify-between shadow-[4px_4px_10px_rgba(0,0,0,0.2)] h-full relative pb-16">
             <div className="icon-box">
               <div className="anim-icon group">
                 <span className="icon icon-1"></span>
@@ -59,22 +56,22 @@ const ServiceCard = ({ title, description, icon }) => {
               </div>
               <div className="text-icon">{icon}</div>
             </div>
-            <h3>
-              <a
-                href="https://azim.commonsupport.com/Detox/index-2.html"
-                className="text-[20px] font-extrabold"
-              >
-                {title}
-              </a>
+            <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-xl 2xl:text-2xl font-extrabold text-center px-2">
+              <a href="#">{title}</a>
             </h3>
-            <p className="text-gray-400 mt-2.5">{description}</p>
+            <p className="text-gray-400 mt-2.5 text-sm sm:text-base px-4 text-center">
+              {description}
+            </p>
 
             {/* Bottom Strip */}
             <div className="bg-[#f3f7ff] w-full py-3 flex items-center justify-center gap-2 absolute bottom-0 left-0 right-0 rounded-b-[1.4rem]">
-            <a href="#" className="text-blue-600 font-semibold">
+              <a
+                href="#"
+                className="text-blue-600 font-semibold text-sm sm:text-base"
+              >
                 See More
               </a>
-              <BsArrowUpRightCircleFill className="text-blue-600" />
+              <BsArrowUpRightCircleFill className="text-blue-600 text-sm sm:text-base" />
             </div>
           </div>
         </div>
@@ -85,29 +82,15 @@ const ServiceCard = ({ title, description, icon }) => {
 
 const ServiceSection = () => {
   return (
-    <div>
-      <section className="xs-section-padding" id="servicesSections">
-        <div className="w-full">
-          <div className="row no-gutters agency-filter-wraper">
-            <div className="col-lg-12">
-              <div
-                className="agency-section-title"
-                style={{ textAlign: "center", width: "100%" }}
-              >
-                <h3
-                  style={{
-                    fontSize: "45px",
-                    color: "black",
-                    fontFamily: "Open Sans, sans-serif",
-                    fontWeight: "700",
-                  }}
-                >
-                  Our Services
-                </h3>
-              </div>
-            </div>
+    <div className="py-12 md:py-16 lg:py-20">
+      <section className="px-4 sm:px-6 lg:px-8" id="servicesSections">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+              Our Services
+            </h3>
           </div>
-          <div className="row gy-10 flex gap-20 flex-wrap justify-center">
+          <div className="flex flex-wrap -mx-4">
             {serviceData.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}

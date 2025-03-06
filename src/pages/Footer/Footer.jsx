@@ -52,25 +52,23 @@ const Footer = () => {
       }}
     >
       <div className="container mx-auto px-4 text-center">
-        <div className="flex justify-center space-x-4 mb-4">
-          {socialIcons.map((item, index) => (
-            <div className="">
-
-            <a
-              key={index}
-              href={item.href}
-              className={`bg-[${item.bgColor}] p-2 rounded-full hover:opacity-80 transition-opacity`}
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-                <div className="p-3 bg-black opacity-80 rounded-full transition-all duration-300 scale-90 hover:scale-100">
-
-              {item.icon}
-                </div>
-            </a>
-                </div>
-          ))}
+      <div className="flex justify-center space-x-4 mb-4">
+  {socialIcons.map((item, index) => (
+    <div key={index} className="">
+      <a
+        href={item.href}
+        className={`bg-[${item.bgColor}] p-2 rounded-full hover:opacity-80 transition-opacity`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="p-3 bg-black opacity-80 rounded-full transition-all duration-300 scale-90 hover:scale-100">
+          {item.icon}
         </div>
+      </a>
+    </div>
+  ))}
+</div>
+
         <div className="text-white text-sm">
           <p className="mb-1">2024 © All Rights Reserved</p>
           <p>Designed and Developed by Barabari Project Dev Team</p>

@@ -28,7 +28,7 @@
 }
 .header-transparent + .creative-portfolio-section,
 .sticky-header + .creative-portfolio-section {
-margin-top: 111px;
+  margin-top: 111px;
 }
 .off-canvas-menu-area .menu-overlay {
   position: fixed;
@@ -218,15 +218,15 @@ margin-top: 111px;
   float: right;
 }
 swiper-container-vertical
-> .swiper-pagination-bullets
-.swiper-pagination-bullet {
-margin: 14px 0;
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 14px 0;
 }
 .offcanvas-menu-wraper .menu-container {
   width: 50%;
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   float: left;
   padding-left: 9.76vw;
 }
@@ -241,20 +241,20 @@ margin: 14px 0;
 .swiper-container.vertical-slider {
   height: 450px;
 }
-.auto-container{
-  position:static;
-  max-width:1200px;
-  padding:0px 15px;
-  margin:0 auto;
+.auto-container {
+  position: static;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
 }
-.main-header .outer-container .menu-right-content .phone a{
+.main-header .outer-container .menu-right-content .phone a {
   color: #6377ee;
 }
-.main-header .outer-container .menu-right-content .btn-box a:before{
+.main-header .outer-container .menu-right-content .btn-box a:before {
   border-bottom: 50px solid #6377ee;
 }
 
-.main-header .outer-container .menu-right-content .btn-box a:after{
+.main-header .outer-container .menu-right-content .btn-box a:after {
   border-bottom: 50px solid #6377ee;
 }
 .offcanvas-menu-wraper {
@@ -266,7 +266,6 @@ margin: 14px 0;
   visibility: hidden;
   overflow: auto;
 }
-
 
 .offcanvas-menu-wraper.active {
   visibility: visible;
@@ -347,22 +346,22 @@ margin: 14px 0;
 .owl-item.active .agency-banner-content .banner-title,
 .owl-item.active .agency-banner-content .btn,
 .owl-item.active .agency-banner-content p {
--webkit-animation: inLeft 2s ease 0s both;
-animation: inLeft 2s ease 0s both;
+  -webkit-animation: inLeft 2s ease 0s both;
+  animation: inLeft 2s ease 0s both;
 }
 .owl-item.active .agency-banner-content p {
--webkit-animation-delay: 0.2s;
-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .owl-item.active .agency-banner-content .btn-wraper .btn {
--webkit-animation-delay: 0.4s;
-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .owl-item.active .agency-banner-content .btn-wraper .btn + .btn {
--webkit-animation-delay: 0.6s;
-animation-delay: 0.6s;
--webkit-animation-name: inRight;
-animation-name: inRight;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-name: inRight;
+  animation-name: inRight;
 }
 .agency-banner-content-group {
   width: 100%;
@@ -583,10 +582,10 @@ animation-name: inRight;
   font-family: "Roboto", sans-serif;
   margin-bottom: 30px;
 }
-.banner-title{
-font-size: 3.75rem;
-font-weight: 600;
-margin-bottom: 45px;
+.banner-title {
+  font-size: 3.75rem;
+  font-weight: 600;
+  margin-bottom: 45px;
 }
 .nav-sticky.sticky-header .humburger.style3 .humburger-icons > span {
   background-color: #000000;
@@ -743,8 +742,8 @@ margin-bottom: 45px;
 }
 .header-style3 .nav-header > .nav-brand,
 .header-style11 .nav-header > .nav-brand {
-min-height: 101px;
-line-height: 101px;
+  min-height: 101px;
+  line-height: 101px;
 }
 .offcanvas-menu li ul {
   display: none;
@@ -861,11 +860,10 @@ line-height: 101px;
   visibility: hidden;
 }
 
-
 .offcanvas-content-wraper {
   width: 50%;
   display: table;
-  height: 100%;
+  height: 100vh;
   float: right;
   padding-left: 9.76vw;
 }
@@ -971,3 +969,112 @@ line-height: 101px;
 .simple-social-list li a.facebook:hover {
   color: #283b63;
 }
+
+/* mobile */
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .off-canvas-menu-area .menu-overlay {
+    background: white !important;
+    background-image: none !important;
+  }
+
+  .menu-and-content-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+  }
+
+  .menu-container,
+  .offcanvas-content-wraper {
+    width: 100% !important;
+    float: none !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  .menu-container {
+    order: 1;
+    padding-top: 20px;
+  }
+
+  .offcanvas-content-wraper {
+    order: 2;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar {
+    width: 50%;
+  }
+  .mainMenu {
+    position: fixed;
+    background-color: rgb(198, 27, 27);
+  }
+  .offcanvas-menu {
+    margin-bottom: 0 !important;
+  }
+
+  .offcanvas-content {
+    display: block !important;
+    padding-bottom: 40px;
+    /* margin: auto; */
+  }
+
+  .offcanvas-content section {
+    margin-top: 25px;
+  }
+  .offcanvas-menu-wraper .menu-container {
+    margin-top: 8rem;
+    justify-content: center;
+  }
+  .off-canvas-menu-area .menu-overlay {
+      position: fixed;
+
+  }
+
+}
+
+@media(max-width:320px){
+  .navbar {
+    width: 76%;
+  }
+}
+/* Existing Desktop Styles */
+.offcanvas-menu-wraper .menu-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  float: left;
+  padding-left: 9.76vw;
+}
+
+.offcanvas-content-wraper {
+  width: 50%;
+  /* display: table; */
+  height: 100vh;
+  float: right;
+  padding-left: 9.76vw;
+}
+
+.off-canvas-menu-area .menu-overlay {
+  top: 0;
+  left: 0;
+  height: 150vh;
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    white 0%,
+    white 50%,
+    #f7f9fb 50%,
+    #f7f9fb 100%
+  );
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.8s ease;
+  transform-origin: 0% 50%;
+}
+
+/* Keep other existing styles below */
+/* ... (remaining CSS remains the same) ... */

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../../styling/ChatBotSec.css";
-import { IoCloseCircleOutline } from "react-icons/io5";
-import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import { ChatFrame } from "./ChatFrame";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { FiArrowRight } from "react-icons/fi";
 import { BiSolidHandDown } from "react-icons/bi";
@@ -50,13 +49,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
     }
   };
 
-  const BackClick = () => {
-    chatboxOpener(false);
-  };
-
-  const handleInputChange = (e) => {
-    setUserInput(e.target.value);
-  };
+  const handleInputChange = (e) => setUserInput(e.target.value);
 
   const handleSendMessage = () => {
     if (userInput.trim()) {
@@ -95,17 +88,11 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
   return (
     <div>
       {chatboxOpen && (
-        <div className="chat-card">
-          <div className="chatHeader">
-            <div className="backIcon" onClick={BackClick}>
-              <FaRegArrowAltCircleLeft />
-            </div>
-            <div className="chatTitle">Chat with us</div>
-            <div className="closeIcon" onClick={BackClick}>
-              <IoCloseCircleOutline />
-            </div>
-          </div>
-          <div className="chat-content" ref={chatContentRef}>
+        <ChatFrame
+          onBackClick={() => chatboxOpener(false)}
+          title="Chat with us"
+        >
+          <div className="chat-content custom-scroll" ref={chatContentRef}>
             <div className="botMessage">
               <div className="botAvatar">
                 <img className="botImg" src="bot.png" alt="bot image" />
@@ -139,11 +126,11 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
               onClick={handleSubmit}
               disabled={selectedOptions.length === 0}
             >
-              Submit 
+              Submit
             </button>
 
             {selectedOptions.includes("Website") && showMessage && (
-              <div className="message-Left">
+              <div className="message-Left mt-2">
                 <p>{message}</p>
               </div>
             )}
@@ -158,7 +145,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
                     <p>Awesome, can you let us know your budget?</p>
                   </div>
                 </div>
-                <div className="options-container">
+                <div className="options-container mt-3">
                   {budgetOptions.map((option) => (
                     <button
                       key={option}
@@ -239,7 +226,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
             />
             <TbSend className="sendIcon" onClick={handleSendMessage} />
           </div>
-        </div>
+        </ChatFrame>
       )}
     </div>
   );

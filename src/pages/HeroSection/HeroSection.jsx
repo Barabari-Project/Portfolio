@@ -84,48 +84,47 @@ const HeroSection = () => {
                 ></div>
                 {/* Contact Us Button */}
                 {/* Let our students build your ChatBots Text */}
-                <div className="absolute z-20 left-[70px] top-[180px]">
-                  <div className=" relative">
-                    <div className="overflow-visible">
-                      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-5xl">
-                        Let our students <br className="" /> build your
-                        <span
-                          id="typingelement"
-                          className="text-[#2d41a2] ml-2 md:ml-3"
-                        ></span>
-                      </h1>
+                <div className="absolute max-md:w-full z-20 left-[55px] top-[180px] max-md:left-0 max-md:top-[100px] px-4">
+                <div className="relative">
+                  <div className="overflow-visible max-md:w-full max-md:flex max-md:justify-center">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-3xl max-md:text-center ">
+                      Let our students <br className="max-md:hidden" /> build your <br className="md:hidden"/>
+                      <span
+                        id="typingelement"
+                        className="text-[#2d41a2] ml-2 md:ml-3"
+                      ></span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+  
+              {/* We are a Section 8 Non-Profit ... Text */}
+              <div className="tp-parallax-wrap absolute z-20 left-[70px] top-[400px] max-md:px-5 max-md:left-0 max-md:top-[250px]">
+                <div className="relative">
+                  <div className="tp-mask-wrap overflow-visible">
+                    <div
+                      className="text-gray-400 w-[600px] max-md:w-full font-extrabold text-[25px] max-md:text-center leading-[30px] tp-rs-perspective perspective-300 tp-with-parallax"
+                      style={{
+                        whiteSpace: "normal", // Changed to normal to allow text wrapping
+                        letterSpacing: "px",
+                        fontWeight: 400,
+                      }}
+                    >
+                      We are a Section 8 Non-Profit upskilling candidates from
+                      low-income families democratizing access to tech and
+                      design employment opportunities.
                     </div>
                   </div>
                 </div>
-                {/* We are a Section 8 Non-Profit ... Text */}
-                <div className="tp-parallax-wrap absolute z-20 left-[70px] top-[400px]">
-                  <div className=" relative">
-                    <div className="tp-mask-wrap overflow-visible">
-                      <div
-                        className="text-gray-400 font-extrabold text-[25px] leading-[30px]  tp-rs-perspective perspective-300 tp-with-parallax"
-                        style={{
-                          whiteSpace: "normal", // Changed to normal to allow text wrapping
-
-                          letterSpacing: "px",
-
-                          fontWeight: 400,
-                          width: "600px", // Set a width for text wrapping, adjust as needed
-                        }}
-                      >
-                        We are a Section 8 Non-Profit upskilling candidates from
-                        low-income families democratizing access to tech and
-                        design employment opportunities.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Hire from us Button */}{" "}
-                <DynamicButton
-                  text="Hire From Us"
-                  position={{ left: "72px", top: "520px" }}
-                  onClick={() => alert("Button clicked!")}
-                  className="font-sans"
-                />
+              </div>
+  
+              {/* Hire from us Button */}
+              <DynamicButton
+                text="Hire From Us"
+                position={{ left: "72px", top: "520px" }}
+                onClick={() => alert("Button clicked!")}
+                className="font-sans "
+              />
                 {/* Parallax Elements - Keep these graphic elements as they are */}
                 <AnimatedCircles />
                 {/* Vector Images */}

@@ -1,35 +1,20 @@
 import React, { useState } from "react";
-import "../../styling/ChatBotFirst.css"; // Assuming you keep your CSS in Chats1.css
+import "../../styling/ChatBotFirst.css";
 import { Chats2 } from "./ChatBotSec";
-import { IoCloseCircleOutline } from "react-icons/io5";
-import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import { ChatFrame } from "./ChatFrame";
 import { FiArrowRight } from "react-icons/fi";
 
 export const Chats1 = ({ chatBoxHandler, chatBoxVar }) => {
   const [chatboxOpen, setchatboxOpen] = useState(false);
 
-  const onClickStartChat = () => {
-    setchatboxOpen(true);
-  };
-
-  const handleBackClick = () => {
-    chatBoxHandler(false);
-  };
+  const onClickStartChat = () => setchatboxOpen(true);
+  const handleBackClick = () => chatBoxHandler(false);
 
   return (
     <div className="chatPage">
       {chatBoxVar && (
-        <div className={`chatContainer ${!chatboxOpen ? "hidden" : "block"}`}>
-          <div className="chatHeader">
-            <div className="backIcon" onClick={handleBackClick}>
-              <FaRegArrowAltCircleLeft />
-            </div>
-            <div className="chatTitle">Chat with us</div>
-            <div className="closeIcon" onClick={handleBackClick}>
-              <IoCloseCircleOutline />
-            </div>
-          </div>
-          <div className="contentArea">
+        <ChatFrame onBackClick={handleBackClick} title="Chat with us">
+          <div className={`contentArea ${!chatboxOpen ? "hidden" : "block"}`}>
             <img className="searchImg" src="search.png" alt="Search" />
             <h1 className="greeting">Hi There!</h1>
             <p className="question">Want to work with us?</p>
@@ -53,7 +38,7 @@ export const Chats1 = ({ chatBoxHandler, chatBoxVar }) => {
               </a>
             </div>
           </div>
-        </div>
+        </ChatFrame>
       )}
       <Chats2 chatboxOpen={chatboxOpen} chatboxOpener={setchatboxOpen} />
     </div>

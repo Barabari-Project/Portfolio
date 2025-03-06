@@ -14,6 +14,14 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
   z-index: 100;
 }
+@media (max-width:768px){
+  .chat-card {
+    
+    height: 90vh;
+    top: 25px;
+    
+  }
+}
 
 .chatHeader {
   background-color: #fff8e1; /* Light yellow header, softer */
@@ -219,4 +227,24 @@
   .message-Left {
     max-width: 90%;
   }
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+@media (min-width: 768px) {
+  .custom-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #3949AB;
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.8);
 }

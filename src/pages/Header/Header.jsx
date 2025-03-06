@@ -49,8 +49,7 @@ const Header = () => {
   // Navigation items configuration
   const menuItems = [
     { path: "/", text: "HOME" },
-    { path: "services", text: "SERVICES", route: true }, // Regular route
-    { path: "servicesSections", text: "SERVICES", scroll: true }, // Scroll link
+    { path: "/", text: "SERVICES", route: true }, // Regular route
   ];
 
   const socialLinks = [
@@ -100,13 +99,13 @@ const Header = () => {
       data-scroll-to="top"
     >
       <div
-        className={`off-canvas-menu-area menuHeader ${
+        className={`off-canvas-menu-area menuHeader  ${
           isMenuOpen ? "nav-is-open" : ""
         }`}
       >
-        <div className="container">
-          <div className="offset-menu-wraper clearfix">
-            <div className="float-left ml-[4rem] mt-4">
+        <div className="container !bg-white ">
+          <div className="offset-menu-wraper clearfix ">
+            <div className="float-left ml-[4rem] mt-4 max-md:ml-5">
               <Link
                 to="/"
                 className="offcanvas-nav-brand"
@@ -116,12 +115,12 @@ const Header = () => {
                 <img
                   src="/src/assets/barabari_logo.png"
                   alt="Barabari Logo"
-                  className="barabari-logo w-[60px] h-[60px]"
+                  className="barabari-logo w-[60px] h-[60px] max-md:w-[40px] max-md:h-[40px]"
                  
                   loading="lazy"
                 />
                 <div className=" ml-2 text-[10px] !flex !items-center">
-                  <p className="banner-title website-name !text-2xl !mb-0">
+                  <p className="banner-title website-name !text-2xl !mb-0 max-md:!text-[18px]">
                     The Barabari Project
                   </p>
                 </div>
@@ -129,16 +128,16 @@ const Header = () => {
             </div>
 
             <div
-              className={`humburger style3 fullscreen_menu_tigger right-32 max-lg:right-0 ${
+              className={`humburger style3 fullscreen_menu_tigger right-32 max-lg:right-0 max-md:right-[22px] max-md:top-[10px] ${
                 isMenuOpen ? "active" : ""
               }`}
               onClick={toggleMenu}
             >
-              <div className="humburger-icons">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+              <div className={`humburger-icons ${isMenuOpen ? 'hamburger-open' : ''}`}>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
             </div>
           </div>
         </div>
@@ -155,8 +154,9 @@ const Header = () => {
             onClick={toggleMenu}
             role="presentation"
           ></div>
+          <div className="">
           <div className="menu-container">
-            <nav aria-label="Main navigation">
+            <nav aria-label="Main navigation" className="navbar">
               <ul className="offcanvas-menu">
                 {menuItems.map((item, index) => (
                   <li key={index} onClick={() => setIsMenuOpen(false)}>
@@ -190,13 +190,13 @@ const Header = () => {
           <div className="offcanvas-content-wraper ">
             <div className="offcanvas-content">
               <section aria-labelledby="contact-heading">
-                <h2 className="offcanvas-title" id="contact-heading">
+                <h2 className="offcanvas-title max-md:!text-[20px]" id="contact-heading ">
                   GET IN TOUCH
                 </h2>
-                <ul className="offcanvas-list-widget">
+                <ul className="offcanvas-list-widget max-md:!text-[15px]">
                   {contactInfo.map((item, index) => (
-                    <li key={index}>
-                      <p className="flex items-center gap-2">
+                    <li key={index} className="max-md:!text-[1px]">
+                      <p className="flex items-center gap-2 max-md:!text-[15px]">
                         {item.icon}
                         <a
                           href={item.link}
@@ -211,7 +211,7 @@ const Header = () => {
               </section>
 
               <section aria-labelledby="social-heading">
-                <h2 className="offcanvas-title" id="social-heading">
+                <h2 className="offcanvas-title max-md:!text-[20px]" id="social-heading">
                   GET SOCIAL TOGETHER
                 </h2>
                 <ul className="social-list version-4 flex space-x-4">
@@ -233,7 +233,9 @@ const Header = () => {
                 </ul>
               </section>
             </div>
-          </div>
+        </div>
+        </div>
+       
         </div>
       </div>
 

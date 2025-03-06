@@ -10,11 +10,15 @@ const testimonialImages = [
 
 function Testimonial() {
   return (
-    <div className="min-h-screen bg-[#3949AB] text-white py-16 mt-20">
-      {/* Custom Scrollbar Styles */}
+    <div className="min-h-screen bg-[#3949AB] text-white py-8 md:py-16 mt-12 md:mt-20">
       <style>{`
         .custom-scroll::-webkit-scrollbar {
-          width: 8px;
+          width: 6px;
+        }
+        @media (min-width: 768px) {
+          .custom-scroll::-webkit-scrollbar {
+            width: 8px;
+          }
         }
         .custom-scroll::-webkit-scrollbar-track {
           background: rgba(255,255,255,0.1);
@@ -29,16 +33,16 @@ function Testimonial() {
         }
       `}</style>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
             Don't just take our word for it
           </h1>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
             Hear from our clients
           </h2>
-          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-200 max-w-3xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
             scelerisque tellus interdum venenatis auctor et nibh. Rhoncus a, sed
             lobortis nisi.
@@ -46,46 +50,60 @@ function Testimonial() {
         </div>
 
         {/* Testimonial Section */}
-        <div className="flex flex-col md:flex-row justify-evenly gap-8 max-w-6xl mx-auto relative ">
-        <div className="absolute -left-8 -top-8 grid grid-cols-7 gap-4">
-            {[...Array(7)].map((_, i) => (
-              <div key={`dot-top-${i}`} className="w-2 h-2 rounded-full bg-white/20" />
-            ))}
-          </div>
-          <div className="absolute -left-8 top-0 grid grid-rows-12 gap-4 ">
-            {[...Array(12)].map((_, i) => (
-              <div key={`dot-left-${i}`} className="w-2 h-2 rounded-full bg-white/20" />
-            ))}
-          </div>
-          <div className="absolute -right-8 bottom-0 grid grid-rows-12 gap-4">
-            {[...Array(12)].map((_, i) => (
-              <div key={`dot-right-${i}`} className="w-2 h-2 rounded-full bg-white/20" />
-            ))}
-          </div>
-          <div className="absolute -right-8 -bottom-8 grid grid-cols-7 gap-4">
-            {[...Array(7)].map((_, i) => (
-              <div key={`dot-bottom-${i}`} className="w-2 h-2 rounded-full bg-white/20" />
-            ))}
-          </div>
-
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 lg:gap-8 max-w-6xl mx-auto relative">
+          {/* Decoration Dots - Hidden on mobile */}
+          <div className="max-lg:hidden">
+  <div className="hidden md:absolute md:-left-8 -top-8 md:grid grid-cols-7 gap-3 lg:gap-4">
+    {[...Array(7)].map((_, i) => (
+      <div
+        key={`dot-top-${i}`}
+        className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-white/20"
+      />
+    ))}
+  </div>
+  <div className="hidden md:absolute md:-left-8 top-0 md:grid grid-rows-12 gap-3 lg:gap-4">
+    {[...Array(12)].map((_, i) => (
+      <div
+        key={`dot-left-${i}`}
+        className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-white/20"
+      />
+    ))}
+  </div>
+  <div className="hidden md:absolute md:-right-8 bottom-0 md:grid grid-rows-12 gap-3 lg:gap-4">
+    {[...Array(12)].map((_, i) => (
+      <div
+        key={`dot-right-${i}`}
+        className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-white/20"
+      />
+    ))}
+  </div>
+  <div className="hidden md:absolute md:-right-8 -bottom-8 md:grid grid-cols-7 gap-3 lg:gap-4">
+    {[...Array(7)].map((_, i) => (
+      <div
+        key={`dot-bottom-${i}`}
+        className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-white/20"
+      />
+    ))}
+  </div>
+</div>
           {/* Navigation Buttons */}
-          <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
-            <ChevronLeft className="w-6 h-6" />
+          <button className="hidden md:absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+            <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
           </button>
-          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
-            <ChevronRight className="w-6 h-6" />
+          <button className="hidden md:absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+            <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
           </button>
 
           {/* Image Carousel */}
-          <div className="w-[30vw] h-[60vh] max-md:w-full bg-white rounded-2xl overflow-hidden shadow-xl">
-            <div className="h-[500px] overflow-y-auto custom-scroll">
+          <div className="w-full md:w-[45%] lg:w-[40%] h-[40vh] sm:h-[50vh] md:h-[60vh] bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
+            <div className="h-full overflow-y-auto custom-scroll">
               <div className="space-y-0">
                 {testimonialImages.map((image, index) => (
-                  <div key={index} className="relative h-[500px] p-4">
+                  <div key={index} className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] p-3 md:p-4">
                     <img
                       src={image}
                       alt={`Testimonial ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-lg"
                     />
                   </div>
                 ))}
@@ -94,29 +112,29 @@ function Testimonial() {
           </div>
 
           {/* Testimonial Content */}
-          <div className="w-[35vw] h-[60vh] max-md:w-full  bg-[#626fb1] backdrop-blur-sm rounded-2xl p-8 flex flex-col shadow-xl">
-            <Quote className="w-12 h-12 mb-6 text-white/80" />
-            <p className="text-xl leading-relaxed mb-8">
+          <div className="w-full md:w-[50%] lg:w-[45%] h-auto min-h-[400px] md:h-[60vh] bg-[#626fb1] backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col shadow-lg md:shadow-xl">
+            <Quote className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-6 text-white/80" />
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               scelerisque tellus interdum venenatis auctor et nibh. Rhoncus a,
               sed lobortis nisi. Nulla scelerisque tellus interdum venenatis
               auctor et nibh.
             </p>
 
-            <div className="mt-auto flex items-center gap-4">
+            <div className="mt-auto flex items-center gap-3 md:gap-4">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
                 alt="Profile"
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover flex-shrink-0"
               />
-              <div>
-                <h3 className="font-semibold">John Smith</h3>
-                <p className="text-sm text-gray-200">Manager, XYZ company</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-semibold text-sm md:text-base truncate">John Smith</h3>
+                <p className="text-xs md:text-sm text-gray-200 truncate">Manager, XYZ company</p>
               </div>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
                 alt="Company Logo"
-                className="ml-auto h-8 invert opacity-90"
+                className="ml-2 h-6 md:h-8 invert opacity-90 flex-shrink-0"
               />
             </div>
           </div>
