@@ -1,5 +1,7 @@
 import React from "react";
-
+import vectorImg1 from "../../assets/Home/home-11-vector-1.png"
+import vectorImg2 from "../../assets/Home/home-11-vector-2.png"
+import vectorImg3 from "../../assets/Home/home-11-vector-3.png"
 const VectorImages = () => {
   return (
     <>
@@ -9,7 +11,7 @@ const VectorImages = () => {
           <div className="tp-loop-wrap relative">
             <div className="tp-mask-wrap overflow-visible">
               <img
-                src="/src/assets/Home/home-11-vector-1.png"
+                src={vectorImg1}
                 alt=""
                 className="tp-caption vector-img"
                 style={{ width: 1409, height: 1062 }}
@@ -22,7 +24,7 @@ const VectorImages = () => {
           <div className="tp-loop-wrap rs-wave wave-loop">
             <div className="tp-mask-wrap overflow-visible">
               <img
-                src="/src/assets/Home/home-11-vector-2.png"
+                src={vectorImg2}
                 alt=""
                 className="tp-caption vector-img"
                 style={{ width: 422, height: 353 }}
@@ -35,7 +37,7 @@ const VectorImages = () => {
           <div className="tp-loop-wrap rs-slideloop slide-loop">
             <div className="tp-mask-wrap overflow-visible">
               <img
-                src="/src/assets/Home/home-11-vector-3.png"
+                src={vectorImg3}
                 alt=""
                 className="tp-caption vector-img"
                 style={{ width: 422, height: 378 }}

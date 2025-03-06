@@ -11,7 +11,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
-
+import Logo from "../../assets/barabari_logo.png"
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -113,7 +113,7 @@ const Header = () => {
                 aria-label="Home"
               >
                 <img
-                  src="/src/assets/barabari_logo.png"
+                  src={Logo}
                   alt="Barabari Logo"
                   className="barabari-logo w-[60px] h-[60px] max-md:w-[40px] max-md:h-[40px]"
                  
