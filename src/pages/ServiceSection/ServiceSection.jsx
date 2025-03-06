@@ -44,7 +44,7 @@ const serviceData = [
 ];
 const ServiceCard = ({ title, description, icon }) => {
   return (
-    <div className="w-full p-4 sm:w-1/2 lg:w-1/3 xl:w-1/3 2xl:w-1/3">
+    <div className="w-full p-4 sm:w-1/2 lg:w-1/3 xl:w-1/3 2xl:w-1/3 max-md:flex max-md:justify-center">
       <div className="single-cases-card h-full">
         <div className="feature-block-one h-full">
           <div className="inner-box flex flex-col items-center justify-between shadow-[4px_4px_10px_rgba(0,0,0,0.2)] h-full relative pb-16">
