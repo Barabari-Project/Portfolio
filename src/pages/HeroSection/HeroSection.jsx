@@ -45,7 +45,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className=" max-md:mb-[-25rem] w-full h-[120vh] max-md:mt-5">
+    <div className=" max-md:mb-[-25rem] w-full h-[120vh] ">
       <div className={chatboxOpen ? "blur" : ""}>
         <div
           id="rev_slider_15_1_wrapper"
@@ -58,17 +58,17 @@ const HeroSection = () => {
           >
             {/* Main Slider Content */}
 
-            <ul className="tp-revslider-mainul visible block overflow-hidden w-full h-[150vh] max-h-none max-sm:h-[60vh]">
+            <ul className="tp-revslider-mainul visible block overflow-hidden w-full h-[150vh] max-h-none">
               {" "}
               {/* Updated: h-[150vh] to h-screen for responsive height */}
               {/* Single Slide */}
               <li
-                className="tp-revslider-slidesli active-revslide relative w-full h-[150vh] overflow-hidden z-20 opacity-100 bg-transparent max-sm:h-[60vh]"
+                className="tp-revslider-slidesli active-revslide relative w-full h-[150vh] overflow-hidden z-20 opacity-100 bg-transparent"
                 data-index="rs-46"
                 style={{ perspective: 6000 }}
               >
                 {/* Background Image - You can keep or remove transparent background as per your need */}
-                <div className="slotholder absolute top-0 left-0 z-0 w-full h-[150vh] visible opacity-100 max-sm:h-[83vh]">
+                <div className="slotholder absolute top-0 left-0 z-0 w-full h-[150vh] visible opacity-100">
                   <div
                     className="tp-bgimg defaultimg absolute inset-0 bg-no-repeat bg-cover bg-center z-20 h-full"
                     style={{

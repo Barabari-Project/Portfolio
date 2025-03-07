@@ -353,7 +353,12 @@ h3 a:hover {
 }
   
   
-  
+  @media(max-width:768px){
+    .feature-block-one .inner-box {
+     width: 100%;
+    }
+    
+  }
   
   
   

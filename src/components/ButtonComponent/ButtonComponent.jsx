@@ -12,7 +12,7 @@ const DynamicButton = ({
       <div className=" relative">
         <div className="overflow-visible">
           <div
-            className=" font-normal text-[18px] px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0"
+            className=" font-normal text-[18px] px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0 max-md:mt-12"
             style={{
               backgroundColor: bgColor,
               color: textColor,
