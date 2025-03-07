@@ -1005,7 +1005,7 @@ swiper-container-vertical
     justify-content: center;
   }
   .navbar {
-    width: 50%;
+    width: 65%;
   }
   .mainMenu {
     position: fixed;
@@ -1039,6 +1039,9 @@ swiper-container-vertical
   .navbar {
     width: 76%;
   }
+}
+.offcanvas-content-wraper .offcanvas-list-widget {
+  margin-bottom: 40px;
 }
 /* Existing Desktop Styles */
 .offcanvas-menu-wraper .menu-container {

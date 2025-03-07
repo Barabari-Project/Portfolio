@@ -31,7 +31,7 @@ function HireSection() {
   ];
 
   return (
-    <div className="bg-white py-8 md:py-16 mt-20 md:mt-40 px-5 max-md:mt-40 ">
+    <div className="bg-white py-8 md:py-16 mt-20 md:mt-40 px-5 max-md:mt-40 max-sm:mt-0 max-sm:py-0 ">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
           Why hire from us?
