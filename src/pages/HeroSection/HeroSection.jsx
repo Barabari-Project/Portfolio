@@ -6,7 +6,7 @@ import DynamicButton from "../../components/ButtonComponent/ButtonComponent";
 import AnimatedCircles from "../../components/Circle/Circle";
 import { Chats1 } from "../ChatBot/ChatBotFirst";
 import VectorImages from "../../components/VectorImages/VectorImages";
-
+import ChatBotImg from "../../assets/robot.gif"
 const HeroSection = () => {
   const [chatboxOpen, setChatboxOpen] = useState(false);
 
@@ -145,7 +145,7 @@ const HeroSection = () => {
         }`}
       >
         <img
-          src="/src/assets/robot.gif"
+          src={ChatBotImg}
           alt=""
           className="w-20 h-20 animate-shake"
         />
