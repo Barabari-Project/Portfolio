@@ -5,7 +5,6 @@ const DynamicButton = ({
   position = { left: "63px", top: "521px" },
   bgColor = "#334499",
   textColor = "white",
-  onClick,
 }) => {
   return (
     <div className="absolute z-20 max-md:flex max-md:justify-center max-md:w-full max-md:!left-0 max-md:!top-[445px]" style={position}>
@@ -20,9 +19,9 @@ const DynamicButton = ({
               letterSpacing: "px",
               fontWeight: 500,
             }}
-            onClick={onClick}
           >
-            {text}
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcfOaRlK0prJLPZImUX5-cQllWitpmv4Ypp6kjCoAcEjJGFA/viewform">            {text}
+            </a>
           </div>
         </div>
       </div>

@@ -1,101 +1,135 @@
+/* Base styles */
 .feature-page {
     padding: 20px;
-}
-
-.featureH1 {
+    box-sizing: border-box;
+  }
+  
+  .featureH1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
     color: #333;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     font-weight: bold;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    max-width: 1200px; /* Limit the overall width */
-    margin: 0 auto; /* Center the grid */
-}
-
-.card {
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1290px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    max-width: 400px; /* Consistent maximum width */
-    /* margin: 0 auto; center the card in its grid cell */
-}
-
-.card:hover {
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 280px; /* Minimum card width */
+  }
+  
+  .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.card-image {
+  }
+  
+  .card-image {
     width: 100%;
-    height: 200px; /* Fixed height for images */
+    height: 200px;
     overflow: hidden;
-}
-
-.card-image img {
+    position: relative;
+  }
+  
+  .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure images fill the space */
-}
-
-.card-content {
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-image img {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
     padding: 20px;
-}
-
-.card-content h3 {
+  }
+  
+  .card-content h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
     color: #334499;
-    text-align: left;
-}
-
-.card-content p {
+  }
+  
+  .card-content p {
     font-size: 1rem;
     color: #666;
     margin-bottom: 20px;
-    text-align: left;
-    line-height: 1.6; /* Improved readability */
-}
-
-.h5-container {
+    line-height: 1.6;
+  }
+  
+  .h5-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
-    margin-top: 15px;
-}
-
-.h5-container h5 {
-    font-size: 1rem;
-    color: #334499;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-}
-
-.h5-container h5:hover {
-    color: #28357a;
-}
-
-.h5-container svg {
-    width: 20px;
-    height: 20px;
-    fill: #334499;
-    transition: fill 0.3s ease-in-out;
-}
-
-.h5-container svg:hover {
-    fill: #28357a;
-}
-
-@media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+    margin-top: auto; /* Push to bottom */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .card {
+      flex: 1 1 350px;
     }
-}
+  }
+  
+  @media (max-width: 768px) {
+    .feature-page {
+      padding: 15px;
+    }
+  
+    .card {
+      flex: 1 1 100%;
+      max-width: 500px;
+    }
+  
+    .card-image {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .featureH1 {
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+    }
+  
+    .card-content {
+      padding: 15px;
+    }
+  
+    .card-content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .card-content p {
+      font-size: 0.9rem;
+    }
+  
+    .h5-container h5 {
+      font-size: 0.9rem;
+    }
+  
+    .h5-container svg {
+      width: 18px;
+      height: 18px;
+    }
+  }

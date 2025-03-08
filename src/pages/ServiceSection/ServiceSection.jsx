@@ -59,12 +59,12 @@ const ServiceCard = ({ title, description, icon }) => {
             <h3 className="text-xl sm:text-2xl lg:text-[20px] xl:text-xl 2xl:text-2xl font-extrabold text-center px-2">
               <a href="#">{title}</a>
             </h3>
-            <p className="text-gray-400 mt-2.5 text-sm sm:text-base px-4 text-center">
+            <p className="text-gray-400 mt-2.5 text-sm sm:text-base px-4 text-center ">
               {description}
             </p>
 
             {/* Bottom Strip */}
-            <div className="bg-[#f3f7ff] w-full py-3 flex items-center justify-center gap-2 absolute bottom-0 left-0 right-0 rounded-b-[1.4rem]">
+            <div className="bg-[#f3f7ff] w-full py-3 flex items-center justify-center gap-2 absolute bottom-0 left-0 right-0 rounded-b-[1.4rem] mt-8">
               <a
                 href="#"
                 className="text-blue-600 font-semibold text-sm sm:text-base"

@@ -15,7 +15,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@tailwindcss/vite": "^4.0.9",
+    "@tailwindcss/vite": "^4.0.12",
     "framer-motion": "^12.4.10",
     "gsap": "^3.12.7",
     "jquery": "^3.7.1",
@@ -29,7 +29,6 @@
     "react-tilt": "^1.0.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.15",
-    "tailwindcss": "^4.0.9",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
@@ -37,11 +36,14 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.12",
     "vite": "^6.0.5"
   }
 }

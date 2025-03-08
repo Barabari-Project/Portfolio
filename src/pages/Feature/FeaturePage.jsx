@@ -6,12 +6,12 @@ const FeaturePage = () => {
     {
       title: "Sprint Up Website",
       description: "E-learning platform landing page",
-      image: "img1.png",
+      image: "/src/assets/webImages/web-1.png",
     },
     {
       title: "Sprint Up Website",
       description: "E-learning platform landing page",
-      image: "img2.png",
+      image: "/src/assets/webImages/web-2.png",
     },
     {
       title: "Sprint Up Website",
@@ -34,29 +34,29 @@ const FeaturePage = () => {
       image: "img4.png", //fixed duplicate
     },
   ];
+
   return (
-    <>
-      <div className="mt-26">
-        {" "}
-        <h1 className="text-4xl font-bold text-center mb-16">
-          Why hire from us?
-        </h1>
+    <div className="feature-page">
+      <div className="feature-header">
+        <h1 className="featureH1">Featured Projects</h1>
       </div>
-      <div className="flex flex-wrap justify-center gap-20">
-        {featureData.map((item, ind) => {
-          return (
-            // Added return here
-            <div className="card" key={ind}>
-              {/* added key prop */}
-              <div className="card-image">
-                <img src={item.image} alt={item.title} />
-              </div>
-              <div className="card-content">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <div className="h5-container">
-                  <h5>View Project</h5>
-                  <svg
+      
+      <div className="card-grid">
+        {featureData.map((item, ind) => (
+          <div className="card" key={ind}>
+            <div className="card-image">
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                loading="lazy"  // Added lazy loading
+              />
+            </div>
+            <div className="card-content">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <div className="h5-container">
+                <h5>View Project</h5>
+                <svg
                     width="25"
                     height="26"
                     viewBox="0 0 25 26"
@@ -69,13 +69,12 @@ const FeaturePage = () => {
                       fill="white"
                     />
                   </svg>
-                </div>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

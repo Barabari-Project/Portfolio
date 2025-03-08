@@ -2,6 +2,7 @@ import React from "react";
 import { Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import FooterBg from "../../assets/motpath.svg"
 const Footer = () => {
   const socialIcons = [
     {
@@ -47,7 +48,7 @@ const Footer = () => {
     <footer
       className="py-8 h-[50vh] flex justify-center items-center"
       style={{
-        backgroundImage: 'url("/src/assets/motpath.svg")',
+        backgroundImage: `url(${FooterBg})`,
         backgroundColor: "#15212a",
       }}
     >

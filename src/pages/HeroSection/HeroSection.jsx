@@ -6,7 +6,7 @@ import DynamicButton from "../../components/ButtonComponent/ButtonComponent";
 import AnimatedCircles from "../../components/Circle/Circle";
 import { Chats1 } from "../ChatBot/ChatBotFirst";
 import VectorImages from "../../components/VectorImages/VectorImages";
-import ChatBotImg from "../../assets/robot.gif"
+import ChatBotImg from "../../assets/botimg.png";
 const HeroSection = () => {
   const [chatboxOpen, setChatboxOpen] = useState(false);
 
@@ -85,46 +85,46 @@ const HeroSection = () => {
                 {/* Contact Us Button */}
                 {/* Let our students build your ChatBots Text */}
                 <div className="absolute max-md:w-full z-20 left-[55px] top-[180px] max-md:left-0 max-md:top-[100px] px-4">
-                <div className="relative">
-                  <div className="overflow-visible max-md:w-full max-md:flex max-md:justify-center">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-3xl max-md:text-center ">
-                      Let our students <br className="max-md:hidden" /> build your <br className="md:hidden"/>
-                      <span
-                        id="typingelement"
-                        className="text-[#2d41a2] ml-2 md:ml-3"
-                      ></span>
-                    </h1>
-                  </div>
-                </div>
-              </div>
-  
-              {/* We are a Section 8 Non-Profit ... Text */}
-              <div className="tp-parallax-wrap absolute z-20 left-[70px] top-[400px] max-md:px-5 max-md:left-0 max-md:top-[250px]">
-                <div className="relative">
-                  <div className="tp-mask-wrap overflow-visible">
-                    <div
-                      className="text-gray-400 w-[600px] max-md:w-full font-extrabold text-[25px] max-md:text-center leading-[30px] tp-rs-perspective perspective-300 tp-with-parallax"
-                      style={{
-                        whiteSpace: "normal", // Changed to normal to allow text wrapping
-                        letterSpacing: "px",
-                        fontWeight: 400,
-                      }}
-                    >
-                      We are a Section 8 Non-Profit upskilling candidates from
-                      low-income families democratizing access to tech and
-                      design employment opportunities.
+                  <div className="relative">
+                    <div className="overflow-visible max-md:w-full max-md:flex max-md:justify-center">
+                      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-3xl max-md:text-center ">
+                        Let our students <br className="max-md:hidden" /> build
+                        your <br className="md:hidden" />
+                        <span
+                          id="typingelement"
+                          className="text-[#2d41a2] ml-2 md:ml-3"
+                        ></span>
+                      </h1>
                     </div>
                   </div>
                 </div>
-              </div>
-  
-              {/* Hire from us Button */}
-              <DynamicButton
-                text="Hire From Us"
-                position={{ left: "72px", top: "520px" }}
-                onClick={() => alert("Button clicked!")}
-                className="font-sans "
-              />
+
+                {/* We are a Section 8 Non-Profit ... Text */}
+                <div className="tp-parallax-wrap absolute z-20 left-[70px] top-[400px] max-md:px-5 max-md:left-0 max-md:top-[250px]">
+                  <div className="relative">
+                    <div className="tp-mask-wrap overflow-visible">
+                      <div
+                        className="text-gray-400 w-[600px] max-md:w-full font-extrabold text-[25px] max-md:text-center leading-[30px] tp-rs-perspective perspective-300 tp-with-parallax"
+                        style={{
+                          whiteSpace: "normal", // Changed to normal to allow text wrapping
+                          letterSpacing: "px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        We are a Section 8 Non-Profit upskilling candidates from
+                        low-income families democratizing access to tech and
+                        design employment opportunities.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hire from us Button */}
+                <DynamicButton
+                  text="Hire From Us"
+                  position={{ left: "72px", top: "520px" }}
+                  className="font-sans "
+                />
                 {/* Parallax Elements - Keep these graphic elements as they are */}
                 <AnimatedCircles />
                 {/* Vector Images */}
@@ -140,15 +140,11 @@ const HeroSection = () => {
 
       <div
         onClick={onClickChat}
-        className={`chatbtn fixed bottom-16 right-7 z-50 p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 ${
+        className={`chatbtn fixed bottom-16 right-3 z-50 p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 ${
           chatboxOpen ? "hidden" : "block"
         }`}
       >
-        <img
-          src={ChatBotImg}
-          alt=""
-          className="w-20 h-20 animate-shake"
-        />
+        <img src={ChatBotImg} alt="" className="w-20 h-20 animate-shake" />
       </div>
       <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />
     </div>
