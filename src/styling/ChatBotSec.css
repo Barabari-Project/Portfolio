@@ -163,7 +163,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  bottom: -47px;
+  bottom: -75px;
   padding: 10px 15px;
   border-top: 1px solid #eee;
 }
@@ -229,6 +229,11 @@
   .message-Left {
     max-width: 90%;
   }
+  .input-container {
+    
+    bottom: -47px;
+   
+  }
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -237,6 +242,11 @@
 @media (min-width: 768px) {
   .custom-scroll::-webkit-scrollbar {
     width: 8px;
+  }
+  .input-container {
+    
+    bottom: -47px;
+   
   }
 }
 .custom-scroll::-webkit-scrollbar-track {
