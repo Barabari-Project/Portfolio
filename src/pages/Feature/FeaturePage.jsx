@@ -6,12 +6,12 @@ const FeaturePage = () => {
     {
       title: "Sprint Up Website",
       description: "E-learning platform landing page",
-      image: "src/assets/webImages/web-1.png",
+      image: "/webImages/web-1.png",
     },
     {
       title: "Sprint Up Website",
       description: "E-learning platform landing page",
-      image: "src/assets/webImages/web-2.png",
+      image: "/webImages/web-2.png",
     },
     {
       title: "Sprint Up Website",
