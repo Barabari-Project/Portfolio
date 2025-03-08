@@ -80,7 +80,7 @@ const Footer = () => {
         onClick={scrollToTop}
         className={`w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 shadow-xl transition-all duration-300 transform hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-violet-300 animate-bounce ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
-        <FaArrowUp className="text-white text-lg transition-all duration-300 hover:-translate-y-1" />
+        <FaArrowUp className="text-white text-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer" />
       </button>
     </div>
     </footer>

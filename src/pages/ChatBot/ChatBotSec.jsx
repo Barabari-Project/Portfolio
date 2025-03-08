@@ -208,7 +208,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
                         <p>If not, kindly hit submit. We will get back to you in 2-3 business days.</p>
                       </div>
                     </div>
-                    <button className="submitBtn">Submit Request <FiArrowRight /></button>
+                    <button className="submitBtn">Submit Request</button>
                   </div>
                 )}
               </>
