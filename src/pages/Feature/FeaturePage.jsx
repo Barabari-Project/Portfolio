@@ -6,12 +6,12 @@ const FeaturePage = () => {
     {
       title: "Sprint Up Website",
       description: "E-learning platform landing page",
-      image: "/src/assets/webImages/web-1.png",
+      image: "src/assets/webImages/web-1.png",
     },
     {
       title: "Sprint Up Website",
       description: "E-learning platform landing page",
-      image: "/src/assets/webImages/web-2.png",
+      image: "src/assets/webImages/web-2.png",
     },
     {
       title: "Sprint Up Website",
@@ -43,7 +43,7 @@ const FeaturePage = () => {
       
       <div className="card-grid">
         {featureData.map((item, ind) => (
-          <div className="card" key={ind}>
+          <div className="card p-3" key={ind}>
             <div className="card-image">
               <img 
                 src={item.image} 

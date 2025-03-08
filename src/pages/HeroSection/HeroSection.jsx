@@ -6,7 +6,7 @@ import DynamicButton from "../../components/ButtonComponent/ButtonComponent";
 import AnimatedCircles from "../../components/Circle/Circle";
 import { Chats1 } from "../ChatBot/ChatBotFirst";
 import VectorImages from "../../components/VectorImages/VectorImages";
-import ChatBotImg from "../../assets/botimg.png";
+import ChatBotImg from "../../assets/Home/botimg.png";
 const HeroSection = () => {
   const [chatboxOpen, setChatboxOpen] = useState(false);
 

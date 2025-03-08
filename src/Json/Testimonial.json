@@ -33,9 +33,9 @@
       "improvements": "Better overall coordination would be ideal, but it's not a major issue. The team has improved significantly over time.",
       "allowCollaboration": "Yes",
       "author": {
-        "profileImg": "/src/assets/Vaibhav Gupta - Vaibhav Gupta.PNG"
+        "profileImg": "../assets/Vaibhav Gupta - Vaibhav Gupta.PNG"
       },
-      "companyLogo": "/src/assets/SprintUp Logo Final - Vaibhav Gupta.jpg"
+      "companyLogo": "../assets/SprintUp Logo Final - Vaibhav Gupta.jpg"
     },
     {
       "id": 2,
@@ -52,9 +52,9 @@
       "improvements": "",
       "allowCollaboration": "Yes",
       "author": {
-        "profileImg": "/src/assets/Shirley-Menon.jpg"
+        "profileImg": "../assets/Shirley-Menon.jpg"
       },
-      "companyLogo": "/src/assets/Save Our Strays.jpeg.jpg"
+      "companyLogo": "../assets/Save Our Strays.jpeg.jpg"
     }
   ]
 }
