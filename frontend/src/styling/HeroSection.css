@@ -1,0 +1,70 @@
+  /* General styles for polishing */
+  .circle-1-wrap {
+    pointer-events: none;
+  }
+
+  .circle-2-wrap {
+      pointer-events: none;
+  }
+
+  .circle-3-wrap {
+      pointer-events: none;
+  }
+
+  .vector-image {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+
+  .animate-on-load {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  /* Wave Animation (Slight Vertical Wave - can adjust or remove if only slideLoop is desired) */
+  @keyframes waveMotion {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); } /* Adjust 10px for wave height */
+  }
+
+  .wave-vector-image .wave-loop {
+    animation: waveMotion 2s ease-in-out infinite alternate; /* Adjusted to waveMotion and timing */
+  }
+
+
+  /* Slide Loop Animation */
+  @keyframes slideLoopMotion {
+    0%, 100% { transform: translate(0, 0); }          /* Center */
+    25%      { transform: translate(5px, 5px); }      /* Move slightly down and right */
+    50%      { transform: translate(0, 10px); }     /* Move further down */
+    75%      { transform: translate(-5px, 5px); }      /* Move slightly down and left */
+  }
+
+  .slide-loop-vector-image .slide-loop {
+    animation: slideLoopMotion 8s linear infinite; /* Applied slideLoopMotion here */
+  }
+
+
+  /* Circle Styles */
+  .circle-1 {
+      width: 987px;
+      height: 987px;
+      background-color: #334499;
+      border-radius: 50%;
+  }
+
+  .circle-2 {
+      width: 853px;
+      height: 853px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+  }
+
+  .circle-3 {
+      width: 795px;
+      height: 795px;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 50%;
+  }

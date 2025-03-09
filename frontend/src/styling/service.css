@@ -1,0 +1,335 @@
+.feature-block-one .icon-box {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 43px;
+  z-index: 1;
+  transition: all 500ms ease;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+
+.feature-block-one .icon-box:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 500ms ease;
+}
+
+.feature-block-one .icon-box:before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  left: -8px;
+  top: -5px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.feature-block-one .inner-box p {
+  margin-bottom: 48px;
+}
+
+.feature-block-one .inner-box .btn-box .theme-btn.style-two {
+  padding: 10.5px 35px;
+}
+
+.feature-block-one .icon-box .anim-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  -webkit-animation: service_hexagon 3s infinite linear;
+  -moz-animation: service_hexagon 3s infinite linear;
+  -o-animation: service_hexagon 3s infinite linear;
+  animation: service_hexagon 3s infinite linear;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.feature-block-one:hover .icon-box .anim-icon {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.feature-block-one .icon-box .anim-icon .icon-1 {
+  position: absolute;
+  left: -25px;
+  top: 60px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-animation: zoom-fade-two 5s infinite linear;
+  animation: zoom-fade-two 5s infinite linear;
+}
+
+.feature-block-one .icon-box .anim-icon .icon-2 {
+  position: absolute;
+  left: 10px;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-animation: zoom-fade-two 4s infinite linear;
+  animation: zoom-fade-two 4s infinite linear;
+}
+
+.feature-block-one .icon-box .anim-icon .icon-3 {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-animation: zoom-fade-two 3s infinite linear;
+  animation: zoom-fade-two 3s infinite linear;
+}
+
+@keyframes service_hexagon {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.feature-block-one .icon-box:after {
+  background: #f3f7ff;
+}
+
+.feature-block-one:hover .icon-box:after {
+  background: #6377ee;
+}
+
+.feature-block-one .icon-box {
+  color: #6377ee;
+}
+
+h3 a:hover {
+  color: #6377ee;
+}
+
+.feature-block-one .icon-box .anim-icon .icon-1 {
+  background: rgba(99, 119, 238, 0.8);
+}
+
+.feature-block-one .icon-box .anim-icon .icon-2 {
+  background: #b1bbf6;
+}
+
+.feature-block-one .icon-box .anim-icon .icon-3 {
+  background: #92a0f3;
+}
+
+.sec-title p {
+  color: #6377ee;
+}
+
+.service-title {
+  font-size: 45px;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.animated {
+  animation-duration: 1500ms;
+  animation-delay: 0ms;
+}
+
+.flipInY {
+  animation-name: flipInY;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Add other necessary styles from your original CSS */
+.feature-block-one .inner-box {
+  position: relative;
+  /* display: block; */
+  text-align: center;
+  background: #fff;
+  border-radius: 25px;
+  /* box-shadow: 0 20px 50px 5px #e9eef7; */
+  padding: 70px 50px 20px 50px;
+  transition: all 500ms ease;
+  /* width: 350px; Set your desired width */
+  /* height: 450px; Set your desired height */
+}
+
+.feature-block-one .icon-box {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  /* width: 130px; */
+  /* height: 130px; */
+  line-height: 130px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 43px;
+  z-index: 1;
+  transition: all 500ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-block-one .icon-box:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 500ms ease;
+  background: #f3f7ff;
+}
+
+.feature-block-one .icon-box:before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  left: -8px;
+  top: -5px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.feature-block-one .inner-box p {
+  margin-bottom: 48px;
+}
+
+.feature-block-one .icon-box .anim-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  animation: service_hexagon 3s infinite linear;
+  animation-play-state: paused;
+}
+
+.feature-block-one:hover .icon-box .anim-icon {
+  animation-play-state: running;
+}
+
+.feature-block-one .icon-box .anim-icon .icon-1 {
+  position: absolute;
+  left: -25px;
+  top: 60px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: zoom-fade-two 5s infinite linear;
+  background: rgba(99, 119, 238, 0.8);
+}
+
+.feature-block-one .icon-box .anim-icon .icon-2 {
+  position: absolute;
+  left: 10px;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: zoom-fade-two 4s infinite linear;
+  background: #b1bbf6;
+}
+
+.feature-block-one .icon-box .anim-icon .icon-3 {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: zoom-fade-two 3s infinite linear;
+  background: #92a0f3;
+}
+
+@keyframes service_hexagon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.feature-block-one:hover .icon-box:after {
+  background: #6377ee;
+}
+
+.feature-block-one .icon-box {
+  color: #6377ee;
+}
+
+h3 a:hover {
+  color: #6377ee;
+}
+
+.sec-title p {
+  color: #6377ee;
+}
+
+.service-title {
+  font-size: 45px;
+  color: black;
+  font-family: "Open Sans, sans-serif";
+  font-weight: 700;
+}
+
+.feature-block-one:hover .icon-box .text-icon {
+  color: white;
+}
+.feature-block-one:hover .icon-box {
+  color: white;
+}
+.text-icon svg {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .feature-block-one .inner-box {
+    width: 100%;
+  }
+}
