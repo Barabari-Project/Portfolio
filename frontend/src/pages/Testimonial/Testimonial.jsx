@@ -123,83 +123,83 @@ function Testimonial() {
 
           {/* Testimonial Content */}
           <div className="w-full md:w-[50%] lg:w-[45%] h-auto min-h-[400px] md:h-[65vh] bg-[#626fb1] backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col shadow-lg md:shadow-xl">
-            <Quote className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-6 text-white/80" />
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8">
-              {JsonData.testimonials[currentIndex].quote}
-            </p>
+  <p className="text-lg md:text-xl text-gray-200 truncate  text-center">
+        {JsonData.testimonials[currentIndex].organisation.name} ({JsonData.testimonials[currentIndex].organisation.type})
+      </p>
+  <Quote className="w-8 h-8 md:w-10 md:h-10 mb-4 md:mb-6 text-white/80" />
+  
+  {/* Quote Section */}
+  <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8">
+    "{JsonData.testimonials[currentIndex].quote}"
+  </p>
 
-            {/* Likes and Improvements Sections */}
-            {JsonData.testimonials[currentIndex].likes && (
-              <p className="text-xs md:text-sm text-gray-200 leading-relaxed mb-4">
-                <strong>What they liked:</strong>{" "}
-                {JsonData.testimonials[currentIndex].likes}
-              </p>
-            )}
-            {JsonData.testimonials[currentIndex].improvements && (
-              <p className="text-xs md:text-sm text-gray-200 leading-relaxed mb-4">
-                <strong>Suggested improvements:</strong>{" "}
-                {JsonData.testimonials[currentIndex].improvements}
-              </p>
-            )}
+  {/* Author & Company Details */}
+  <div className="mt-auto flex items-center gap-3 md:gap-4">
+    {/* Author Image */}
+    {JsonData.testimonials[currentIndex].author.profileImg && (
+      <img
+        src={JsonData.testimonials[currentIndex].author.profileImg}
+        alt={JsonData.testimonials[currentIndex].name}
+        className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover flex-shrink-0"
+      />
+    )}
 
-            <div className="mt-auto flex items-center gap-3 md:gap-4">
-              {JsonData.testimonials[currentIndex].author.profileImg && (
-                <img
-                  src={JsonData.testimonials[currentIndex].author.profileImg}
-                  alt="Profile"
-                  className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover flex-shrink-0"
-                />
-              )}
-              <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-sm md:text-base truncate">
-                  {JsonData.testimonials[currentIndex].name}
-                </h3>
-                <p className="text-xs md:text-sm text-gray-200 truncate">
-                  {JsonData.testimonials[currentIndex].organisation.name} (
-                  {JsonData.testimonials[currentIndex].organisation.type})
-                </p>
-              </div>
-              {JsonData.testimonials[currentIndex].companyLogo && (
-                <img
-                  src={JsonData.testimonials[currentIndex].companyLogo}
-                  alt="Company Logo"
-                  className="ml-2 h-6 cursor-pointer md:h-8 invert opacity-90 flex-shrink-0 rounded-full scale-95 hover:scale-100 transition-all duration-200"
-                />
-              )}
-            </div>
+    {/* Author & Organization Details */}
+    <div className="flex-1 min-w-0">
+      <h3 className="font-semibold text-sm md:text-base truncate">
+        {JsonData.testimonials[currentIndex].name}
+      </h3>
+     
+    </div>
 
-            {/* Social Links */}
-            <div
-              className="mt-4 flex gap-4 p-2 "
-            >
-              {JsonData.testimonials[currentIndex].organisation.instagram && (
-                <a
-                  href={
-                    JsonData.testimonials[currentIndex].organisation.instagram
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full shadow-md py-2 px-2 
-                bg-white/10 backdrop-blur-md dark:text-white hover:scale-110 scale-100 transition-all duration-300"
-                >
-                  <Instagram />
-                </a>
-              )}
-              {JsonData.testimonials[currentIndex].organisation.linkedin && (
-                <a
-                  href={
-                    JsonData.testimonials[currentIndex].organisation.linkedin
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full shadow-md py-2 px-2 
-                bg-white/10 backdrop-blur-md dark:text-white hover:scale-110 scale-100 transition-all duration-300"
-                >
-                  <Linkedin />
-                </a>
-              )}
-            </div>
-          </div>
+    {/* Company Logo */}
+    {JsonData.testimonials[currentIndex].companyLogo && (
+      <img
+        src={JsonData.testimonials[currentIndex].companyLogo}
+        alt="Company Logo"
+        className="ml-2 h-6 cursor-pointer md:h-8 invert opacity-90 flex-shrink-0 rounded-full scale-95 hover:scale-100 transition-all duration-200"
+      />
+    )}
+  </div>
+
+  {/* Social Links */}
+  <div className="mt-4 flex gap-4 p-2">
+    {JsonData.testimonials[currentIndex].organisation.instagram && (
+      <a
+        href={JsonData.testimonials[currentIndex].organisation.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full shadow-md py-2 px-2 bg-white/10 backdrop-blur-md dark:text-white hover:scale-110 scale-100 transition-all duration-300"
+      >
+        <Instagram />
+      </a>
+    )}
+    {JsonData.testimonials[currentIndex].organisation.linkedin && (
+      <a
+        href={JsonData.testimonials[currentIndex].organisation.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full shadow-md py-2 px-2 bg-white/10 backdrop-blur-md dark:text-white hover:scale-110 scale-100 transition-all duration-300"
+      >
+        <Linkedin />
+      </a>
+    )}
+  </div>
+
+  {/* Technologies Used */}
+  <div className="mt-4 flex flex-wrap gap-2">
+    Tech used: 
+    {JsonData.testimonials[currentIndex].techUsed.map((tech, index) => (
+      <span
+        key={index}
+        className="text-xs md:text-sm bg-white/10 text-white py-1 px-3 rounded-full shadow-md"
+      >
+        {tech}
+      </span>
+    ))}
+  </div>
+</div>
+
 
           {/* Desktop Navigation Buttons */}
           <div className="hidden md:flex absolute left-0 right-0 top-1/2 -translate-y-1/2 justify-between">

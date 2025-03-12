@@ -140,7 +140,7 @@ const HeroSection = () => {
 
       <div
         onClick={onClickChat}
-        className={`chatbtn fixed bottom-16 right-3 z-50 p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 ${
+        className={`chatbtn fixed bottom-16 right-3  p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 z-[100] ${
           chatboxOpen ? "hidden" : "block"
         }`}
       >

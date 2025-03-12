@@ -8,7 +8,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More subtle shadow */
   padding: 15px; /* Consistent padding */
   position: fixed;
-  height: 78vh;
+  height: 82vh;
   top: 85px;
   right: 2%; /* Adjusted positioning */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
@@ -17,7 +17,7 @@
 @media (max-width:768px){
   .chat-card {
     
-    height: 90vh;
+    height: 92vh;
     top: 25px;
     
   }
@@ -229,11 +229,11 @@
   .message-Left {
     max-width: 90%;
   }
-  .input-container {
+  /* .input-container {
     
     bottom: -47px;
    
-  }
+  } */
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -248,6 +248,14 @@
     bottom: -47px;
    
   }
+}
+@media (max-width:376px){
+
+.input-container {
+  
+  bottom: -47px;
+ 
+}
 }
 .custom-scroll::-webkit-scrollbar-track {
   background: rgba(255,255,255,0.1);

@@ -20,7 +20,7 @@ const DynamicButton = ({
               fontWeight: 500,
             }}
           >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcfOaRlK0prJLPZImUX5-cQllWitpmv4Ypp6kjCoAcEjJGFA/viewform">            {text}
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcfOaRlK0prJLPZImUX5-cQllWitpmv4Ypp6kjCoAcEjJGFA/viewform" target="_blank">            {text}
             </a>
           </div>
         </div>

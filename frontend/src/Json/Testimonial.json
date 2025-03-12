@@ -29,13 +29,17 @@
         "linkedin": ""
       },
       "quote": "The Barabari Collective helped us build our primary website. It's a multi-page dynamic website with student interactions like form filling, login, etc.",
-      "likes": "I appreciated the team's professionalism, adherence to timelines, and willingness to accommodate extra tasks. There was also great collaboration and friendship among the team, which created a strong bond.",
-      "improvements": "Better overall coordination would be ideal, but it's not a major issue. The team has improved significantly over time.",
       "allowCollaboration": "Yes",
       "author": {
         "profileImg": "/Feedbackimg/Vaibhav Gupta - Vaibhav Gupta.png"
       },
-      "companyLogo": "/Feedbackimg/SprintUp Logo Final - Vaibhav Gupta.jpg"
+      "companyLogo": "/Feedbackimg/SprintUp Logo Final - Vaibhav Gupta.jpg",
+      "techUsed": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Tailwind CSS"
+      ]
     },
     {
       "id": 2,
@@ -47,14 +51,19 @@
         "instagram": "https://www.instagram.com/save_our_strays_/?hl=en",
         "linkedin": "https://www.linkedin.com/in/save-our-strays-sos-4397bb305/"
       },
-      "quote": "Donation Receipt Generation Tool. The tool has reduced the time by 75% for the activity week on week. Harihar and Drumil were very patient with me. I would advocate using these tools to make our lives simpler. Thanks to the duo I am able to dedicate more time to other time-sensitive tasks in the Org.",
-      "likes": "You were kind, supportive, and made things easier for our organization. That's what we need!",
-      "improvements": "",
+      "quote": "The Donation Receipt Tool cut processing time by 75% weekly. Harihar and Drumil were patient, making my work easier. Thanks to them, I can focus on urgent tasks.",
       "allowCollaboration": "Yes",
       "author": {
         "profileImg": "/Feedbackimg/Shirley-Menon.jpg"
       },
-      "companyLogo": "/Feedbackimg/Save Our Strays.jpeg.jpg"
+      "companyLogo": "/Feedbackimg/Save Our Strays.jpeg.jpg",
+      "techUsed": [
+        "JavaScipt",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "SCSS"
+      ]
     }
   ]
 }
