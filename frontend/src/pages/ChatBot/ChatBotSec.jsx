@@ -84,7 +84,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
     ]);
     setCurrentStep(8);
   };
-
+ 
   const handleRefresh = () => {
     setSelectedOption(null);
     setCurrentStep(1);
