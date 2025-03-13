@@ -8,82 +8,309 @@ import { TbSend } from "react-icons/tb";
 
 export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
   const chatContentRef = useRef(null);
-  const [selectedOptions, setSelectedOptions] = useState([]);
-  const [step, setStep] = useState(1);
-  const [budget, setBudget] = useState(null);
-  const [showMessage, setShowMessage] = useState(false);
-  const [message, setMessage] = useState("");
-  const [showBudgetMessage, setShowBudgetMessage] = useState(false);
-  const [budgetMessage, setBudgetMessage] = useState("");
-  const [goodSoundMessage, setGoodSoundMessage] = useState("");
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [currentStep, setCurrentStep] = useState(1);
   const [userInput, setUserInput] = useState("");
-  const [sentMessages, setSentMessages] = useState([]);
-  const [showThankYouMessage, setShowThankYouMessage] = useState(false);
+  const [messages, setMessages] = useState([
+    { sender: "bot", content: "Hi, Thank you for reaching out." },
+    {
+      sender: "bot",
+      content: "Let's see what kind of projects we can help you with",
+    },
+  ]);
+  const [name, setName] = useState("");
+  const [organization, setOrganization] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [additionalInfo, setAdditionalInfo] = useState("");
 
-  const options = ["Website", "Mobile Application", "Chatbot", "CRM tools"];
-  const budgetOptions = ["Under 50K", "50K-1L", "1L+", "To be Decided"];
+  const options = [
+    "Website",
+    "Chatbot",
+    "Handle social media",
+    "LMS",
+    "E commerce marketplace",
+    "Something else",
+  ];
 
   const handleSelectOption = (option) => {
-    if (!selectedOptions.includes(option)) {
-      setSelectedOptions([option]);
+    setSelectedOption(option);
+    setMessages((prev) => [...prev, { sender: "user", content: option }]);
+    if (option === "Something else") {
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", content: "Please describe your project" },
+      ]);
+      setCurrentStep(2);
+    } else {
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", content: "Tell us your name" },
+      ]);
+      setCurrentStep(3);
     }
   };
 
-  const handleBudgetSelect = (selectedBudget) => {
-    setBudget(selectedBudget);
-    if (selectedBudget === "Under 50K") {
-      setShowBudgetMessage(true);
-      setBudgetMessage("Under 50K");
-      setGoodSoundMessage("Sounds good!");
-    } else {
-      setShowBudgetMessage(false);
-      setGoodSoundMessage("");
+  const handleCustomDescription = () => {
+    if (userInput.trim()) {
+      setMessages((prev) => [...prev, { sender: "user", content: userInput }]);
+      setUserInput("");
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", content: "Tell us your name" },
+      ]);
+      setCurrentStep(3);
     }
   };
 
   const handleSubmit = () => {
-    setStep(2);
-    if (selectedOptions.includes("Website")) {
-      setShowMessage(true);
-      setMessage("Website");
+    if (additionalInfo.trim()) {
+      setMessages((prev) => [...prev, { sender: "user", content: additionalInfo }]);
     }
-  };
-
-  const handleInputChange = (e) => setUserInput(e.target.value);
-
-  const handleSendMessage = () => {
-    if (userInput.trim()) {
-      setSentMessages([...sentMessages, userInput]);
-      setUserInput("");
-      setShowThankYouMessage(true);
-      setTimeout(() => {
-        const messages = document.querySelectorAll(".message-Left");
-        if (messages.length > 0) {
-          messages[messages.length - 1].scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
+    console.log({
+      projectType: selectedOption,
+      name,
+      organization,
+      phone,
+      email,
+      additionalInfo,
+    });
+    setMessages((prev) => [
+      ...prev,
+      {
+        sender: "bot",
+        content: "Thank you! We'll get back to you within 2-3 business days.",
+      },
+    ]);
+    setCurrentStep(8);
   };
 
   const handleRefresh = () => {
-    setSelectedOptions([]);
-    setStep(1);
-    setBudget(null);
-    setShowMessage(false);
-    setMessage("");
-    setShowBudgetMessage(false);
-    setBudgetMessage("");
-    setGoodSoundMessage("");
+    setSelectedOption(null);
+    setCurrentStep(1);
     setUserInput("");
-    setSentMessages([]);
-    setShowThankYouMessage(false);
+    setMessages([
+      { sender: "bot", content: "Hi, Thank you for reaching out." },
+      {
+        sender: "bot",
+        content: "Let's see what kind of projects we can help you with",
+      },
+    ]);
+    setName("");
+    setOrganization("");
+    setPhone("");
+    setEmail("");
+    setAdditionalInfo("");
+  };
+
+  const handleSendMessage = () => {
+    if (userInput.trim()) {
+      setMessages((prev) => [...prev, { sender: "user", content: userInput.trim() }]);
+      setUserInput("");
+    }
   };
 
   useEffect(() => {
     if (chatContentRef.current) {
       chatContentRef.current.scrollTop = chatContentRef.current.scrollHeight;
     }
-  }, [sentMessages, userInput, budgetOptions]);
+  }, [messages, currentStep]);
+
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case 1:
+        return (<>
+        
+          <div className="options-container">
+            {options.map((option) => (
+              <button
+                key={option}
+                className={`option-btn ${
+                  selectedOption === option ? "selected" : ""
+                }`}
+                onClick={() => handleSelectOption(option)}
+                disabled={selectedOption !== null}
+                >
+                {option}
+              </button>
+            ))}
+            
+          </div>
+                </>
+        );
+      case 2:
+        return (
+          <div className="user-input-container">
+            <input
+              type="text"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              placeholder="Type your project description"
+              className="underlined-input"
+            />
+            <button className="next-btn" onClick={handleCustomDescription}>
+              <FiArrowRight />
+            </button>
+          </div>
+        );
+      case 3:
+        return (
+          <div className="user-input-container">
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter your name"
+              className="underlined-input"
+            />
+            <button
+              className="next-btn"
+              onClick={() => {
+                if (name.trim()) {
+                  setMessages((prev) => [...prev, { sender: "user", content: name }]);
+                  setCurrentStep(4);
+                  setMessages((prev) => [
+                    ...prev,
+                    { sender: "bot", content: "What's your organization name?" },
+                  ]);
+                }
+              }}
+            >
+              <FiArrowRight />
+            </button>
+          </div>
+        );
+      case 4:
+        return (
+          <div className="user-input-container">
+            <input
+              type="text"
+              value={organization}
+              onChange={(e) => setOrganization(e.target.value)}
+              placeholder="Enter organization name"
+              className="underlined-input"
+            />
+            <button
+              className="next-btn"
+              onClick={() => {
+                if (organization.trim()) {
+                  setMessages((prev) => [...prev, { sender: "user", content: organization }]);
+                  setCurrentStep(5);
+                  setMessages((prev) => [
+                    ...prev,
+                    { sender: "bot", content: "Phone number (optional)" },
+                  ]);
+                }
+              }}
+            >
+              <FiArrowRight />
+            </button>
+          </div>
+        );
+      case 5:
+        return (
+          <div className="user-input-container">
+            <input
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="Enter phone number"
+              className="underlined-input"
+
+            />
+            <div className="skip-container">
+              <button
+                className="next-btn"
+                onClick={() => {
+                  if (phone.trim()) {
+                    setMessages((prev) => [...prev, { sender: "user", content: phone }]);
+                  }
+                  setCurrentStep(6);
+                  setMessages((prev) => [
+                    ...prev,
+                    { sender: "bot", content: "Email address (optional)" },
+                  ]);
+                }}
+              >
+                <FiArrowRight />
+              </button>
+              <button
+                className="skip-btn"
+                onClick={() => {
+                  setCurrentStep(6);
+                  setMessages((prev) => [
+                    ...prev,
+                    { sender: "bot", content: "Email address (optional)" },
+                  ]);
+                }}
+              >
+                Skip
+              </button>
+            </div>
+          </div>
+        );
+      case 6:
+        return (
+          <div className="user-input-container">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter email address"
+              className="underlined-input"
+
+            />
+            <div className="skip-container">
+              <button
+                className="next-btn"
+                onClick={() => {
+                  if (email.trim()) {
+                    setMessages((prev) => [...prev, { sender: "user", content: email }]);
+                  }
+                  setCurrentStep(7);
+                  setMessages((prev) => [
+                    ...prev,
+                    { sender: "bot", content: "Anything else you want us to know?" },
+                  ]);
+                }}
+              >
+                <FiArrowRight />
+              </button>
+              <button
+                className="skip-btn"
+                onClick={() => {
+                  setCurrentStep(7);
+                  setMessages((prev) => [
+                    ...prev,
+                    { sender: "bot", content: "Anything else you want us to know?" },
+                  ]);
+                }}
+              >
+                Skip
+              </button>
+            </div>
+          </div>
+        );
+      case 7:
+        return (
+          <div className="user-input-container">
+            <input
+              type="text"
+              value={additionalInfo}
+              onChange={(e) => setAdditionalInfo(e.target.value)}
+              placeholder="Type your message"
+              className="underlined-input"
+
+            />
+            <button className="next-btn" onClick={handleSubmit}>
+              <TbSend />
+            </button>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <div>
@@ -93,139 +320,42 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
           title="Chat with us"
         >
           <div className="chat-content custom-scroll" ref={chatContentRef}>
-            <div className="botMessage">
-              <div className="botAvatar">
-                <img className="botImg" src="bot.png" alt="bot image" />
-              </div>
-              <div className="messageText">
-                <p>Hi, Thank you for reaching out.</p>
-              </div>
-            </div>
-            <div className="botMessage">
-              <div className="botAvatar">
-                <img className="botImg" src="bot.png" alt="bot image" />
-              </div>
-              <div className="messageText">
-                <p>Let's see what kind of projects we can help you with</p>
-              </div>
-            </div>
-            <div className="options-container">
-              {options.map((option) => (
-                <button
-                  key={option}
-                  className={`option-btn ${selectedOptions.includes(option) ? "selected" : ""}`}
-                  onClick={() => handleSelectOption(option)}
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
-
-            <button
-              className="submit-btn"
-              onClick={handleSubmit}
-              disabled={selectedOptions.length === 0}
-            >
-              Submit
-            </button>
-
-            {selectedOptions.includes("Website") && showMessage && (
-              <div className="message-Left mt-2">
-                <p>{message}</p>
-              </div>
-            )}
-
-            {step === 2 && (
-              <>
-                <div className="botMessage">
+            {messages.map((message, index) =>
+              message.sender === "bot" ? (
+                <div className="botMessage" key={index}>
                   <div className="botAvatar">
-                    <img className="botImg" src="bot.png" alt="" />
+                    <img className="botImg" src="bot.png" alt="bot" />
                   </div>
                   <div className="messageText">
-                    <p>Awesome, can you let us know your budget?</p>
+                    <p>{message.content}</p>
                   </div>
                 </div>
-                <div className="options-container mt-3">
-                  {budgetOptions.map((option) => (
-                    <button
-                      key={option}
-                      className={`option-btn ${budget === option ? "selected" : ""}`}
-                      onClick={() => handleBudgetSelect(option)}
-                    >
-                      {option}
-                    </button>
-                  ))}
+              ) : (
+                <div className="user-message" key={index}>
+                  <p>{message.content}</p>
                 </div>
-
-                {budget === "Under 50K" && showBudgetMessage && (
-                  <div className="message-Left">
-                    <p>{budgetMessage}</p>
-                  </div>
-                )}
-
-                {budget === "Under 50K" && goodSoundMessage && (
-                  <>
-                    <div className="botMessage">
-                      <div className="botAvatar">
-                        <img className="botImg" src="bot.png" alt="" />
-                      </div>
-                      <div className="messageText">
-                        <p>Sound good. Can you please leave us your contact details?</p>
-                      </div>
-                    </div>
-                    <div className="botMessage">
-                      <div className="botAvatar">
-                        <img className="botImg" src="bot.png" alt="" />
-                      </div>
-                      <div className="messageText">
-                        <p>You can type it in below <BiSolidHandDown className="below-icon" /></p>
-                      </div>
-                    </div>
-                  </>
-                )}
-
-                {sentMessages.map((msg, index) => (
-                  <div key={index} className="message-Left">
-                    <p>{msg}</p>
-                  </div>
-                ))}
-
-                {showThankYouMessage && (
-                  <div>
-                    <div className="botMessage">
-                      <div className="botAvatar">
-                        <img className="botImg" src="bot.png" alt="" />
-                      </div>
-                      <div className="messageText">
-                        <p>Thankyou! Is there anything else you would like to share? Please type it in below <BiSolidHandDown className="below-icon" /></p>
-                      </div>
-                    </div>
-                    <div className="botMessage">
-                      <div className="botAvatar">
-                        <img className="botImg" src="bot.png" alt="" />
-                      </div>
-                      <div className="messageText">
-                        <p>If not, kindly hit submit. We will get back to you in 2-3 business days.</p>
-                      </div>
-                    </div>
-                    <button className="submitBtn">Submit Request</button>
-                  </div>
-                )}
-              </>
+              )
             )}
+            {currentStep !== 8 && renderStepContent()}
           </div>
 
-          <div className="input-container">
-            <HiOutlineRefresh className="refreshIcon" onClick={handleRefresh} />
-            <input
-              className="chat-input"
-              type="text"
-              placeholder="Type here"
-              value={userInput}
-              onChange={handleInputChange}
-            />
-            <TbSend className="sendIcon" onClick={handleSendMessage} />
-          </div>
+          {currentStep !== 8 && (
+            <div className="input-container">
+              <HiOutlineRefresh className="refreshIcon" onClick={handleRefresh} />
+              <input
+                className="chat-input"
+                type="text"
+                placeholder="Type here"
+                value={userInput}
+                onChange={(e) => setUserInput(e.target.value)}
+                onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
+              />
+              <TbSend
+                className="sendIcon"
+                onClick={handleSendMessage}
+              />
+            </div>
+          )}
         </ChatFrame>
       )}
     </div>
