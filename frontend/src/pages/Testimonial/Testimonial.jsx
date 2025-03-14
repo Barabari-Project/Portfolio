@@ -27,6 +27,7 @@ function Testimonial() {
       <style>{`
         .custom-scroll::-webkit-scrollbar {
           width: 6px;
+          height:12px; 
         }
         @media (min-width: 768px) {
           .custom-scroll::-webkit-scrollbar {
@@ -35,14 +36,14 @@ function Testimonial() {
         }
         .custom-scroll::-webkit-scrollbar-track {
           background: rgba(255,255,255,0.1);
-          border-radius: 4px;
+          border-radius: 5px;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
           background: #3949AB;
           border-radius: 4px;
         }
         .custom-scroll::-webkit-scrollbar-thumb:hover {
-          background: rgba(255,255,255,0.8);
+          background: gray;
         }
       `}</style>
 
@@ -101,26 +102,23 @@ function Testimonial() {
 
           {/* Image Carousel */}
           <div className="w-full md:w-[45%] lg:w-[40%] h-[40vh] sm:h-[50vh] md:h-[60vh] bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
-            <div className="h-full overflow-y-auto custom-scroll">
-              <div className="space-y-4">
-                {JsonData.testimonialImages[currentIndex].scrollImg.map(
-                  (imgSrc, idx) => (
-                    <div
-                      key={idx}
-                      className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] p-3 md:p-4"
-                    >
-                      <img
-                        src={imgSrc}
-                        alt={`Testimonial ${currentIndex + 1}`}
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          </div>
-
+  <div className="h-full overflow-x-auto overflow-y-hidden whitespace-nowrap custom-scroll">
+    {JsonData.testimonialImages[currentIndex].scrollImg.map(
+      (imgSrc, idx) => (
+        <div
+          key={idx}
+          className="inline-block h-[40vh] sm:h-[50vh] md:h-[60vh] p-3 md:p-4"
+        >
+          <img
+            src={imgSrc}
+            alt={`Testimonial ${currentIndex + 1}`}
+            className="h-full object-cover rounded-lg"
+          />
+        </div>
+      )
+    )}
+  </div>
+</div>
           {/* Testimonial Content */}
           <div className="w-full md:w-[50%] lg:w-[45%] h-auto min-h-[400px] md:h-[65vh] bg-[#626fb1] backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col shadow-lg md:shadow-xl">
   <p className="text-lg md:text-xl text-gray-200 truncate  text-center">

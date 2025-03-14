@@ -23,6 +23,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
+  const [projectDescription, setProjectDescription] = useState("");
 
   const options = [
     "Website",
@@ -43,18 +44,6 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
       ]);
       setCurrentStep(2);
     } else {
-      setMessages((prev) => [
-        ...prev,
-        { sender: "bot", content: "Tell us your name" },
-      ]);
-      setCurrentStep(3);
-    }
-  };
-
-  const handleCustomDescription = () => {
-    if (userInput.trim()) {
-      setMessages((prev) => [...prev, { sender: "user", content: userInput }]);
-      setUserInput("");
       setMessages((prev) => [
         ...prev,
         { sender: "bot", content: "Tell us your name" },
@@ -84,7 +73,10 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
     });
     
     console.log({
-      projectType: selectedOption,
+      projectType:
+        selectedOption === "Something else"
+          ? projectDescription
+          : selectedOption,
       name,
       organization,
       phone,
@@ -100,7 +92,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
     ]);
     setCurrentStep(8);
   };
- 
+
   const handleRefresh = () => {
     setSelectedOption(null);
     setCurrentStep(1);
@@ -117,12 +109,101 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
     setPhone("");
     setEmail("");
     setAdditionalInfo("");
+    setProjectDescription("");
+  };
+
+  const getPlaceholder = () => {
+    switch (currentStep) {
+      case 1:
+        return "Select an option above";
+      case 2:
+        return "Describe your project";
+      case 3:
+        return "Enter your name";
+      case 4:
+        return "Enter organization name";
+      case 5:
+        return "Enter phone number (optional)";
+      case 6:
+        return "Enter email address (optional)";
+      case 7:
+        return "Anything else you want us to know?";
+      default:
+        return "Type here";
+    }
   };
 
   const handleSendMessage = () => {
-    if (userInput.trim()) {
-      setMessages((prev) => [...prev, { sender: "user", content: userInput.trim() }]);
-      setUserInput("");
+    const trimmedInput = userInput.trim();
+    if (!trimmedInput) return;
+
+    setMessages((prev) => [...prev, { sender: "user", content: trimmedInput }]);
+    setUserInput("");
+
+    switch (currentStep) {
+      case 2:
+        setProjectDescription(trimmedInput);
+        setCurrentStep(3);
+        setMessages((prev) => [
+          ...prev,
+          { sender: "bot", content: "Tell us your name" },
+        ]);
+        break;
+      case 3:
+        setName(trimmedInput);
+        setCurrentStep(4);
+        setMessages((prev) => [
+          ...prev,
+          { sender: "bot", content: "What's your organization name?" },
+        ]);
+        break;
+      case 4:
+        setOrganization(trimmedInput);
+        setCurrentStep(5);
+        setMessages((prev) => [
+          ...prev,
+          { sender: "bot", content: "Phone number (optional)" },
+        ]);
+        break;
+      case 5:
+        setPhone(trimmedInput);
+        setCurrentStep(6);
+        setMessages((prev) => [
+          ...prev,
+          { sender: "bot", content: "Email address (optional)" },
+        ]);
+        break;
+      case 6:
+        setEmail(trimmedInput);
+        setCurrentStep(7);
+        setMessages((prev) => [
+          ...prev,
+          { sender: "bot", content: "Anything else you want us to know?" },
+        ]);
+        break;
+      case 7:
+        setAdditionalInfo(trimmedInput);
+        handleSubmit();
+        break;
+    }
+  };
+
+  const handleSkip = () => {
+    switch (currentStep) {
+      case 5:
+        setCurrentStep(6);
+        setMessages((prev) => [
+          ...prev,
+          { sender: "bot", content: "Email address (optional)" },
+        ]);
+        break;
+      case 6:
+        setCurrentStep(7);
+        setMessages((prev) => [
+          ...prev,
+          { sender: "bot", content: "Anything else you want us to know?" },
+        ]);
+        break;
     }
   };
 
@@ -133,199 +214,25 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
   }, [messages, currentStep]);
 
   const renderStepContent = () => {
-    switch (currentStep) {
-      case 1:
-        return (<>
-        
-          <div className="options-container">
-            {options.map((option) => (
-              <button
-                key={option}
-                className={`option-btn ${
-                  selectedOption === option ? "selected" : ""
-                }`}
-                onClick={() => handleSelectOption(option)}
-                disabled={selectedOption !== null}
-                >
-                {option}
-              </button>
-            ))}
-            
-          </div>
-                </>
-        );
-      case 2:
-        return (
-          <div className="user-input-container">
-            <input
-              type="text"
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-              placeholder="Type your project description"
-              className="underlined-input"
-            />
-            <button className="next-btn" onClick={handleCustomDescription}>
-              <FiArrowRight />
-            </button>
-          </div>
-        );
-      case 3:
-        return (
-          <div className="user-input-container">
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Enter your name"
-              className="underlined-input"
-            />
+    if (currentStep === 1) {
+      return (
+        <div className="options-container">
+          {options.map((option) => (
             <button
-              className="next-btn"
-              onClick={() => {
-                if (name.trim()) {
-                  setMessages((prev) => [...prev, { sender: "user", content: name }]);
-                  setCurrentStep(4);
-                  setMessages((prev) => [
-                    ...prev,
-                    { sender: "bot", content: "What's your organization name?" },
-                  ]);
-                }
-              }}
+              key={option}
+              className={`option-btn ${
+                selectedOption === option ? "selected" : ""
+              }`}
+              onClick={() => handleSelectOption(option)}
+              disabled={selectedOption !== null}
             >
-              <FiArrowRight />
+              {option}
             </button>
-          </div>
-        );
-      case 4:
-        return (
-          <div className="user-input-container">
-            <input
-              type="text"
-              value={organization}
-              onChange={(e) => setOrganization(e.target.value)}
-              placeholder="Enter organization name"
-              className="underlined-input"
-            />
-            <button
-              className="next-btn"
-              onClick={() => {
-                if (organization.trim()) {
-                  setMessages((prev) => [...prev, { sender: "user", content: organization }]);
-                  setCurrentStep(5);
-                  setMessages((prev) => [
-                    ...prev,
-                    { sender: "bot", content: "Phone number (optional)" },
-                  ]);
-                }
-              }}
-            >
-              <FiArrowRight />
-            </button>
-          </div>
-        );
-      case 5:
-        return (
-          <div className="user-input-container">
-            <input
-              type="tel"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              placeholder="Enter phone number"
-              className="underlined-input"
-
-            />
-            <div className="skip-container">
-              <button
-                className="next-btn"
-                onClick={() => {
-                  if (phone.trim()) {
-                    setMessages((prev) => [...prev, { sender: "user", content: phone }]);
-                  }
-                  setCurrentStep(6);
-                  setMessages((prev) => [
-                    ...prev,
-                    { sender: "bot", content: "Email address (optional)" },
-                  ]);
-                }}
-              >
-                <FiArrowRight />
-              </button>
-              <button
-                className="skip-btn"
-                onClick={() => {
-                  setCurrentStep(6);
-                  setMessages((prev) => [
-                    ...prev,
-                    { sender: "bot", content: "Email address (optional)" },
-                  ]);
-                }}
-              >
-                Skip
-              </button>
-            </div>
-          </div>
-        );
-      case 6:
-        return (
-          <div className="user-input-container">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter email address"
-              className="underlined-input"
-
-            />
-            <div className="skip-container">
-              <button
-                className="next-btn"
-                onClick={() => {
-                  if (email.trim()) {
-                    setMessages((prev) => [...prev, { sender: "user", content: email }]);
-                  }
-                  setCurrentStep(7);
-                  setMessages((prev) => [
-                    ...prev,
-                    { sender: "bot", content: "Anything else you want us to know?" },
-                  ]);
-                }}
-              >
-                <FiArrowRight />
-              </button>
-              <button
-                className="skip-btn"
-                onClick={() => {
-                  setCurrentStep(7);
-                  setMessages((prev) => [
-                    ...prev,
-                    { sender: "bot", content: "Anything else you want us to know?" },
-                  ]);
-                }}
-              >
-                Skip
-              </button>
-            </div>
-          </div>
-        );
-      case 7:
-        return (
-          <div className="user-input-container">
-            <input
-              type="text"
-              value={additionalInfo}
-              onChange={(e) => setAdditionalInfo(e.target.value)}
-              placeholder="Type your message"
-              className="underlined-input"
-
-            />
-            <button className="next-btn" onClick={handleSubmit}>
-              <TbSend />
-            </button>
-          </div>
-        );
-      default:
-        return null;
+          ))}
+        </div>
+      );
     }
+    return null;
   };
 
   return (
@@ -357,18 +264,28 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
 
           {currentStep !== 8 && (
             <div className="input-container">
-              <HiOutlineRefresh className="refreshIcon" onClick={handleRefresh} />
+              <HiOutlineRefresh
+                className="refreshIcon"
+                onClick={handleRefresh}
+              />
               <input
                 className="chat-input"
                 type="text"
-                placeholder="Type here"
+                placeholder={getPlaceholder()}
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
+                disabled={currentStep === 1}
               />
+              {(currentStep === 5 || currentStep === 6) && (
+                <button className="skip-btn" onClick={handleSkip}>
+                  Skip
+                </button>
+              )}
               <TbSend
                 className="sendIcon"
                 onClick={handleSendMessage}
+                disabled={currentStep === 1}
               />
             </div>
           )}

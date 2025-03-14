@@ -56,7 +56,7 @@
 
 .chat-content {
   overflow-y: auto; /* Changed to auto for better scroll handling */
-  max-height: 50vh; /* Adjusted height for flexibility */
+  max-height: 61vh; /* Adjusted height for flexibility */
   padding: 15px;
   overflow-x: hidden;
 }
@@ -142,7 +142,9 @@
 .submit-btn:hover {
   background-color: #28377a;
 }
-
+.skip-btn{
+  cursor: pointer;
+}
 .message-Left {
   background-color: #334499;
   color: white;
@@ -162,7 +164,7 @@
 .input-container {
   display: flex;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   bottom: -75px;
   padding: 10px 15px;
   border-top: 1px solid #eee;
@@ -238,7 +240,7 @@
     color: #aaa;
 }
 
-.next-btn {
+/* .next-btn {
   background-color: #007bff;
   color: white;
   border: none;
@@ -249,11 +251,11 @@
   align-items: center;
   justify-content: center;
   margin-left: 10px;
-}
+} */
 
-.next-btn:hover {
+/* .next-btn:hover {
   background-color: #0056b3;
-}
+} */
 .user-message {
   display: flex;
   justify-content: flex-end;
@@ -270,6 +272,39 @@
   margin: 5px 10px;
   word-break: break-word;
 }
+/* Updated CSS for proper input positioning */
+.chat-card {
+  /* ... existing styles */
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.input-container {
+  /* position: sticky; */
+  bottom: -65px;
+  background: white;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 1;
+  /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); */
+}
+
+/* Remove these existing styles */
+/* .input-container {
+  position: relative;
+  bottom: -75px;
+} */
+
+/* Keep all other existing CSS styles */
 @media (max-width: 480px) {
   .chat-card {
     width: 90%;
@@ -299,11 +334,11 @@
   .custom-scroll::-webkit-scrollbar {
     width: 8px;
   }
-  .input-container {
+  /* .input-container {
     
     bottom: -47px;
    
-  }
+  } */
 }
 @media (max-width:376px){
 
