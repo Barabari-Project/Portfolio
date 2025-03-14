@@ -67,6 +67,22 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
     if (additionalInfo.trim()) {
       setMessages((prev) => [...prev, { sender: "user", content: additionalInfo }]);
     }
+
+     fetch("https://backend.barabaricollective.org/barabari-portfolio/save", {
+    method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        projectType: selectedOption,
+        name,
+        organization,
+        phone,
+        email,
+        additionalInfo,
+      }),
+    });
+    
     console.log({
       projectType: selectedOption,
       name,
