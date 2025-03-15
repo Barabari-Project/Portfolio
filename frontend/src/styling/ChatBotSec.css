@@ -17,7 +17,7 @@
 @media (max-width:768px){
   .chat-card {
     
-    height: 92vh;
+    /* height: 92vh; */
     top: 25px;
     
   }
