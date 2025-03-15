@@ -11,3 +11,8 @@ body {
   }
 /* Circles.css */
 
+@media(min-width:2500px){
+  .max-sizer{
+    height: 100vh;
+  }
+}
