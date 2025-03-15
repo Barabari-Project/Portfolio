@@ -45,7 +45,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className=" max-md:mb-[-25rem] w-full h-[120vh] ">
+    <div className=" max-md:mb-[-25rem] w-full h-[120vh] max-md:h-[87vh] ">
       <div className={chatboxOpen ? "blur" : ""}>
         <div
           id="rev_slider_15_1_wrapper"
@@ -124,7 +124,7 @@ const HeroSection = () => {
       <div className=" relative">
         <div className="overflow-visible">
           <div
-            className=" font-normal text-[18px] bg-blue-800 text-white px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0 max-sm:mt-12"
+            className=" font-normal text-[18px] bg-blue-800 text-white px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0"
             style={{
              
               whiteSpace: "nowrap",
