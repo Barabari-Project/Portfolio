@@ -120,11 +120,24 @@ const HeroSection = () => {
                 </div>
 
                 {/* Hire from us Button */}
-                <DynamicButton
-                  text="Hire From Us"
-                  position={{ left: "72px", top: "520px" }}
-                  className="font-sans "
-                />
+                <div className="absolute z-20 max-md:flex max-md:justify-center max-md:w-full max-md:!left-0 max-md:!top-[445px] left-[63px] top-[521px] ">
+      <div className=" relative">
+        <div className="overflow-visible">
+          <div
+            className=" font-normal text-[18px] bg-blue-800 text-white px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0 max-md:mt-12"
+            style={{
+             
+              whiteSpace: "nowrap",
+              letterSpacing: "px",
+              fontWeight: 500,
+            }}
+            onClick={onClickChat}
+
+          >Hire From Us
+          </div>
+        </div>
+      </div>
+    </div>
                 {/* Parallax Elements - Keep these graphic elements as they are */}
                 <AnimatedCircles />
                 {/* Vector Images */}
@@ -138,14 +151,14 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         onClick={onClickChat}
         className={`chatbtn fixed bottom-16 right-3  p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 z-[100] ${
           chatboxOpen ? "hidden" : "block"
         }`}
       >
         <img src={ChatBotImg} alt="" className="w-20 h-20 animate-shake" />
-      </div>
+      </div> */}
       <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />
     </div>
   );

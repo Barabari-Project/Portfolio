@@ -121,7 +121,7 @@ const Header = () => {
                 />
                 <div className=" ml-2 text-[10px] !flex !items-center">
                   <p className="banner-title website-name !text-2xl !mb-0 max-md:!text-[18px]">
-                    The Barabari Project
+                    The Barabari Collective
                   </p>
                 </div>
               </Link>

@@ -50,35 +50,6 @@ function HireSection() {
               </div>
             ))}
           </div>
-
-          <div className="flex flex-col lg:flex-row gap-6">
-            <div className="lg:w-[52%] w-full h-[250px] sm:h-[300px] md:h-[35vh]">
-              <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="Team members discussing project"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-
-            <div className="bg-[#f3f7ff] p-6 rounded-lg flex flex-col justify-center lg:w-1/4 shadow-[6px_6px_10px_rgba(0,0,0,0.2)] min-h-[250px] sm:h-[300px] md:h-[35vh]">
-              <div className="mb-4">
-                <Code className="h-6 w-6 text-gray-800" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Custom Development</h3>
-              <p className="text-gray-600 text-sm">
-                From concept to launch, we create stunning, user-centric
-                websites that elevate your brand and engage your audience.
-              </p>
-            </div>
-
-            <div className="lg:w-1/4 w-full h-[250px] sm:h-[300px] md:h-[35vh]">
-              <img
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="Team members collaborating"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-          </div>
         </div>
       </div>
       <div className="bg-[#3949ab] text-white relative overflow-hidden mt-16 md:mt-32 py-16 md:py-24">
