@@ -45,7 +45,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className=" max-sizer max-md:mb-[-25rem] w-full  h-[140vh] max-2xl:h-full overflow-hidden">
+    <div className="max-md:mb-[-25rem] w-full  h-[140vh] max-2xl:h-full ">
     <div className={chatboxOpen ? "blur" : ""}>
       <div
         id="rev_slider_15_1_wrapper"
@@ -56,7 +56,12 @@ const HeroSection = () => {
           className="rev_slider fullwidthabanner revslider-initialised tp-simpleresponsive rev_redraw_on_blurfocus"
           style={{ maxHeight: "868px", height: "868px" }}
         >
-            
+          <ul className="tp-revslider-mainul visible block overflow-hidden w-full h-[150vh] max-h-none">
+            <li
+              className="tp-revslider-slidesli active-revslide relative w-full h-[150vh] overflow-hidden z-20 opacity-100 bg-transparent"
+              data-index="rs-46"
+              style={{ perspective: 6000 }}
+            >
                 <div
                   className="tp-bgimg defaultimg absolute inset-0 bg-no-repeat bg-cover bg-center z-20 h-full"
                   style={{
@@ -116,6 +121,8 @@ const HeroSection = () => {
               </div>
               <AnimatedCircles />
               <VectorImages />
+            </li>
+          </ul>
         </div>
       </div>
     </div>

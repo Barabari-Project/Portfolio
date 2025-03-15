@@ -33,23 +33,23 @@ function HireSection() {
   return (
     <>
       <div className="bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto max-md:px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 ">
             Why hire from us?
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-  {cardData.map((card, index) => (
-    <div
-      key={index}
-      className="bg-[#f3f7ff] p-6 rounded-lg shadow-[6px_6px_10px_rgba(0,0,0,0.2)]"
-    >
-      <div className="mb-4">{card.icon}</div>
-      <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
-      <p className="text-gray-600 text-sm">{card.description}</p>
-    </div>
-  ))}
-</div>
+            {cardData.map((card, index) => (
+              <div
+                key={index}
+                className="bg-[#f3f7ff] p-6 rounded-lg shadow-[6px_6px_10px_rgba(0,0,0,0.2)]"
+              >
+                <div className="mb-4">{card.icon}</div>
+                <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
+                <p className="text-gray-600 text-sm">{card.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="bg-[#3949ab] text-white relative overflow-hidden mt-16 md:mt-32 py-16 md:py-24">
