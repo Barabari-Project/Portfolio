@@ -68,3 +68,8 @@
       background-color: rgba(255, 255, 255, 0.07);
       border-radius: 50%;
   }
+@media (min-width:2500px){
+  .max-sizer{
+    height: 60vh;
+  }
+}
