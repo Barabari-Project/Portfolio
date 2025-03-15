@@ -54,11 +54,14 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
 
   const handleSubmit = () => {
     if (additionalInfo.trim()) {
-      setMessages((prev) => [...prev, { sender: "user", content: additionalInfo }]);
+      setMessages((prev) => [
+        ...prev,
+        { sender: "user", content: additionalInfo },
+      ]);
     }
 
-     fetch("https://backend.barabaricollective.org/barabari-portfolio/save", {
-    method: "POST",
+    fetch("https://backend.barabaricollective.org/barabari-portfolio/save", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -71,7 +74,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
         additionalInfo,
       }),
     });
-    
+
     console.log({
       projectType:
         selectedOption === "Something else"
@@ -243,6 +246,7 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
           title="Chat with us"
         >
           <div className="chat-content custom-scroll" ref={chatContentRef}>
+            {/* Messages mapping remains the same */}
             {messages.map((message, index) =>
               message.sender === "bot" ? (
                 <div className="botMessage" key={index}>
