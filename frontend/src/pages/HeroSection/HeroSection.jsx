@@ -124,7 +124,7 @@ const HeroSection = () => {
       <div className=" relative">
         <div className="overflow-visible">
           <div
-            className=" font-normal text-[18px] bg-blue-800 text-white px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0 max-md:mt-12"
+            className=" font-normal text-[18px] bg-blue-800 text-white px-8 py-3 rounded-full perspective-300  cursor-pointer max-md:m-auto max-md:!left-0 max-sm:mt-12"
             style={{
              
               whiteSpace: "nowrap",
