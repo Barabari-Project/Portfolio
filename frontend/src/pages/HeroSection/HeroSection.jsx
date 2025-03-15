@@ -45,7 +45,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="max-md:mb-[-25rem] w-full  h-[140vh] max-2xl:h-full ">
+    <div className="max-md:mb-[-21rem] w-full  h-[140vh] max-2xl:h-full ">
     <div className={chatboxOpen ? "blur" : ""}>
       <div
         id="rev_slider_15_1_wrapper"
