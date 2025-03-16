@@ -3,11 +3,13 @@ import { MdOutlinePhoneInTalk,MdAttachEmail } from "react-icons/md";
 import { FaInstagram,FaLinkedin } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import logo from "../../assets/barabari_logo.png"
+import DevImg from "../../assets/deepak.jpg"
+
 
 const developers = [
   {
     name: "Deepak",
-    image: "./src/assets/deepak.jpg",
+    image: DevImg,
     linkedin: "https://www.linkedin.com/in/deepak-sagar1/",
   }
 ];
