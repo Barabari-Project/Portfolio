@@ -6,9 +6,9 @@ import logo from "../../assets/barabari_logo.png"
 
 const developers = [
   {
-    name: "Drumil Akhenia",
-    image: "/assets/drumil.jpg",
-    linkedin: "https://www.linkedin.com/in/drumil-akhenia/",
+    name: "Deepak",
+    image: "./src/assets/deepak.jpg",
+    linkedin: "https://www.linkedin.com/in/deepak-sagar1/",
   }
 ];
 

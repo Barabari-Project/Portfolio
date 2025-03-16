@@ -4,29 +4,34 @@ import "../../styling/Feature.css";
 const FeaturePage = () => {
   const featureData = [
     {
-      title: "Sprint Up Website",
+      title: "I am wellbeing",
       description: "E-learning platform landing page",
       image: "/webImages/web-1.png",
+      src:"https://main.d228kk0n6wpyz0.amplifyapp.com/"
     },
     {
-      title: "Sprint Up Website",
-      description: "E-learning platform landing page",
+      title: "Protsahan",
+      description: "Girls empowerment and development org.",
       image: "/webImages/web-2.png",
+      src:"https://main.d1jtxne7po0rhl.amplifyapp.com/"
+    },
+    {
+      title: "EdTech",
+      description: "E-learning platform landing page",
+      image: "/webImages/edTech.png",
+      src:"https://academy.barabaricollective.org/"
     },
     {
       title: "Sprint Up Website",
       description: "E-learning platform landing page",
-      image: "img3.png",
+      image: "/webImages/sprintup.png",
+      src:"https://ed-tech-frontend-client-view.onrender.com/"
     },
     {
-      title: "Sprint Up Website",
-      description: "E-learning platform landing page",
-      image: "img4.png",
-    },
-    {
-      title: "Sprint Up Website",
-      description: "E-learning platform landing page",
-      image: "img4.png", //fixed duplicate
+      title: "Raithan",
+      description: "Channel between the seeker and provider",
+      image: "/webImages/Raithan.png", //fixed duplicate
+      src:"https://drive.google.com/file/d/1d7vh6q2sUYkGljvljNSGYEyemifbFHUv/view"
     },
     {
       title: "Sprint Up Website",
@@ -55,7 +60,8 @@ const FeaturePage = () => {
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <div className="h5-container">
-                <h5>View Project</h5>
+                {/* <h5></h5> */}
+                <a href={item.src} target="_blank">View Project</a>
                 <svg
                     width="25"
                     height="26"

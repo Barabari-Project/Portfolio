@@ -3,7 +3,8 @@ import Typed from "typed.js";
 import { Chats1 } from "../ChatBot/ChatBotFirst";
 import AnimatedCircles from "../../components/Circle/Circle";
 import VectorImages from "../../components/VectorImages/VectorImages";
-import "../../styling/HeroSection.css"
+import ChatBotImg from "../../assets/Home/botimg.png"
+import "../../styling/HeroSection.css";
 const HeroSection = () => {
   const [chatboxOpen, setChatboxOpen] = useState(false);
 
@@ -38,14 +39,8 @@ const HeroSection = () => {
   return (
     <div className=" max-sizer w-full h-[104vh] max-md:h-[100vh] relative overflow-hidden 2xl:h-[150vh]">
       <div className={chatboxOpen ? "blur" : ""}>
-        <div
-          id="rev_slider_15_1_wrapper"
-          className="w-full h-screen absolute"
-        >
-          <div
-            id="rev_slider_15_1"
-            className="w-full h-full relative"
-          >
+        <div id="rev_slider_15_1_wrapper" className="w-full h-screen absolute">
+          <div id="rev_slider_15_1" className="w-full h-full relative">
             <ul className="w-full h-full relative">
               <li
                 className="w-full h-full relative"
@@ -63,8 +58,8 @@ const HeroSection = () => {
                   <div className="relative">
                     <div className="w-full md:w-auto flex justify-center md:justify-start">
                       <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-left max-md:text-center">
-                        Let our students <br className="hidden md:block" /> build
-                        your <br className="md:hidden" />
+                        Let our students <br className="hidden md:block" />{" "}
+                        build your <br className="md:hidden" />
                         <span
                           id="typingelement"
                           className="text-[#2d41a2] ml-2 md:ml-3"
@@ -114,6 +109,14 @@ const HeroSection = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div
+        onClick={onClickChat}
+        className={`chatbtn fixed bottom-16 right-3  p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 z-[100] ${
+          chatboxOpen ? "hidden" : "block"
+        }`}
+      >
+        <img src={ChatBotImg} alt="" className="w-20 h-20 animate-shake" />
       </div>
       <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />
     </div>
