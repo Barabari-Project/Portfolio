@@ -181,7 +181,7 @@
 }
 @media (min-width: 320px) and (max-width:425px) {
   .animation-header123 {
-    min-height: 100vh;
+    min-height: 85vh;
   }
 }
 @media (max-width: 320px) {
