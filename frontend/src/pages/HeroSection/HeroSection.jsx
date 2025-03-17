@@ -135,8 +135,8 @@ const Demo = () => {
                   <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-md:text-center">
                     {" "}
                     {/* Removed my-80 */}
-                    We are a Section 8 Non-Profit upskilling candidates <br className="hidden md:block"/>
-                    from low-income families democratizing access to <br className="hidden md:block"/>
+                    We are a Section 8 Non-Profit upskilling candidates <br className="hidden sm:block"/>
+                    from low-income families democratizing access to <br className="hidden sm:block"/>
                     tech and design employment opportunities.
                   </p>
                   <div className="max-md:flex max-md:justify-center">

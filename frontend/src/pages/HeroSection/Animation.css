@@ -1,6 +1,4 @@
-
-
-.animation-header123{
+.animation-header123 {
   width: 100vw;
   min-height: 140vh;
   overflow: hidden;
@@ -22,41 +20,38 @@
   height: var(--initial-height);
 }
 
-
 @keyframes grow123 {
   0% {
-      width: var(--initial-width);
-      height: var(--initial-height);
-      opacity: 0;
+    width: var(--initial-width);
+    height: var(--initial-height);
+    opacity: 0;
   }
   50% {
-      opacity: var(--half-opacity);
+    opacity: var(--half-opacity);
   }
   100% {
-      width: var(--final-width);
-      height: var(--final-height);
-      opacity: 1;
+    width: var(--final-width);
+    height: var(--final-height);
+    opacity: 1;
   }
 }
 
-
-.header-image123{
+.header-image123 {
   /* background-image: url('/assets/images/home-11-vector-1.png'); */
   position: absolute;
   /* left: 8.67vw ; */
-  top:-2.5vw;
+  top: -2.5vw;
   scale: 0.99;
-  
+
   right: 0;
   /* width: 100%; */
-  width: 91.40vw;
+  width: 91.4vw;
   /* border: 1px solid blue; */
   /* height: 100%; */
   /* left: 10px; */
 }
 
-.worker-img123{
-  
+.worker-img123 {
   /* position:absolute; */
   /* left: 13.67vw; */
   width: 100vw;
@@ -67,12 +62,12 @@
   background-size: cover;
 }
 
-.inner-image123{
+.inner-image123 {
   /* width: 696px; */
   height: 100vw;
-   background-size: cover;
+  background-size: cover;
   object-fit: cover; /* Ensures the image covers the parent div without stretching */
-  object-position: center;  
+  object-position: center;
   opacity: 0;
   animation: move-left123 forwards;
   animation-delay: 2s;
@@ -80,19 +75,19 @@
 }
 
 @keyframes move-left123 {
-  0%{
-      translate:  5vh;
+  0% {
+    translate: 5vh;
   }
-  50%{
-      opacity: 0.7;
+  50% {
+    opacity: 0.7;
   }
-  100%{
-      translate: -5vh;
-      opacity: 1;
+  100% {
+    translate: -5vh;
+    opacity: 1;
   }
 }
 
-.second-image123{
+.second-image123 {
   position: absolute;
   bottom: 16vw;
   left: 63vw;
@@ -100,94 +95,97 @@
   /* transform: translate(-50%, -50%); */
   animation: ellipse123 2s linear infinite;
   animation-delay: 2s;
-  
 }
 
-.third-image123{
+.third-image123 {
   position: absolute;
   bottom: 5vw;
-  left:36vw;
+  left: 36vw;
   /* transform: translate(-50%, -50%); */
   animation: line123 3s ease infinite;
 }
 
-.second-image-loader123{
+.second-image-loader123 {
   opacity: 0;
   animation: move-right123 forwards;
   animation-delay: 2s;
   animation-duration: 1s;
 }
 
-.third-image-loader123{
+.third-image-loader123 {
   opacity: 0;
   animation: move-up123 forwards;
   animation-delay: 2.5s;
   animation-duration: 1s;
 }
 @keyframes move-right123 {
-  0%{
-      translate:  -5vh;
+  0% {
+    translate: -5vh;
   }
-  50%{
-      opacity: 0.7;
+  50% {
+    opacity: 0.7;
   }
-  100%{
-      translate: 5vh;
-      opacity: 1;
+  100% {
+    translate: 5vh;
+    opacity: 1;
   }
 }
 
 @keyframes move-up123 {
-  0%{
-      translate:  0 5vh;
+  0% {
+    translate: 0 5vh;
   }
-  50%{
-      opacity: 0.7;
+  50% {
+    opacity: 0.7;
   }
-  100%{
-      translate: 0 -5vh;
-      opacity: 1;
+  100% {
+    translate: 0 -5vh;
+    opacity: 1;
   }
 }
 
 @keyframes line123 {
-  0%{
-      translate: 0px 0px;
+  0% {
+    translate: 0px 0px;
   }
-  50%{
-      translate: 10px 10px;
+  50% {
+    translate: 10px 10px;
   }
-  
-  
 }
 
 @keyframes ellipse123 {
-  0% { 
-      transform: rotate(0deg)  
-            translateY(-10px) rotate(0deg); 
-  } 
+  0% {
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
 
-  100% { 
-      transform: rotate(360deg)  
-            translateY(-10px) rotate(-360deg); 
+  100% {
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg);
   }
 }
-@media(max-width:768px){
+@media (max-width: 768px) {
   .animation-header123 {
-   
     min-height: 82vh;
-   
-}
+  }
 }
 
-@media(max-width:460px){
+@media (min-width: 425px) and (max-width: 768px) {
   .animation-header123 {
-   
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 425px) {
+  .animation-header123 {
+    min-height: 80vh;
+  }
+}
+@media (min-width: 320px) and (max-width:425px) {
+  .animation-header123 {
     min-height: 100vh;
-   
+  }
 }
-.layer{
-  height: 40vh;
-  opacity: 80%;
-}
+@media (max-width: 320px) {
+  .animation-header123 {
+    min-height: 75vh;
+  }
 }
