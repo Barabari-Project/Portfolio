@@ -987,7 +987,7 @@ swiper-container-vertical
 
   .menu-container,
   .offcanvas-content-wraper {
-    width: 100% !important;
+    width: 64% !important;
     float: none !important;
     height: auto !important;
     padding: 0 !important;
@@ -1034,7 +1034,26 @@ swiper-container-vertical
   }
 
 }
+@media (max-width:600px) {
+  .menu-container,
+  .offcanvas-content-wraper {
+    width: 100% !important;
+    float: none !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  .offcanvas-menu-wraper .menu-container .offcanvas-menu {
+    width: 16rem;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
+  
+}
+  
+}
 @media(max-width:320px){
   .navbar {
     width: 76%;

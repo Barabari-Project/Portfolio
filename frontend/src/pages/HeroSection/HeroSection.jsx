@@ -1,12 +1,90 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import vectorImg1 from "../../assets/images/home-11-vector-1.png";
+import vectorImg2 from "../../assets/images/home-11-vector-2.png";
+import vectorImg3 from "../../assets/images/home-11-vector-3.png";
+import "./Animation.css";
+// import React, { useEffect, useState } from "react";
 import Typed from "typed.js";
 import { Chats1 } from "../ChatBot/ChatBotFirst";
-import AnimatedCircles from "../../components/Circle/Circle";
-import VectorImages from "../../components/VectorImages/VectorImages";
-import ChatBotImg from "../../assets/Home/botimg.png"
-import "../../styling/HeroSection.css";
-const HeroSection = () => {
+import ChatBotImg from "../../assets/Home/botimg.png";
+const Demo = () => {
   const [chatboxOpen, setChatboxOpen] = useState(false);
+
+  const dynamicImageRef = useRef(null);
+  const secondImageRef = useRef(null);
+  const thirdImageRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const setDynamicImageSize = () => {
+      const screenWidth = screen.width;
+      const screenHeight = screen.height;
+
+      if (dynamicImageRef.current) {
+        dynamicImageRef.current.style.width = `${screenWidth}px`;
+        dynamicImageRef.current.style.height = `${
+          screenWidth / 2 + screenWidth * 0.17
+        }px`;
+      }
+
+      if (secondImageRef.current) {
+        secondImageRef.current.style.width = `${(screenWidth * 417) / 1536}px`;
+        secondImageRef.current.style.height = `${(screenWidth * 374) / 1536}px`;
+      }
+
+      if (thirdImageRef.current) {
+        thirdImageRef.current.style.width = `${(screenWidth * 417) / 1536}px`;
+        thirdImageRef.current.style.height = `${(screenWidth * 349) / 1536}px`;
+      }
+    };
+
+    setDynamicImageSize();
+    window.addEventListener("resize", setDynamicImageSize);
+
+    return () => {
+      window.removeEventListener("resize", setDynamicImageSize);
+    };
+  }, []);
+
+  const circleStyles = [
+    {
+      "--ani-duration": "1s",
+      "--back-color": "#334499",
+      "--ani-delay": "0s",
+      "--half-opacity": "0",
+      "--initial-width": "57.74vw",
+      "--initial-height": "57.74vw",
+      "--final-width": "64.25vw",
+      "--final-height": "64.25vw",
+      "--h-top": "-35.5vw",
+      "--v-right": "-8.46vw",
+    },
+    {
+      "--ani-duration": "0.5s",
+      "--ani-delay": "1s",
+      "--h-top": "-26.88vw",
+      "--v-right": "-5.85vw",
+      "--half-opacity": "0.5",
+      "--back-color": "rgba(255, 255, 255, 0.1)",
+      "--initial-width": "49.02vw",
+      "--initial-height": "49.02vw",
+      "--final-width": "55.53vw",
+      "--final-height": "55.53vw",
+    },
+    {
+      "--ani-duration": "0.5s",
+      "--ani-delay": "1.5s",
+      "--h-top": "-22.78vw",
+      "--v-right": "-6vw",
+      "--half-opacity": "0.5",
+      "--back-color": "rgba(255, 255, 255, 0.07)",
+      "--initial-width": "45.24vw",
+      "--initial-height": "45.24vw",
+      "--final-width": "51.75vw",
+      "--final-height": "51.75vw",
+    },
+  ];
 
   const onClickChat = () => {
     setChatboxOpen(true);
@@ -35,92 +113,89 @@ const HeroSection = () => {
       typed.destroy();
     };
   }, []);
-
   return (
-    <div className=" max-sizer w-full h-[104vh] max-md:h-[100vh] relative overflow-hidden 2xl:h-[150vh]">
-      <div className={chatboxOpen ? "blur" : ""}>
-        <div id="rev_slider_15_1_wrapper" className="w-full h-screen absolute">
-          <div id="rev_slider_15_1" className="w-full h-full relative">
-            <ul className="w-full h-full relative">
-              <li
-                className="w-full h-full relative"
-                style={{ perspective: 6000 }}
-              >
-                <div
-                  className="absolute inset-0 bg-no-repeat bg-cover bg-center z-20"
-                  style={{
-                    backgroundImage:
-                      "url(/assets/services/images/rev-slider/transparent.png)",
-                  }}
+    <>
+      <div className="">
+        <div className={chatboxOpen ? "blur" : ""}>
+          <section className="animation-header123 mb-20 max-md:mb-0 ">
+            {/* Added mb-20 (or mb-[80px] if configured) */}
+            {circleStyles.map((style, index) => (
+              <div key={index} className="circle123" style={style} />
+            ))}
+            <div className="flex flex-col md:flex-row items-center justify-between relative left-16 top-52 max-md:left-0 max-md:p-2 max-md:top-40 ">
+              {/* Text Content - Left Side */}
+              <div className="w-full md:w-1/2 z-20 mb-8 md:mb-0 space-y-11">
+                <div className="flex flex-col gap-y-8">
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-center ">
+                    Let our students <br className="hidden md:block" />
+                    build your <br className="md:hidden block"/>
+                    <span id="typingelement" className="text-[#2d41a2]"></span>
+                  </h1>
+
+                  <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-md:text-center">
+                    {" "}
+                    {/* Removed my-80 */}
+                    We are a Section 8 Non-Profit upskilling candidates <br className="hidden md:block"/>
+                    from low-income families democratizing access to <br className="hidden md:block"/>
+                    tech and design employment opportunities.
+                  </p>
+                  <div className="max-md:flex max-md:justify-center">
+                    <button
+                      onClick={() => setChatboxOpen(true)}
+                      className="bg-blue-800 text-white px-5 py-2 rounded-full text-lg hover:bg-blue-900 transition-colors "
+                    >
+                      Hire From Us
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Section - Right Side */}
+            </div>
+            <div className="header-image123 z-[15]">
+              <div className="worker-img123">
+                <img
+                  ref={dynamicImageRef}
+                  src={vectorImg1}
+                  className="inner-image123"
+                  alt="main vector"
                 />
 
-                <div className="absolute w-full md:w-auto z-20 left-4 max-md:left-0 md:left-[55px] top-[100px] md:top-[180px] px-4">
-                  <div className="relative">
-                    <div className="w-full md:w-auto flex justify-center md:justify-start">
-                      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-left max-md:text-center">
-                        Let our students <br className="hidden md:block" />{" "}
-                        build your <br className="md:hidden" />
-                        <span
-                          id="typingelement"
-                          className="text-[#2d41a2] ml-2 md:ml-3"
-                        ></span>
-                      </h1>
-                    </div>
-                  </div>
+                <div className="second-image-loader123">
+                  <img
+                    ref={secondImageRef}
+                    src={vectorImg2}
+                    className="second-image123 z-[16]"
+                    alt="secondary element"
+                  />
                 </div>
-                <div className="absolute w-full md:w-auto z-20 left-4 max-md:left-0 md:left-[70px] top-[250px] md:top-[400px] px-5 md:px-0">
-                  <div className="relative">
-                    <div className="overflow-visible">
-                      <div
-                        className="text-gray-400 w-full md:w-[600px] font-extrabold text-[20px] md:text-[25px] text-left max-md:text-center leading-[30px]"
-                        style={{
-                          whiteSpace: "normal",
-                          letterSpacing: "px",
-                          fontWeight: 400,
-                        }}
-                      >
-                        We are a Section 8 Non-Profit upskilling candidates from
-                        low-income families democratizing access to tech and
-                        design employment opportunities.
-                      </div>
-                    </div>
-                  </div>
+
+                <div className="third-image-loader123">
+                  <img
+                    ref={thirdImageRef}
+                    src={vectorImg3}
+                    className="third-image123 z-[17]"
+                    alt="tertiary element"
+                  />
                 </div>
-                <div className="absolute w-full md:w-auto z-20 left-4 md:left-[63px] max-md:left-0 top-[445px] md:top-[521px] flex justify-center md:justify-start">
-                  <div className="relative">
-                    <div className="overflow-visible">
-                      <div
-                        className="font-normal text-[16px] md:text-[18px] bg-blue-800 text-white px-6 md:px-8 py-3 rounded-full cursor-pointer"
-                        style={{
-                          whiteSpace: "nowrap",
-                          letterSpacing: "px",
-                          fontWeight: 500,
-                        }}
-                        onClick={onClickChat}
-                      >
-                        Hire From Us
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <AnimatedCircles />
-                <VectorImages />
-              </li>
-            </ul>
+              </div>
+            </div>
+          </section>
+<div className=" layer w-full h-screen absolute top-0 md:hidden block bg-white opacity-60 z-[15] max-md:h-[75vh]"></div>
+          <div
+            onClick={onClickChat}
+            className={`chatbtn fixed bottom-16 right-3  p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 z-[100] ${
+              chatboxOpen ? "hidden" : "block"
+            }`}
+          >
+            <img src={ChatBotImg} alt="" className="w-20 h-20 animate-shake" />
           </div>
         </div>
+        <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />
       </div>
-      <div
-        onClick={onClickChat}
-        className={`chatbtn fixed bottom-16 right-3  p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 z-[100] ${
-          chatboxOpen ? "hidden" : "block"
-        }`}
-      >
-        <img src={ChatBotImg} alt="" className="w-20 h-20 animate-shake" />
-      </div>
-      <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />
-    </div>
+      {/* <HeroContent /> */}
+    </>
   );
 };
 
-export default HeroSection;
+export default Demo;

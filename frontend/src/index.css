@@ -9,10 +9,5 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
-/* Circles.css */
 
-@media(min-width:2500px){
-  .max-sizer{
-    height: 100vh;
-  }
-}
+
