@@ -128,7 +128,7 @@ const Demo = () => {
                 <div className="flex flex-col gap-y-8">
                   <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-center ">
                     Let our students <br className="hidden md:block" />
-                    build your <br className="md:hidden block"/>
+                    build your <br className="lg:hidden block"/>
                     <span id="typingelement" className="text-[#2d41a2]"></span>
                   </h1>
 
