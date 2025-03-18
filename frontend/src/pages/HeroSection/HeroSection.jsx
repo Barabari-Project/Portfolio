@@ -122,9 +122,9 @@ const Demo = () => {
             {circleStyles.map((style, index) => (
               <div key={index} className="circle123" style={style} />
             ))}
-            <div className="flex flex-col md:flex-row items-center justify-between relative left-16 top-52 max-md:left-0 max-md:p-2 max-md:top-40 ">
+            <div className="flex flex-col md:flex-row max-md:w-full justify-between relative left-16 top-52 max-md:left-0 max-md:p-2 max-md:top-20 ">
               {/* Text Content - Left Side */}
-              <div className="w-full md:w-1/2 z-20 mb-8 md:mb-0 space-y-11">
+              <div className="w-full md:w-full z-20 mb-8 md:mb-0 space-y-11">
                 <div className="flex flex-col gap-y-8">
                   <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-center ">
                     Let our students <br className="hidden md:block" />

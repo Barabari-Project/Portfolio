@@ -1,9 +1,11 @@
 .animation-header123 {
   width: 100vw;
-  min-height: 140vh;
-  overflow: hidden;
-  /* overflow-x: hidden; */
+  min-height: 100vh; /* Base mobile-first height */
   position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  /* align-items: center; */
 }
 
 .circle123 {
@@ -177,9 +179,15 @@
     min-height: 140vh;
   }
 } */
+/*  
 @media (min-width: 1024px) and (max-width: 1440px) {
   .animation-header123 {
     min-height: 80vh;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .animation-header123 {
+    min-height: 138vh;
   }
 }
 @media (max-width: 935px) {
@@ -224,5 +232,158 @@
 @media (max-width: 320px) {
   .animation-header123 {
     min-height: 75vh;
+  }
+} */
+/* Base Header Styles */
+
+
+/* Responsive Height Adjustments */
+@media (min-width: 768px) {
+  .animation-header123 {
+    min-height: 120vh; /* Taller height for tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .animation-header123 {
+    min-height: 130vh; /* Full height for desktops */
+  }
+}
+
+/* Circle Animation */
+.circle123 {
+  position: absolute;
+  top: var(--h-top);
+  right: var(--v-right);
+  background-color: var(--back-color);
+  border-radius: 50%;
+  opacity: 0;
+  animation: grow123 ease-in forwards;
+  animation-duration: var(--ani-duration);
+  animation-delay: var(--ani-delay);
+  width: var(--initial-width);
+  height: var(--initial-height);
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+@keyframes grow123 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: var(--half-opacity);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Header Image Container */
+.header-image123 {
+  position: absolute;
+  top: -2.5vw;
+  right: 0;
+  width: 91.4vw;
+  max-width: 1600px; /* Prevent over-stretching */
+  aspect-ratio: 1.2; /* Maintain aspect ratio */
+}
+
+/* Worker Image */
+.worker-img123 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Prevent cropping */
+  object-position: center top;
+}
+
+/* Animated Inner Image */
+.inner-image123 {
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  animation: move-left123 forwards;
+  animation-delay: 2s;
+  animation-duration: 1s;
+}
+
+@keyframes move-left123 {
+  0% {
+    transform: translateX(5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-5vh);
+    opacity: 1;
+  }
+}
+
+/* Secondary Animated Elements */
+.second-image123 {
+  position: absolute;
+  bottom: 16vw;
+  left: 63vw;
+  animation: 
+    ellipse123 2s linear infinite,
+    fade-in123 1s forwards 2s;
+}
+
+.third-image123 {
+  position: absolute;
+  bottom: 5vw;
+  left: 36vw;
+  animation: 
+    line123 3s ease infinite,
+    fade-in123 1s forwards 2.5s;
+}
+
+/* Animation Optimizations */
+@keyframes fade-in123 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes ellipse123 {
+  0% { transform: rotate(0deg) translateY(-10px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-10px) rotate(-360deg); }
+}
+
+@keyframes line123 {
+  0% { transform: translate(0); }
+  50% { transform: translate(10px, 10px); }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 767px) {
+  .header-image123 {
+    width: 100vw;
+    top: 0;
+    aspect-ratio: 0.8; /* Better mobile aspect ratio */
+  }
+  
+  .second-image123 {
+    bottom: 25vw;
+    left: 50vw;
+  }
+  
+  .third-image123 {
+    bottom: 10vw;
+    left: 30vw;
+  }
+}
+
+/* 2K+ Screens */
+@media (min-width: 2000px) {
+  .animation-header123 {
+    min-height: 100vh; /* Reset height for very large screens */
+  }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
