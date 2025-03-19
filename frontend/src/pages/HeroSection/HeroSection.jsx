@@ -18,7 +18,7 @@ const Demo = () => {
     window.scrollTo(0, 0);
 
     const setDynamicImageSize = () => {
-      const screenWidth = screen.width;
+      const screenWidth = window.innerWidth; 
       const screenHeight = screen.height;
 
       if (dynamicImageRef.current) {
@@ -115,7 +115,7 @@ const Demo = () => {
   }, []);
   return (
     <>
-      <div className="">
+      <div className="w-full h-[140vh] max-md:h-[80vh]">
         <div className={chatboxOpen ? "blur" : ""}>
           <section className="animation-header123 mb-20 max-md:mb-0 ">
             {/* Added mb-20 (or mb-[80px] if configured) */}

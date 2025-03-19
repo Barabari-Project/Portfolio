@@ -1,6 +1,6 @@
 .animation-header123 {
   width: 100vw;
-  min-height: 100vh; /* Base mobile-first height */
+  height: 140vh; /* Base mobile-first height */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -166,55 +166,9 @@
     transform: rotate(360deg) translateY(-10px) rotate(-360deg);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width:768px) {
   .animation-header123 {
-    min-height: 80vh;
-  }
-}
-
-/* Responsive Height Adjustments */
-@media (min-width: 768px) {
-  .animation-header123 {
-    min-height: 120vh; /* Taller height for tablets */
-  }
-}
-
-@media (min-width: 1024px) {
-  .animation-header123 {
-    min-height: 130vh; /* Full height for desktops */
-  }
-}
-
-/* Mobile Optimizations */
-@media (max-width: 767px) {
-  .header-image123 {
-    width: 100vw;
-    top: 0;
-    aspect-ratio: 0.8; /* Better mobile aspect ratio */
-  }
-  
-  .second-image123 {
-    bottom: 25vw;
-    left: 50vw;
-  }
-  
-  .third-image123 {
-    bottom: 10vw;
-    left: 30vw;
-  }
-}
-
-/* 2K+ Screens */
-@media (min-width: 2000px) {
-  .animation-header123 {
-    min-height: 100vh; /* Reset height for very large screens */
-  }
-}
-
-/* Performance Optimizations */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    height: 80vh; /* Base mobile-first height */
+    
   }
 }

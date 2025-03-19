@@ -15,15 +15,15 @@ export const Chats1 = ({ chatBoxHandler, chatBoxVar }) => {
       {chatBoxVar && (
         <ChatFrame onBackClick={handleBackClick} title="Chat with us">
           <div className={`contentArea ${!chatboxOpen ? "hidden" : "block"}`}>
-            <img className="searchImg" src="search.png" alt="Search" />
             <h1 className="greeting">Hi There!</h1>
             <p className="question">Want to work with us?</p>
             <p className="description">
-              We are happy to discuss any potential projects. If you have a
-              couple of minutes, we would love to hear more.
+            Give us the details of your requirements and our team will get back to you as soon as possible.
+
             </p>
-            <button className="startChatButton" onClick={onClickStartChat}>
-              Start Chat <FiArrowRight className="arrow" />
+            <button className="startChatButton " onClick={onClickStartChat}>
+            Talk to us 
+            <FiArrowRight className="arrow" />
             </button>
             <div className="emailSection">
               <h2 className="emailHeader">Got any other queries?</h2>
