@@ -1,11 +1,11 @@
 .animation-header123 {
   width: 100vw;
-  height: 140vh; /* Base mobile-first height */
+  height: 140vh; 
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: start;
-  /* align-items: center; */
+  /* max-height: 140vh; */
 }
 
 .circle123 {
@@ -48,26 +48,17 @@
 
 
   right: 0;
-  /* width: 100%; */
   width: 91.4vw;
-  /* border: 1px solid blue; */
-  /* height: 100%; */
-  /* left: 10px; */
+ 
 }
-
 .worker-img123 {
-  /* position:absolute; */
-  /* left: 13.67vw; */
   width: 100vw;
   height: 100%;
-  /* object-fit: fill; */
-  /* border: 1px solid red; */
   object-fit: cover;
   background-size: cover;
 }
 
 .inner-image123 {
-  /* width: 696px; */
   height: 100vw;
   background-size: cover;
   object-fit: cover; /* Ensures the image covers the parent div without stretching */
@@ -95,8 +86,6 @@
   position: absolute;
   bottom: 16vw;
   left: 63vw;
-  /* opacity: 0; */
-  /* transform: translate(-50%, -50%); */
   animation: ellipse123 2s linear infinite;
   animation-delay: 2s;
 }
@@ -105,7 +94,6 @@
   position: absolute;
   bottom: 5vw;
   left: 36vw;
-  /* transform: translate(-50%, -50%); */
   animation: line123 3s ease infinite;
 }
 
@@ -166,9 +154,12 @@
     transform: rotate(360deg) translateY(-10px) rotate(-360deg);
   }
 }
-@media (max-width:768px) {
+@media (min-width:1600px) {
   .animation-header123 {
-    height: 80vh; /* Base mobile-first height */
+    height: 100vh; 
     
+  }
+  .max-sizer{
+    height: 100vh;
   }
 }

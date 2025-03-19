@@ -115,7 +115,7 @@ const Demo = () => {
   }, []);
   return (
     <>
-      <div className="w-full h-[140vh] max-md:h-[80vh]">
+      <div className="max-sizer w-full 2xl:h-[140vh] max-md:h-[80vh] max-sm:h-[60vh] h-full">
         <div className={chatboxOpen ? "blur" : ""}>
           <section className="animation-header123 mb-20 max-md:mb-0 ">
             {/* Added mb-20 (or mb-[80px] if configured) */}
@@ -181,7 +181,7 @@ const Demo = () => {
               </div>
             </div>
           </section>
-<div className=" layer w-full h-screen absolute top-0 md:hidden block bg-white opacity-60 z-[15] max-md:h-[75vh]"></div>
+<div className=" layer max-sm:h-[50vh] w-full h-screen absolute top-0 md:hidden block bg-white opacity-60 z-[15] max-md:h-[75vh]"></div>
           <div
             onClick={onClickChat}
             className={`chatbtn fixed bottom-16 right-3  p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 z-[100] ${
