@@ -23,30 +23,30 @@ function Testimonial() {
   };
 
   const images = JsonData.testimonialImages[currentIndex].scrollImg;
-  const [imageIndex, setImageIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-  const sliderRef = useRef(null);
+  // const [imageIndex, setImageIndex] = useState(0);
+  // const [isTransitioning, setIsTransitioning] = useState(true);
+  // const sliderRef = useRef(null);
 
   // Reset index when currentIndex changes
-  useEffect(() => {
-    setImageIndex(0);
-    setIsTransitioning(true);
-  }, [currentIndex]);
+  // useEffect(() => {
+  //   setImageIndex(0);
+  //   setIsTransitioning(true);
+  // }, [currentIndex]);
 
   // Auto-slide effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (imageIndex >= images.length) {
-        setIsTransitioning(false); // Remove animation
-        setImageIndex(0); // Instant reset
-        setTimeout(() => setIsTransitioning(true), 50); // Restore animation
-      } else {
-        setImageIndex((prev) => prev + 1);
-      }
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (imageIndex >= images.length) {
+  //       setIsTransitioning(false); // Remove animation
+  //       setImageIndex(0); // Instant reset
+  //       setTimeout(() => setIsTransitioning(true), 50); // Restore animation
+  //     } else {
+  //       setImageIndex((prev) => prev + 1);
+  //     }
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, [imageIndex, images.length]);
+  //   return () => clearInterval(interval);
+  // }, [imageIndex, images.length]);
 
   return (
     <div className="min-h-screen bg-[#3949AB] text-white py-8 md:py-16 mt-12 md:mt-20">
@@ -82,11 +82,6 @@ function Testimonial() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
             Hear from our clients
           </h2>
-          <p className="text-sm md:text-lg text-gray-200 max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            scelerisque tellus interdum venenatis auctor et nibh. Rhoncus a, sed
-            lobortis nisi.
-          </p>
         </div>
 
         {/* Testimonial Section */}
@@ -130,13 +125,15 @@ function Testimonial() {
           <div className="w-full md:w-[45%] lg:w-[40%] h-[40vh] sm:h-[50vh] md:h-[60vh] bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
             <div className="h-full overflow-hidden">
               <div
-                ref={sliderRef}
-                className={`flex h-full ${
-                  isTransitioning
-                    ? "transition-transform duration-500 ease-in-out"
-                    : ""
-                }`}
-                style={{ transform: `translateX(-${imageIndex * 100}%)` }}
+                // ref={sliderRef}
+                className={`flex h-full`}
+                //    ${
+                //   isTransitioning
+                //     ? "transition-transform duration-500 ease-in-out"
+                //     : ""
+                // }
+                
+                // style={{ transform: `translateX(-${imageIndex * 100}%)` }}
               >
                 {/* Render slides */}
                 {images.concat(images[0]).map((imgSrc, idx) => (
