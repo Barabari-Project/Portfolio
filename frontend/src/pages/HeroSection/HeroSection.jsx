@@ -18,7 +18,7 @@ const Demo = () => {
     window.scrollTo(0, 0);
 
     const setDynamicImageSize = () => {
-      const screenWidth = window.innerWidth; 
+      const screenWidth = window.innerWidth;
       const screenHeight = screen.height;
 
       if (dynamicImageRef.current) {
@@ -127,17 +127,16 @@ const Demo = () => {
               <div className="w-full md:w-full z-20 mb-8 md:mb-0 space-y-11">
                 <div className="flex flex-col gap-y-8">
                   <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-center ">
-                    Let our students <br className="hidden md:block" />
-                    build your <br className="lg:hidden block"/>
+                    Let us build your <br className="hidden md:block" />
+                    build your <br className="lg:hidden block" />
                     <span id="typingelement" className="text-[#2d41a2]"></span>
                   </h1>
 
                   <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-md:text-center">
                     {" "}
                     {/* Removed my-80 */}
-                    We are a Section 8 Non-Profit upskilling candidates <br className="hidden sm:block"/>
-                    from low-income families democratizing access to <br className="hidden sm:block"/>
-                    tech and design employment opportunities.
+                    We are a social tech collective building high Tech Products
+                    and Services
                   </p>
                   <div className="max-md:flex max-md:justify-center">
                     <button
@@ -181,7 +180,7 @@ const Demo = () => {
               </div>
             </div>
           </section>
-<div className=" layer max-sm:h-[50vh] w-full h-screen absolute top-0 md:hidden block bg-white opacity-60 z-[15] max-md:h-[75vh]"></div>
+          <div className=" layer max-sm:h-[50vh] w-full h-screen absolute top-0 md:hidden block bg-white opacity-60 z-[15] max-md:h-[75vh]"></div>
           <div
             onClick={onClickChat}
             className={`chatbtn fixed bottom-16 right-3  p-4 rounded-full cursor-pointer flex justify-center items-center gap-3 z-[100] ${

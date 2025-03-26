@@ -1,39 +1,51 @@
-import React from "react";
-import { Star, Sun, Monitor, Briefcase, Code } from "lucide-react";
+import React,{useState} from "react";
+// import { Star, Sun, Monitor, Briefcase,  } from "lucide-react";
+import { Code, Lightbulb, Headset, Users } from "lucide-react";
+
 import RoamingCircle from "../../components/RoamingCircle/RoamingCircle";
 import { Meteors } from "../../components/ui/Meteors"; // Make sure to import the Meteors component
+import { Particles } from "../../components/Particle/Particles";
 
 function HireSection() {
+  const [color, setColor] = useState("yellow");
+
   const cardData = [
     {
-      icon: <Sun className="h-6 w-6 text-white" />, // Changed to white
-      title: "Highly Skilled",
+      icon: <Code className="h-6 w-6 text-white" />, // Represents coding and advanced skills
+      title: "Advanced Skills",
       description:
-        "From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.",
+        "Barabari builders specialize in the latest tech stacks like MERN, Django-based, Sprint-based and etc.",
     },
     {
-      icon: <Star className="h-6 w-6 text-white" />,
-      title: "Proven Excellence",
+      icon: <Lightbulb className="h-6 w-6 text-white" />, // Represents innovative and tailored solutions
+      title: "Contextualized Solutions",
       description:
-        "From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.",
+        "We tailor-make our products specifically for your organisation use case.",
     },
     {
-      icon: <Monitor className="h-6 w-6 text-white" />,
-      title: "Responsive Design",
+      icon: <Headset className="h-6 w-6 text-white" />, // Represents active support and customer service
+      title: "Active Support",
       description:
-        "From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.",
+        "Project Managers are available for client queries across different timezones.",
     },
     {
-      icon: <Briefcase className="h-6 w-6 text-white" />,
-      title: "Personalized Care",
+      icon: <Users className="h-6 w-6 text-white" />, // Represents collaboration and long-term capacity building
+      title: "Capacity Building",
       description:
-        "From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.",
+        "Beyond single projects, we build long-term tech partnerships.",
     },
   ];
 
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-white relative ">
+      <Particles
+        className=" absolute inset-0 z-50"
+        quantity={100}
+        ease={80}
+        color={color}
+        refresh
+      />
         <div className="max-w-7xl mx-auto max-md:px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
             Why hire from us?
@@ -44,7 +56,7 @@ function HireSection() {
               <div key={index} className="relative w-full h-full">
                 {/* Gradient background */}
                 <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full blur-3xl" />
-                
+
                 {/* Card container */}
                 <div className="relative h-full flex flex-col items-start justify-start overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-xl">
                   {/* Icon container */}
@@ -56,9 +68,7 @@ function HireSection() {
                   <h3 className="text-lg font-semibold mb-2 text-white">
                     {card.title}
                   </h3>
-                  <p className="text-gray-400 text-sm">
-                    {card.description}
-                  </p>
+                  <p className="text-gray-400 text-sm">{card.description}</p>
 
                   {/* Meteors effect */}
                   <Meteors number={10} />
@@ -73,11 +83,10 @@ function HireSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-full relative z-10">
           <div className="max-w-3xl text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-              We can help build just about anything
+              Experience Our Landmarks Products
             </h1>
             <p className="text-base md:text-lg lg:text-xl opacity-90">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              scelerisque tellus interdum venenatis auctor
+              Across different business domains{" "}
             </p>
           </div>
         </div>

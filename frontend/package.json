@@ -29,9 +29,11 @@
     "react-scroll": "^1.9.3",
     "react-slick": "^0.30.3",
     "react-tilt": "^1.0.2",
+    "react-tsparticles": "^2.12.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.15",
     "tailwind-merge": "^3.0.2",
+    "tsparticles": "^3.8.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

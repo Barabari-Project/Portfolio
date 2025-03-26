@@ -22,9 +22,9 @@ const App = () => {
           <>
             <HeroSection />
             <HireSection />
-            <ServiceSection />
             <FeaturePage />
             <Testimonial />
+            <ServiceSection />
             <Footer />
           </>
         } />
