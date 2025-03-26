@@ -48,7 +48,7 @@ function HireSection() {
       />
         <div className="max-w-7xl mx-auto max-md:px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
-            Why hire from us?
+            Why hire us?
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -85,7 +85,7 @@ function HireSection() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
               Experience Our Landmarks Products
             </h1>
-            <p className="text-base md:text-lg lg:text-xl opacity-90">
+            <p className="text-base md:text-lg lg:text-[1.8rem] opacity-90">
               Across different business domains{" "}
             </p>
           </div>

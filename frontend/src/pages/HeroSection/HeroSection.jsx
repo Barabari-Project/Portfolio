@@ -132,10 +132,10 @@ const Demo = () => {
                     <span id="typingelement" className="text-[#2d41a2]"></span>
                   </h1>
 
-                  <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-md:text-center">
+                  <p className="text-gray-400 text-lg md:text-2xl leading-relaxed max-md:text-center">
                     {" "}
                     {/* Removed my-80 */}
-                    We are a social tech collective building high Tech Products
+                    We are a social tech collective building high Tech <br className="md:block hidden"/> Products
                     and Services
                   </p>
                   <div className="max-md:flex max-md:justify-center">
@@ -143,7 +143,7 @@ const Demo = () => {
                       onClick={() => setChatboxOpen(true)}
                       className="bg-blue-800 text-white px-5 py-2 rounded-full text-lg hover:bg-blue-900 transition-colors "
                     >
-                      Hire From Us
+                      Hire Us
                     </button>
                   </div>
                 </div>
