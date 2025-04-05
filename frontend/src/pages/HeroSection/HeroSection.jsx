@@ -6,7 +6,7 @@ import "./Animation.css";
 // import React, { useEffect, useState } from "react";
 import Typed from "typed.js";
 import { Chats1 } from "../ChatBot/ChatBotFirst";
-import ChatBotImg from "../../assets/Home/botgif.gif";
+import ChatBotImg from "../../assets/Home/bot-img.gif";
 const Demo = () => {
   const [chatboxOpen, setChatboxOpen] = useState(false);
 
