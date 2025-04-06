@@ -64,7 +64,7 @@ const ServiceCard = ({ title, description, icon }) => {
             </p>
 
             {/* Bottom Strip */}
-            <div className="bg-[#f3f7ff] w-full py-3 flex items-center justify-center gap-2 absolute bottom-0 left-0 right-0 rounded-b-[1.4rem] mt-8">
+            {/* <div className="bg-[#f3f7ff] w-full py-3 flex items-center justify-center gap-2 absolute bottom-0 left-0 right-0 rounded-b-[1.4rem] mt-8">
               <a
                 href="#"
                 className="text-blue-600 font-semibold text-sm sm:text-base"
@@ -72,7 +72,7 @@ const ServiceCard = ({ title, description, icon }) => {
                 See More
               </a>
               <BsArrowUpRightCircleFill className="text-blue-600 text-sm sm:text-base" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

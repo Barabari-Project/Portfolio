@@ -6,7 +6,7 @@ import "./Animation.css";
 // import React, { useEffect, useState } from "react";
 import Typed from "typed.js";
 import { Chats1 } from "../ChatBot/ChatBotFirst";
-import ChatBotImg from "../../assets/Home/bot-img.gif";
+import ChatBotImg from "../../assets/Home/robot.gif";
 const Demo = () => {
   const [chatboxOpen, setChatboxOpen] = useState(false);
 
@@ -187,7 +187,7 @@ const Demo = () => {
               chatboxOpen ? "hidden" : "block"
             }`}
           >
-            <img src={ChatBotImg} alt="" className="w-26 h-20 animate-shake" />
+            <img src={ChatBotImg} alt="" className="w-20 h-20 animate-shake" />
           </div>
         </div>
         <Chats1 chatBoxHandler={setChatboxOpen} chatBoxVar={chatboxOpen} />

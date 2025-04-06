@@ -3,20 +3,25 @@
     {
       "scrollImg": [
         "/teamImg/7.png"
-          ]
+      ]
     },
     {
       "scrollImg": [
         "/teamImg/7.png"
-          ]
+      ]
+    },
+    {
+      "scrollImg": [
+        "/teamImg/7.png"
+      ]
     }
-   
   ],
   "testimonials": [
     {
       "id": 1,
       "timestamp": "11/26/2024 20:11:07",
       "name": "Vaibhav Gupta",
+      "Designation": "Founder, SprintUp Digital Space",
       "organisation": {
         "name": "SprintUp Digital Space",
         "type": "Startup",
@@ -26,7 +31,7 @@
       "quote": "The Barabari Collective helped us build our primary website. It's a multi-page dynamic website with student interactions like form filling, login, etc.",
       "allowCollaboration": "Yes",
       "author": {
-        "profileImg": "/Feedbackimg/Vaibhav Gupta - Vaibhav Gupta.png"
+        "profileImg": "/Feedbackimg/Vaibhav_Gupta_-_Vaibhav_Gupta-removebg-preview.png"
       },
       "companyLogo": "/Feedbackimg/SprintUp Logo Final - Vaibhav Gupta.jpg",
       "techUsed": [
@@ -40,6 +45,7 @@
       "id": 2,
       "timestamp": "12/5/2024 17:36:57",
       "name": "Shirley Menon",
+      "Designation": "Volunteer & Admin, SAVE OUR STRAYS",
       "organisation": {
         "name": "SAVE OUR STRAYS",
         "type": "Non-Profit",
@@ -49,7 +55,7 @@
       "quote": "The Donation Receipt Tool cut processing time by 75% weekly. Harihar and Drumil were patient, making my work easier. Thanks to them, I can focus on urgent tasks.",
       "allowCollaboration": "Yes",
       "author": {
-        "profileImg": "/Feedbackimg/Shirley-Menon.jpg"
+        "profileImg": "/Feedbackimg/Shirley-Menon-removebg-preview.png"
       },
       "companyLogo": "/Feedbackimg/Save Our Strays.jpeg.jpg",
       "techUsed": [
@@ -58,6 +64,30 @@
         "HTML",
         "CSS",
         "SCSS"
+      ]
+    },
+    {
+      "id": 3,
+      "timestamp": "4/4/2025 17:24:52",
+      "name": "Akanksha Chandele",
+      "Designation": "Co-Founder(Nairatmya Foundation)",
+      "organisation": {
+        "name": "I Am Wellbeing (Nairatmya Foundation)",
+        "type": "Non-Profit",
+        "instagram": "https://instagram.com/iamwellbeing_",
+        "linkedin": "https://www.linkedin.com/company/i-am-wellbeing/"
+      },
+      "quote": "Barabari's team showed openness, compassion, and deep alignment with our mental health mission. The collaboration on our website redesign felt empowering and safe.",
+      "allowCollaboration": "Yes",
+      "author": {
+        "profileImg": "/Feedbackimg/akansha.png"
+      },
+      "companyLogo": "/Feedbackimg/iamwellbeing.png",
+      "techUsed": [
+        "Next.js",
+        "Figma",
+        "Tailwind CSS",
+        "GSAP"
       ]
     }
   ]

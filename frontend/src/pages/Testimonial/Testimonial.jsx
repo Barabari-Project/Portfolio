@@ -6,6 +6,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import { AnimatedTooltip } from "../../components/ui/TooltipTeam";
 import JsonData from "../../Json/Testimonial.json";
 function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,7 +48,50 @@ function Testimonial() {
 
   //   return () => clearInterval(interval);
   // }, [imageIndex, images.length]);
-
+  const people = [
+    {
+      id: 1,
+      name: "John Doe",
+      designation: "Software Engineer",
+      image:
+        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+    },
+    {
+      id: 2,
+      name: "Robert Johnson",
+      designation: "Product Manager",
+      image:
+        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    {
+      id: 3,
+      name: "Jane Smith",
+      designation: "Data Scientist",
+      image:
+        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    {
+      id: 4,
+      name: "Emily Davis",
+      designation: "UX Designer",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    {
+      id: 5,
+      name: "Tyler Durden",
+      designation: "Soap Developer",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+    },
+    {
+      id: 6,
+      name: "Dora",
+      designation: "The Explorer",
+      image:
+        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+    },
+  ];
   return (
     <div className="min-h-screen bg-[#3949AB] text-white py-8 md:py-16 mt-12 md:mt-20">
       <style>{`
@@ -122,20 +166,19 @@ function Testimonial() {
           </div>
 
           {/* Image Carousel */}
-          <div className="w-full md:w-[45%] lg:w-[40%] h-[40vh] sm:h-[50vh] md:h-[60vh] bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
+          {/* <div className="w-full md:w-[45%] lg:w-[40%] h-[40vh] sm:h-[50vh] md:h-[60vh] bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
             <div className="h-full overflow-hidden">
               <div
-                // ref={sliderRef}
+                ref={sliderRef}
                 className={`flex h-full`}
-                //    ${
-                //   isTransitioning
-                //     ? "transition-transform duration-500 ease-in-out"
-                //     : ""
-                // }
-                
-                // style={{ transform: `translateX(-${imageIndex * 100}%)` }}
+                 ${
+                isTransitioning
+                  ? "transition-transform duration-500 ease-in-out"
+                  : ""
+              }
+
+              style={{ transform: `translateX(-${imageIndex * 100}%)` }}
               >
-                {/* Render slides */}
                 {images.concat(images[0]).map((imgSrc, idx) => (
                   <div
                     key={idx}
@@ -144,23 +187,21 @@ function Testimonial() {
                     <img
                       src={imgSrc}
                       alt={`Slide ${idx + 1}`}
-                      className="w-full h-full object-cover rounded-lg"
+                      className="w-full h-full object-cover obj rounded-lg"
                     />
                   </div>
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
           {/* Testimonial Content */}
-          <div className="w-full md:w-[50%] lg:w-[45%] h-auto min-h-[400px] md:h-[65vh] bg-[#626fb1] backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col shadow-lg md:shadow-xl">
+          <div className="w-full lg:w-[60%] min-h-[400px] md:h-[65vh]   bg-[#626fb1] backdrop-blur-sm rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col shadow-lg md:shadow-xl overflow-hidden">
   {/* Header Section: Company Name & Logo */}
   <div className="flex justify-between items-center mb-6">
-    {/* Company Name */}
-    <p className="text-lg md:text-xl text-gray-200 font-bold">
+    <p className="text-lg md:text-xl text-white font-bold">
       {JsonData.testimonials[currentIndex].organisation.name} (
       {JsonData.testimonials[currentIndex].organisation.type})
     </p>
-    {/* Company Logo */}
     {JsonData.testimonials[currentIndex].companyLogo && (
       <img
         src={JsonData.testimonials[currentIndex].companyLogo}
@@ -169,70 +210,61 @@ function Testimonial() {
       />
     )}
   </div>
-  <Quote className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white/80 mb-3 md:mb-4" />
 
-  {/* Quote Section */}
-  <p className="text-sm md:text-base lg:text-lg leading-relaxed italic mb-4">
-    {JsonData.testimonials[currentIndex].quote}
-  </p>
+  {/* Main Section */}
+  <div className="flex flex-1 w-full relative">
+    {/* Text Content */}
+    <div className="flex-1 pr-4 flex flex-col justify-between">
+      <div>
+        <Quote className="w-6 h-6 text-white/80 mb-3" />
+        <p className="text-sm md:text-base text-white leading-relaxed mb-4 w-[100%]">
+          {JsonData.testimonials[currentIndex].quote}
+        </p>
 
-  {/* Technologies Used */}
-  <div className="mt-2 flex flex-wrap gap-2">
-    <span className="font-semibold">Tech used:</span>
-    {JsonData.testimonials[currentIndex].techUsed.map((tech, index) => (
-      <span
-        key={index}
-        className="text-xs md:text-sm bg-white/10 text-white py-1 px-3 rounded-full shadow-md"
-      >
-        {tech}
-      </span>
-    ))}
-  </div>
+        <div className="mt-2 flex flex-wrap gap-2 w-[70%]">
+          <span className="font-semibold text-white">Tech used:</span>
+          {JsonData.testimonials[currentIndex].techUsed.map((tech, index) => (
+            <span
+              key={index}
+              className="text-xs md:text-sm bg-white/10 text-white py-1 px-3 rounded-full shadow-md"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
 
-  {/* Footer Section: Author Details & Social Media */}
-  <div className="mt-auto flex justify-between items-center w-full pt-6">
-    {/* Author Profile */}
-    <div className="flex items-center gap-3">
-      {JsonData.testimonials[currentIndex].author.profileImg && (
+    {/* Profile Section */}
+    {JsonData.testimonials[currentIndex].author.profileImg && (
+      <div className="w-28 md:w-32 lg:w-40 flex flex-col items-center">
         <img
           src={JsonData.testimonials[currentIndex].author.profileImg}
           alt={JsonData.testimonials[currentIndex].name}
-          className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover"
+          className="w-full h-auto object-cover rounded-lg shadow-md border-2 border-white/20 transition-transform duration-200 hover:scale-105"
         />
-      )}
-      <h3 className="font-semibold text-sm md:text-base">
-        {JsonData.testimonials[currentIndex].name}
-      </h3>
-    </div>
-    
-    {/* Social Media Links */}
-    <div className="flex gap-4">
-      {JsonData.testimonials[currentIndex].organisation.instagram && (
-        <a
-          href={JsonData.testimonials[currentIndex].organisation.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full shadow-md p-2 bg-white/10 backdrop-blur-md dark:text-white hover:scale-110 transition-all duration-300"
-        >
-          <Instagram />
-        </a>
-      )}
-      {JsonData.testimonials[currentIndex].organisation.linkedin && (
-        <a
-          href={JsonData.testimonials[currentIndex].organisation.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full shadow-md p-2 bg-white/10 backdrop-blur-md dark:text-white hover:scale-110 transition-all duration-300"
-        >
-          <Linkedin />
-        </a>
-      )}
+        <div className="mt-2 text-center">
+          <h3 className="font-semibold text-sm md:text-base text-white">
+            {JsonData.testimonials[currentIndex].name}
+          </h3>
+          <p className="text-xs md:text-sm text-white/80">
+            {JsonData.testimonials[currentIndex].Designation}
+          </p>
+        </div>
+      </div>
+    )}
+  </div>
+  <div className="w-full flex justify-center mt-4">
+  <div className="w-full md:w-[50%] lg:w-[60%] border-t border-white/20 pt-4">
+    <div className="flex justify-center items-center">
+      <AnimatedTooltip items={people} />
     </div>
   </div>
 </div>
 
+</div>
 
-          {/* Desktop Navigation Buttons */}
+ {/* Desktop Navigation Buttons */}
           <div className="hidden md:flex absolute left-0 right-0 top-1/2 -translate-y-1/2 justify-between">
             <button
               className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors -translate-x-12"
