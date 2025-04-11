@@ -1,21 +1,5 @@
 {
-  "testimonialImages": [
-    {
-      "scrollImg": [
-        "/teamImg/7.png"
-      ]
-    },
-    {
-      "scrollImg": [
-        "/teamImg/7.png"
-      ]
-    },
-    {
-      "scrollImg": [
-        "/teamImg/7.png"
-      ]
-    }
-  ],
+
   "testimonials": [
     {
       "id": 1,
@@ -39,6 +23,16 @@
         "Node.js",
         "MongoDB",
         "Tailwind CSS"
+      ],
+      "developerDetails": [
+        {
+          "id": 1,
+          "name": "Drumil Akhenina",
+          "designation": "UX Designer",
+          "image": "/teamImg/drumil.jpg",
+          "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
+
+        }
       ]
     },
     {
@@ -48,10 +42,8 @@
       "Designation": "Volunteer & Admin, SAVE OUR STRAYS",
       "organisation": {
         "name": "SAVE OUR STRAYS",
-        "type": "Non-Profit",
-        "instagram": "https://www.instagram.com/save_our_strays_/?hl=en",
-        "linkedin": "https://www.linkedin.com/in/save-our-strays-sos-4397bb305/"
-      },
+        "type": "Non-Profit"
+           },
       "quote": "The Donation Receipt Tool cut processing time by 75% weekly. Harihar and Drumil were patient, making my work easier. Thanks to them, I can focus on urgent tasks.",
       "allowCollaboration": "Yes",
       "author": {
@@ -64,6 +56,15 @@
         "HTML",
         "CSS",
         "SCSS"
+      ],
+      "developerDetails": [
+        {
+          "id": 1,
+          "name": "Drumil Akhenina",
+          "designation": "UX Designer",
+          "image": "/teamImg/drumil.jpg",
+          "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
+        }
       ]
     },
     {
@@ -73,10 +74,8 @@
       "Designation": "Co-Founder(Nairatmya Foundation)",
       "organisation": {
         "name": "I Am Wellbeing (Nairatmya Foundation)",
-        "type": "Non-Profit",
-        "instagram": "https://instagram.com/iamwellbeing_",
-        "linkedin": "https://www.linkedin.com/company/i-am-wellbeing/"
-      },
+        "type": "Non-Profit"
+        },
       "quote": "Barabari's team showed openness, compassion, and deep alignment with our mental health mission. The collaboration on our website redesign felt empowering and safe.",
       "allowCollaboration": "Yes",
       "author": {
@@ -88,6 +87,16 @@
         "Figma",
         "Tailwind CSS",
         "GSAP"
+      ],
+      "developerDetails": [
+        {
+          "id": 1,
+          "name": "Drumil Akhenina",
+          "designation": "UX Designer",
+          "image": "/teamImg/drumil.jpg",
+          "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
+
+        }
       ]
     }
   ]

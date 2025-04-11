@@ -4,10 +4,7 @@ import { cn } from "../../../lib/utlis";
 import React, { useEffect, useRef, useState } from "react";
 
 function MousePosition() {
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -26,7 +23,6 @@ function MousePosition() {
 
 function hexToRgb(hex) {
   hex = hex.replace("#", "");
-
   if (hex.length === 3) {
     hex = hex
       .split("")
@@ -68,7 +64,6 @@ const Particles = ({
     initCanvas();
     animate();
     window.addEventListener("resize", initCanvas);
-
     return () => {
       window.removeEventListener("resize", initCanvas);
     };
@@ -125,6 +120,7 @@ const Particles = ({
     const dx = (Math.random() - 0.5) * 0.1;
     const dy = (Math.random() - 0.5) * 0.1;
     const magnetism = 0.1 + Math.random() * 4;
+    const shape = Math.random() > 0.5 ? "circle" : "star"; // ⭐ shape selection
     return {
       x,
       y,
@@ -136,21 +132,55 @@ const Particles = ({
       dx,
       dy,
       magnetism,
+      shape,
     };
   };
 
   const rgb = hexToRgb(color);
 
+  const drawStar = (ctx, x, y, r, alpha) => {
+    const spikes = 5;
+    const outerRadius = r;
+    const innerRadius = r / 2;
+    let rot = (Math.PI / 2) * 3;
+    let step = Math.PI / spikes;
+
+    ctx.beginPath();
+    ctx.moveTo(x, y - outerRadius);
+    for (let i = 0; i < spikes; i++) {
+      ctx.lineTo(
+        x + Math.cos(rot) * outerRadius,
+        y + Math.sin(rot) * outerRadius
+      );
+      rot += step;
+
+      ctx.lineTo(
+        x + Math.cos(rot) * innerRadius,
+        y + Math.sin(rot) * innerRadius
+      );
+      rot += step;
+    }
+    ctx.lineTo(x, y - outerRadius);
+    ctx.closePath();
+    ctx.fillStyle = `rgba(${rgb.join(",")}, ${alpha})`;
+    ctx.fill();
+  };
+
   const drawCircle = (circle, update = false) => {
     if (context.current) {
-      const { x, y, translateX, translateY, size, alpha } = circle;
+      const { x, y, translateX, translateY, size, alpha, shape } = circle;
       context.current.translate(translateX, translateY);
-      context.current.beginPath();
-      context.current.arc(x, y, size, 0, 2 * Math.PI);
-      context.current.fillStyle = `rgba(${rgb.join(", ")}, ${alpha})`;
-      context.current.fill();
-      context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+      if (shape === "circle") {
+        context.current.beginPath();
+        context.current.arc(x, y, size, 0, 2 * Math.PI);
+        context.current.fillStyle = `rgba(${rgb.join(",")}, ${alpha})`;
+        context.current.fill();
+      } else {
+        drawStar(context.current, x, y, size, alpha);
+      }
+
+      context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
       if (!update) {
         circles.current.push(circle);
       }
@@ -170,8 +200,7 @@ const Particles = ({
 
   const drawParticles = () => {
     clearContext();
-    const particleCount = quantity;
-    for (let i = 0; i < particleCount; i++) {
+    for (let i = 0; i < quantity; i++) {
       const circle = circleParams();
       drawCircle(circle);
     }
@@ -196,6 +225,7 @@ const Particles = ({
       const remapClosestEdge = parseFloat(
         remapValue(closestEdge, 0, 20, 0, 1).toFixed(2)
       );
+
       if (remapClosestEdge > 1) {
         circle.alpha += 0.02;
         if (circle.alpha > circle.targetAlpha) {
@@ -204,13 +234,16 @@ const Particles = ({
       } else {
         circle.alpha = circle.targetAlpha * remapClosestEdge;
       }
+
       circle.x += circle.dx + vx;
       circle.y += circle.dy + vy;
       circle.translateX +=
-        (mouse.current.x / (staticity / circle.magnetism) - circle.translateX) /
+        (mouse.current.x / (staticity / circle.magnetism) -
+          circle.translateX) /
         ease;
       circle.translateY +=
-        (mouse.current.y / (staticity / circle.magnetism) - circle.translateY) /
+        (mouse.current.y / (staticity / circle.magnetism) -
+          circle.translateY) /
         ease;
 
       drawCircle(circle, true);

@@ -7,7 +7,7 @@ import { Meteors } from "../../components/ui/Meteors"; // Make sure to import th
 import { Particles } from "../../components/Particle/Particles";
 
 function HireSection() {
-  const [color, setColor] = useState("yellow");
+  const [color, setColor] = useState("blue");
 
   const cardData = [
     {

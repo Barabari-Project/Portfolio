@@ -23,7 +23,7 @@ function Testimonial() {
     );
   };
 
-  const images = JsonData.testimonialImages[currentIndex].scrollImg;
+  // const images = JsonData.testimonialImages[currentIndex].scrollImg;
   // const [imageIndex, setImageIndex] = useState(0);
   // const [isTransitioning, setIsTransitioning] = useState(true);
   // const sliderRef = useRef(null);
@@ -257,7 +257,7 @@ function Testimonial() {
   <div className="w-full flex justify-center mt-4">
   <div className="w-full md:w-[50%] lg:w-[60%] border-t border-white/20 pt-4">
     <div className="flex justify-center items-center">
-      <AnimatedTooltip items={people} />
+      <AnimatedTooltip items={JsonData.testimonials[currentIndex].developerDetails} />
     </div>
   </div>
 </div>
