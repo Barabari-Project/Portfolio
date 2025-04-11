@@ -256,7 +256,7 @@ function Testimonial() {
   </div>
   <div className="w-full flex justify-center mt-4">
   <div className="w-full md:w-[50%] lg:w-[60%] border-t border-white/20 pt-4">
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center gap-[4px]">
       <AnimatedTooltip items={JsonData.testimonials[currentIndex].developerDetails} />
     </div>
   </div>

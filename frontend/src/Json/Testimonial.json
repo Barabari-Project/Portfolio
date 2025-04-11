@@ -28,7 +28,7 @@
         {
           "id": 1,
           "name": "Drumil Akhenina",
-          "designation": "UX Designer",
+          "designation": "Full Stack Developer",
           "image": "/teamImg/drumil.jpg",
           "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
 
@@ -61,7 +61,7 @@
         {
           "id": 1,
           "name": "Drumil Akhenina",
-          "designation": "UX Designer",
+          "designation": "Full Stack Developer",
           "image": "/teamImg/drumil.jpg",
           "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
         }
@@ -92,10 +92,24 @@
         {
           "id": 1,
           "name": "Drumil Akhenina",
-          "designation": "UX Designer",
+          "designation": "Full Stack Developer",
           "image": "/teamImg/drumil.jpg",
           "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
 
+        },
+        {
+          "id": 2,
+          "name": "Tanishka Jain",
+          "designation": "Full Stack Developer",
+          "image": "/teamImg/tanishka.jpg",
+          "linkedin": "https://www.linkedin.com/in/tanishka-khameshara-b32833232/"
+        },
+        {
+          "id": 3,
+          "name": "Juber",
+          "designation": "Full Stack Developer",
+          "image": "/teamImg/juber.png",
+          "linkedin": "https://www.linkedin.com/in/tanishka-khameshara-b32833232/"
         }
       ]
     }
