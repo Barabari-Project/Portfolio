@@ -14,27 +14,24 @@ const developers = [
     designation: "Full Stack Developer",
     image: DevImg1,
     linkedin: "https://www.linkedin.com/in/juber-267270170/",
-    height: 150,
-  width: 150,
+  
 
   },
   {
     id: 2,
     name: "Savita Rao",
-    designation: "Full Stack Developer",
+    designation: "Frontend Developer",
     image: DevImg2,
     linkedin: "https://www.linkedin.com/in/savita-rao-04bbba333/",
-    height: 800,
-    width: 800,
+    
   },
   {
     id: 3,
     name: "Sabnam Choudhary",
-    designation: "Full Stack Developer",
+    designation: "Frontend Developer",
     image: DevImg3,
     linkedin: "https://www.linkedin.com/in/sabnam-choudhary-1910a2334",
-    height: 800,
-    width: 800,
+   
   },
 ];
 
