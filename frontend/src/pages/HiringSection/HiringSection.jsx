@@ -38,46 +38,52 @@ function HireSection() {
 
   return (
     <>
-      <div className="bg-white relative ">
-      <Particles
-        className=" absolute inset-0 z-50"
-        quantity={100}
-        ease={80}
-        color={color}
-        refresh
-      />
-        <div className="max-w-7xl mx-auto max-md:px-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
-            Why hire us?
-          </h1>
+     <div className="bg-white relative overflow-hidden">
+  
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {cardData.map((card, index) => (
-              <div key={index} className="relative w-full h-full">
-                {/* Gradient background */}
-                <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full blur-3xl" />
+  {/* Particle effect */}
+  <Particles
+    className="absolute inset-0 z-50"
+    quantity={100}
+    ease={80}
+    color={color}
+    refresh
+  />
 
-                {/* Card container */}
-                <div className="relative h-full flex flex-col items-start justify-start overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-xl">
-                  {/* Icon container */}
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-gray-500">
-                    {card.icon}
-                  </div>
+  {/* Main content */}
+  <div className="max-w-7xl mx-auto max-md:px-4 relative z-[60]">
+    <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">
+      Why hire us?
+    </h1>
 
-                  {/* Content */}
-                  <h3 className="text-lg font-semibold mb-2 text-white">
-                    {card.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm">{card.description}</p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      {cardData.map((card, index) => (
+        <div key={index} className="relative w-full h-full">
+          {/* Gradient background */}
+          <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full blur-3xl" />
 
-                  {/* Meteors effect */}
-                  <Meteors number={10} />
-                </div>
-              </div>
-            ))}
+          {/* Card container */}
+          <div className="relative h-full flex flex-col items-start justify-start overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-xl">
+            {/* Icon container */}
+            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-gray-500">
+              {card.icon}
+            </div>
+
+            {/* Content */}
+            <h3 className="text-lg font-semibold mb-2 text-white">
+              {card.title}
+            </h3>
+            <p className="text-gray-400 text-sm">{card.description}</p>
+
+            {/* Meteors effect */}
+            <Meteors number={10} />
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
       <div className="bg-[#3949ab] text-white relative overflow-hidden mt-16 md:mt-32 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-full relative z-10">

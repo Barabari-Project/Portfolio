@@ -1,27 +1,49 @@
 import React from 'react';
-import { MdOutlinePhoneInTalk,MdAttachEmail } from "react-icons/md";
-import { FaInstagram,FaLinkedin } from "react-icons/fa";
+import { MdOutlinePhoneInTalk, MdAttachEmail } from "react-icons/md";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import logo from "../../assets/barabari_logo.png"
-import DevImg from "../../assets/deepak.jpg"
-
-
+import DevImg1 from "../../assets/deepak.jpg"
+import DevImg2 from "../../assets/SavitaRao.jpg"
+import DevImg3 from "../../assets/sabnam choudhary.jpg"
+import { AnimatedTooltip } from '../../components/ui/TooltipTeam';
 const developers = [
   {
-    name: "Deepak",
-    image: DevImg,
-    linkedin: "https://www.linkedin.com/in/deepak-sagar1/",
-  }
+    id: 1,
+    name: "Deepak Sagar",
+    designation: "Full Stack Developer",
+    image: DevImg1,
+    linkedin: "https://www.linkedin.com/in/juber-267270170/",
+    height: 150,
+  width: 150,
+
+  },
+  {
+    id: 2,
+    name: "Savita Rao",
+    designation: "Full Stack Developer",
+    image: DevImg2,
+    linkedin: "https://www.linkedin.com/in/savita-rao-04bbba333/",
+    height: 800,
+    width: 800,
+  },
+  {
+    id: 3,
+    name: "Sabnam Choudhary",
+    designation: "Full Stack Developer",
+    image: DevImg3,
+    linkedin: "https://www.linkedin.com/in/sabnam-choudhary-1910a2334",
+    height: 800,
+    width: 800,
+  },
 ];
 
 const Footer = () => {
   return (
     <footer className="bg-[#181818] text-white py-10 flex flex-col justify-center items-center p-[2rem 1rem] m-auto">
       <div className="container mx-auto px-6 max-w-[1200px] w-full p-[2rem 3rem] flex justify-center flex-col items-center gap-8">
-        <div className=" bg-[#1e1e1e] credits mb-8 p-8 text-center w-full flex flex-col justify-between items-center flex-wrap rounded-2xl shadow-xl">
-          <h2 className="text-[1.8rem] text-[#ffd500] font-bold uppercase mb-4 flex-[1 100%] text-center ">
-            This platform is built by students of <br /> our program!
-          </h2>
+        {/* <div className=" bg-[#1e1e1e] credits mb-8 p-8 text-center w-full flex flex-col justify-between items-center flex-wrap rounded-2xl shadow-xl">
+         
           <div className="developerImageContainer flex justify-center items-center gap-[5px]">
             {developers.map((developer) => (
               <a
@@ -40,8 +62,17 @@ const Footer = () => {
               </a>
             ))}
           </div>
+        </div> */}
+        <div className="w-full flex justify-center mt-4">
+          <div className="w-full md:w-[50%] lg:w-[60%] border-t border-white/20 pt-4">
+        <h2 className="text-[1.8rem] text-[#ffd500] font-bold uppercase mb-4 flex-[1 100%] text-center ">
+            This platform is built by students of <br /> our program!
+          </h2>
+            <div className="flex justify-center items-center gap-[4px]">
+              <AnimatedTooltip items={developers}  />
+            </div>
+          </div>
         </div>
-
         {/* Contact Information Section */}
         <div className="information flex flex-col  justify-between items-start md:items-center">
           <div className="pagesContainer mb-6 md:mb-0 md:text-left flex items-center flex-col gap-4 mx-auto">
@@ -52,27 +83,27 @@ const Footer = () => {
             <ul className="contact-info space-y-2">
               <li>
                 <a href="tel:+918639322365" className="flex items-center">
-                <MdOutlinePhoneInTalk  className='mr-2'/>
-                +91 8639322365
+                  <MdOutlinePhoneInTalk className='mr-2' />
+                  +91 8639322365
                 </a>
               </li>
               <li>
                 <a href="mailto:info@barabaricollective.org" className="flex items-center">
-                  <MdAttachEmail className='mr-2'/> info@barabaricollective.org
+                  <MdAttachEmail className='mr-2' /> info@barabaricollective.org
                 </a>
               </li>
             </ul>
-          <div className="social-media flex justify-center gap-[15px] mt-4 md:mt-0">
-        <a href="https://x.com/BarabariProject" target="_blank" rel="noopener noreferrer" className='text-white bg-black rounded-[50%] p-3 w-10 h-10 flex items-center justify-center transition-all ease-linear hover:transform hover:scale-[1.2] '>
-              <RiTwitterXFill className=" text-2xl "/>
-            </a>
-            <a href="https://www.instagram.com/thebarabariproject/" target="_blank" rel="noopener noreferrer"className='text-white bg-black rounded-[50%] p-3 w-10 h-10 flex items-center justify-center transition-all ease-linear hover:transform hover:scale-[1.2] '>
-              <FaInstagram className="text-2xl"/>
-            </a>
-            <a href="https://www.linkedin.com/company/the-barabari-collective/" target="_blank" rel="noopener noreferrer"className='text-white bg-black rounded-[50%] p-3 w-10 h-10 flex items-center justify-center transition-all ease-linear hover:transform hover:scale-[1.2] '>
-              <FaLinkedin className="text-2xl "/>
-            </a>
-          </div>
+            <div className="social-media flex justify-center gap-[15px] mt-4 md:mt-0">
+              <a href="https://x.com/BarabariProject" target="_blank" rel="noopener noreferrer" className='text-white bg-black rounded-[50%] p-3 w-10 h-10 flex items-center justify-center transition-all ease-linear hover:transform hover:scale-[1.2] '>
+                <RiTwitterXFill className=" text-2xl " />
+              </a>
+              <a href="https://www.instagram.com/barabaricollective/" target="_blank" rel="noopener noreferrer" className='text-white bg-black rounded-[50%] p-3 w-10 h-10 flex items-center justify-center transition-all ease-linear hover:transform hover:scale-[1.2] '>
+                <FaInstagram className="text-2xl" />
+              </a>
+              <a href="https://www.linkedin.com/company/the-barabari-collective/" target="_blank" rel="noopener noreferrer" className='text-white bg-black rounded-[50%] p-3 w-10 h-10 flex items-center justify-center transition-all ease-linear hover:transform hover:scale-[1.2] '>
+                <FaLinkedin className="text-2xl " />
+              </a>
+            </div>
           </div>
         </div>
       </div>

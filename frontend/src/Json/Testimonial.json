@@ -111,6 +111,14 @@
           "image": "/teamImg/juber.png",
           "linkedin": "https://www.linkedin.com/in/juber-267270170/"
         }
+        ,
+        {
+          "id": 4,
+          "name": "Deepak Sagar",
+          "designation": "Full Stack Developer",
+          "image": "/teamImg/deepak.jpg",
+          "linkedin": "https://www.linkedin.com/in/juber-267270170/"
+        }
       ]
     }
   ]

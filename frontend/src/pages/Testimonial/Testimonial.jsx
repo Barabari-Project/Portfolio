@@ -6,7 +6,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
-import { AnimatedTooltip } from "../../components/ui/TooltipTeam";
+import { AnimatedTooltip } from "../../components/Team/TooltipTeam";
 import JsonData from "../../Json/Testimonial.json";
 function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
