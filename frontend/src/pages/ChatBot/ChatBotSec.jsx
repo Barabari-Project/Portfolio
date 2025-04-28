@@ -59,6 +59,14 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
         { sender: "user", content: additionalInfo },
       ]);
     }
+    console.log({
+      projectType: selectedOption,
+      name,
+      organization,
+      phone,
+      email,
+      additionalInfo,
+    });
 
     fetch("https://backend.barabaricollective.org/barabari-portfolio/save", {
       method: "POST",
@@ -223,9 +231,8 @@ export const Chats2 = ({ chatboxOpen, chatboxOpener }) => {
           {options.map((option) => (
             <button
               key={option}
-              className={`option-btn ${
-                selectedOption === option ? "selected" : ""
-              }`}
+              className={`option-btn ${selectedOption === option ? "selected" : ""
+                }`}
               onClick={() => handleSelectOption(option)}
               disabled={selectedOption !== null}
             >

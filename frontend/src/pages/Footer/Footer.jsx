@@ -62,7 +62,7 @@ const Footer = () => {
         </div> */}
         <div className="w-full flex justify-center mt-4">
           <div className="w-full md:w-[50%] lg:w-[60%] border-t border-white/20 pt-4">
-        <h2 className="text-[1.8rem] text-[#ffd500] font-bold uppercase mb-4 flex-[1 100%] text-center ">
+        <h2 className="text-[1.5rem] text-[#ffd500] font-bold uppercase mb-4 flex-[1 100%] text-center ">
             This platform is built by students of <br /> our program!
           </h2>
             <div className="flex justify-center items-center gap-[4px]">

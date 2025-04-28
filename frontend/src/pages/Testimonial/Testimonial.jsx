@@ -254,7 +254,7 @@ function Testimonial() {
       </div>
     )}
   </div>
-  <div className="w-full flex justify-center mt-4">
+  <div className="w-full flex justify-center mt-4 cursor-pointer">
   <div className="w-full md:w-[50%] lg:w-[60%] border-t border-white/20 pt-4">
     <div className="flex justify-center items-center gap-[4px]">
       <AnimatedTooltip items={JsonData.testimonials[currentIndex].developerDetails} />
@@ -270,13 +270,13 @@ function Testimonial() {
               className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors -translate-x-12"
               onClick={handlePrev}
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-6 h-6 cursor-pointer" />
             </button>
             <button
               className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors translate-x-12"
               onClick={handleNext}
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-6 h-6 cursor-pointer" />
             </button>
           </div>
           <div className="md:hidden flex justify-center gap-4 w-full">
@@ -284,13 +284,13 @@ function Testimonial() {
               className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
               onClick={handlePrev}
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5 cursor-pointer" />
             </button>
             <button
               className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
               onClick={handleNext}
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5 cursor-pointer" />
             </button>
           </div>
         </div>

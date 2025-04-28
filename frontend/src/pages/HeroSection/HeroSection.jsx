@@ -128,20 +128,20 @@ const Demo = () => {
                 <div className="flex flex-col gap-y-8">
                   <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight max-md:text-center ">
                     Let us build your <br className="hidden md:block" />
-                    build your <br className="lg:hidden block" />
+                     <br className="lg:hidden block" />
                     <span id="typingelement" className="text-[#2d41a2]"></span>
                   </h1>
 
                   <p className="text-gray-400 text-lg md:text-2xl leading-relaxed max-md:text-center">
                     {" "}
                     {/* Removed my-80 */}
-                    We are a social tech collective building high Tech <br className="md:block hidden"/> Products
+                    We are a Social Tech Collective Building High Tech Quality <br className="md:block hidden"/> Products
                     and Services
                   </p>
                   <div className="max-md:flex max-md:justify-center">
                     <button
                       onClick={() => setChatboxOpen(true)}
-                      className="bg-blue-800 text-white px-5 py-2 rounded-full text-lg hover:bg-blue-900 transition-colors "
+                      className="bg-blue-800 text-white px-5 py-2 rounded-full text-lg hover:bg-blue-900 transition-colors cursor-pointer "
                     >
                       Hire Us
                     </button>

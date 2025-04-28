@@ -22,7 +22,7 @@ const FeaturePage = () => {
       src: "https://academy.barabaricollective.org/"
     },
     {
-      title: "Sprint Up Website",
+      title: "Sprint Up, Startup LMS",
       description: "E-learning platform landing page",
       image: "/webImages/sprintup.png",
       src: "https://ed-tech-frontend-client-view.onrender.com/"
@@ -30,13 +30,14 @@ const FeaturePage = () => {
     {
       title: "Raithan",
       description: "Channel between the seeker and provider",
-      image: "/webImages/Raithan.png", //fixed duplicate
+      image: "/webImages/Raithan.png", 
       src: "https://drive.google.com/file/d/1d7vh6q2sUYkGljvljNSGYEyemifbFHUv/view"
     },
     {
-      title: "Sprint Up Website",
+      title: "Sampoorna Shiksha",
       description: "E-learning platform landing page",
-      image: "img4.png", //fixed duplicate
+      image: "/webImages/sampoorna-shiksha.png", 
+      src: "https://www.sampoorna-shiksha.barabaricollective.org/school" // Added src for the new project
     },
   ];
 

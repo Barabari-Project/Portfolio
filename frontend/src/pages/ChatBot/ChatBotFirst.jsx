@@ -34,7 +34,7 @@ export const Chats1 = ({ chatBoxHandler, chatBoxVar }) => {
                 href="mailto:barabaricollective@gmail.com"
                 className="emailLink"
               >
-                barabaricollective@gmail.com
+                info@barabaricollective.org
               </a>
             </div>
           </div>
