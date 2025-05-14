@@ -1,5 +1,4 @@
 {
-
   "testimonials": [
     {
       "id": 1,
@@ -18,12 +17,7 @@
         "profileImg": "/Feedbackimg/Vaibhav_Gupta_-_Vaibhav_Gupta-removebg-preview.png"
       },
       "companyLogo": "/Feedbackimg/SprintUp Logo Final - Vaibhav Gupta.jpg",
-      "techUsed": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Tailwind CSS"
-      ],
+      "techUsed": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       "developerDetails": [
         {
           "id": 1,
@@ -31,7 +25,6 @@
           "designation": "Full Stack Developer",
           "image": "/teamImg/drumil.jpg",
           "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
-
         }
       ]
     },
@@ -43,20 +36,14 @@
       "organisation": {
         "name": "SAVE OUR STRAYS",
         "type": "Non-Profit"
-           },
+      },
       "quote": "The Donation Receipt Tool cut processing time by 75% weekly. Harihar and Drumil were patient, making my work easier. Thanks to them, I can focus on urgent tasks.",
       "allowCollaboration": "Yes",
       "author": {
         "profileImg": "/Feedbackimg/Shirley-Menon-removebg-preview.png"
       },
       "companyLogo": "/Feedbackimg/Save Our Strays.jpeg.jpg",
-      "techUsed": [
-        "JavaScipt",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "SCSS"
-      ],
+      "techUsed": ["JavaScipt", "TypeScript", "HTML", "CSS", "SCSS"],
       "developerDetails": [
         {
           "id": 1,
@@ -75,19 +62,14 @@
       "organisation": {
         "name": "I Am Wellbeing (Nairatmya Foundation)",
         "type": "Non-Profit"
-        },
+      },
       "quote": "Barabari's team showed openness, compassion, and deep alignment with our mental health mission. The collaboration on our website redesign felt empowering and safe.",
       "allowCollaboration": "Yes",
       "author": {
         "profileImg": "/Feedbackimg/akansha.png"
       },
       "companyLogo": "/Feedbackimg/iamwellbeing.png",
-      "techUsed": [
-        "Next.js",
-        "Figma",
-        "Tailwind CSS",
-        "GSAP"
-      ],
+      "techUsed": ["Next.js", "Figma", "Tailwind CSS", "GSAP"],
       "developerDetails": [
         {
           "id": 1,
@@ -95,7 +77,6 @@
           "designation": "Full Stack Developer",
           "image": "/teamImg/drumil.jpg",
           "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
-
         },
         {
           "id": 2,
@@ -110,8 +91,7 @@
           "designation": "Full Stack Developer",
           "image": "/teamImg/juber.png",
           "linkedin": "https://www.linkedin.com/in/juber-267270170/"
-        }
-        ,
+        },
         {
           "id": 4,
           "name": "Deepak Sagar",
@@ -119,6 +99,74 @@
           "image": "/teamImg/deepak.jpg",
           "linkedin": "https://www.linkedin.com/in/deepak-sagar1/"
         }
+      ]
+    },
+    {
+      "id": 4,
+      "timestamp": "4/30/2025 14:21:22",
+      "name": "IMAM HUSSAIN",
+      "Designation": "",
+      "organisation": {
+        "name": "RAITHAN FORM FOUNDATION",
+        "type": "Non-Profit"
+      },
+      "quote": "An application that serve for farmers to fulfill their form needs",
+      "allowCollaboration": "Want to discuss with the team",
+      "author": {
+        "profileImg": ""
+      },
+      "companyLogo": "",
+      "techUsed": ["React", "Tailwind CSS", "TypeScript", "Node.js", "MongoDB"],
+      "developerDetails": [ {
+          "id": 1,
+          "name": "Deepak Sagar",
+          "designation": "Full Stack Developer",
+          "image": "/teamImg/deepak.jpg",
+          "linkedin": "https://www.linkedin.com/in/deepak-sagar1/"
+        },{
+          "id": 2,
+          "name": "Drumil Akhenina",
+          "designation": "Full Stack Developer",
+          "image": "/teamImg/drumil.jpg",
+          "linkedin": "https://www.linkedin.com/in/drumil-akhenia/"
+        }],
+      "challengeFaced": "Found bit understanding issues in conceptualization of application",
+      "instagram": "NA",
+      "linkedin": "NA",
+      "driveLinks": [
+        "https://drive.google.com/open?id=1YvlimYc-8RbMb2IesKcVP2bZ5YuFL5Ba",
+        "https://drive.google.com/open?id=1itb9fGFS-QdkrV_W08cRTp_xzgF62ury"
+      ]
+    },
+    {
+      "id": 5,
+      "timestamp": "5/5/2025 17:16:59",
+      "name": "Advait Kaluve",
+      "Designation": "",
+      "organisation": {
+        "name": "Sitara Akka",
+        "type": "Non-Profit",
+        "instagram": "https://www.instagram.com/sitaraakka/",
+        "linkedin": "https://www.linkedin.com/company/sitara-akka/"
+      },
+      "quote": "Student Performance Analysis (SPA) software",
+      "allowCollaboration": "Yes",
+       "author": {
+        "profileImg": "/teamImg/Advait.jpeg"
+      },
+      "companyLogo": "/Feedbackimg/SitaraAkka.jpeg",
+      "techUsed": ["React", "Tailwind CSS", "TypeScript", "Node.js", "MongoDB"],
+      "developerDetails": [{
+          "id": 1,
+          "name": "Hemanshu Faldu",
+          "designation": "Full Stack Developer",
+          "image": "/teamImg/himanshu.jpg",
+          "linkedin": "https://www.linkedin.com/in/hemanshu-faldu-54a732207/"
+        }],
+      "likedAboutService": "Firstly, I liked the fact that you (Harihar) as the founder did not assign someone to coordinate with us while we approached you. Instead you were present throughout in all the meetings, listening to all our requirements and discussions. Second I liked the seamless transition between Drumil and Hemanshu. I did not have to repeat anything to Hemanshu as he was already well briefed by Drumil. Third, I was very impressed by the fact that the project was completed well within the timeline. Also one point I would like to mention, is that I was given an update almost every day about what has been done, and this made it easier to implement any changes when needed. I also liked your website, it has been done really well. Kudos!",
+      "feedback": "For now I have nothing to add. All I will say is continue doing the great work you are presently doing and Barabari will reach great heights.",
+      "driveLinks": [
+        "https://drive.google.com/open?id=16QsNq7-wreupFIHsazZYidRwibRnIBR9"
       ]
     }
   ]
