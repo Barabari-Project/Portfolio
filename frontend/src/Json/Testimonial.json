@@ -113,7 +113,7 @@
       "quote": "An application that serve for farmers to fulfill their form needs",
       "allowCollaboration": "Want to discuss with the team",
       "author": {
-        "profileImg": "/teamImg/imam-hussain.jpg"
+        "profileImg": "/Feedbackimg/imam-hussain.png"
       },
       "companyLogo": "",
       "techUsed": ["React", "Tailwind CSS", "TypeScript", "Node.js", "MongoDB"],
@@ -152,7 +152,7 @@
       "quote": "Student Performance Analysis (SPA) software",
       "allowCollaboration": "Yes",
        "author": {
-        "profileImg": "/teamImg/Advait.jpeg"
+        "profileImg": "/Feedbackimg/Advait.png"
       },
       "companyLogo": "/Feedbackimg/SitaraAkka.jpeg",
       "techUsed": ["React", "Tailwind CSS", "TypeScript", "Node.js", "MongoDB"],
