@@ -166,7 +166,7 @@ function Testimonial() {
           </div>
 
           {/* Image Carousel */}
-          {/* <div className="w-full md:w-[45%] lg:w-[40%] h-[40vh] sm:h-[50vh] md:h-[60vh] bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
+{/* <div className="w-full md:w-[45%] lg:w-[40%] h-[40vh] sm:h-[50vh] md:h-[60vh] bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
             <div className="h-full overflow-hidden">
               <div
                 ref={sliderRef}

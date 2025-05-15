@@ -14,13 +14,13 @@ function HireSection() {
       icon: <Code className="h-6 w-6 text-white" />, // Represents coding and advanced skills
       title: "Advanced Skills",
       description:
-        "Barabari builders specialize in the latest tech stacks like MERN, Django-based, Sprint-based and etc.",
+        "Barabari Builders specialize in the latest tech stacks like MERN, Django-based, Spring-based technologies, etc.",
     },
     {
       icon: <Lightbulb className="h-6 w-6 text-white" />, // Represents innovative and tailored solutions
       title: "Contextualized Solutions",
       description:
-        "We tailor-make our products specifically for your organisation use case.",
+        "We customize our products to fit your organisation's specific use case.",
     },
     {
       icon: <Headset className="h-6 w-6 text-white" />, // Represents active support and customer service
@@ -89,7 +89,7 @@ function HireSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-full relative z-10">
           <div className="max-w-3xl text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-              Experience Our Landmarks Products
+              Experience Our Landmark Products
             </h1>
             <p className="text-base md:text-lg lg:text-[1.8rem] opacity-90">
               Across different business domains{" "}
